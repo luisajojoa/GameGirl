@@ -1,0 +1,7 @@
+INFILE=/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.ncd
+OUTFILE=/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.bit
+FAMILY=Artix7
+PART=xc7a100t-1csg324
+WORKINGDIR=/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware
+LICENSE=WebPack
+USER_INFO=211381552_0_0_410
