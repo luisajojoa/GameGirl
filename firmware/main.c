@@ -82,10 +82,10 @@ static void help(void)
 	puts("Available commands:");
 	puts("help                            - this command");
 	puts("reboot                          - reboot CPU");
-	puts("display                         - display test");
 	puts("led                             - led test");
 	puts("sw                             - switch test");
 	puts("lcd                             - test lcd");
+	puts("lcd-buttons                             - test lcd with buttons");
 }
 
 static void reboot(void)
@@ -93,18 +93,6 @@ static void reboot(void)
 	asm("call r0");
 }
 
-static void display_test(void)
-{
-	int i;
-	printf("display_test...\n");
-	
-
-	for(i=0; i<6; i++) {
-		display_sel_write(i);
-		display_value_write(1);
-		display_write_write(1);
-	}busy_wait(1);
-}
 
 static void led_test(void)
 {
@@ -390,7 +378,7 @@ static void lcd_test(void)
 	lcd_initialize();
 
 	while(i<9680){
-	lcd_write(1,switches_in_read());
+	lcd_write(1,"0x08ff");
 	i++;
 	}
 	i=0;
@@ -406,6 +394,32 @@ static void lcd_test(void)
 }
 
 
+static void lcdbuttons_test(void)
+{
+	int xmax=220;
+	int ymax=176;
+	while(1){
+
+	switch(buttons_in_read()){
+		case 1:
+			lcd_write(1,0xffe0);
+			break;
+		case 2:
+			lcd_write(1,0x001f);
+			break;
+		case 4:
+			lcd_write(1,0xffff);
+			break;
+		case 8:
+			lcd_write(1,0x0000);
+			break;
+		case 16:
+			lcd_write(1,0xaaaa);
+			break;
+	}}
+}
+
+
 static void console_service(void)
 {
 	char *str;
@@ -418,14 +432,14 @@ static void console_service(void)
 		help();
 	else if(strcmp(token, "reboot") == 0)
 		reboot();
-	else if(strcmp(token, "display") == 0)
-		display_test();
 	else if(strcmp(token, "led") == 0)
 		led_test();
 	else if(strcmp(token, "sw") == 0)
 		switch_test();
 	else if(strcmp(token, "lcd") == 0)
 		lcd_test();
+	else if(strcmp(token, "lcd-buttons") == 0)
+		lcdbuttons_test();
 	prompt();
 }
 

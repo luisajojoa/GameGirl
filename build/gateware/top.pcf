@@ -1,13 +1,21 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sun Feb 24 18:32:23 2019
+// Written by: Map P.20131013 on Tue Feb 26 11:52:27 2019
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "user_led10" LOCATE = SITE "U14" LEVEL 1;
 COMP "clk100" LOCATE = SITE "E3" LEVEL 1;
-COMP "lcd_spi_miso" LOCATE = SITE "G18" LEVEL 1;
+COMP "user_led6" LOCATE = SITE "U17" LEVEL 1;
+COMP "lcd_spi_miso" LOCATE = SITE "G17" LEVEL 1;
+COMP "user_led1" LOCATE = SITE "K15" LEVEL 1;
+COMP "user_led12" LOCATE = SITE "V15" LEVEL 1;
+COMP "user_led8" LOCATE = SITE "V16" LEVEL 1;
+COMP "user_led14" LOCATE = SITE "V12" LEVEL 1;
+COMP "user_led2" LOCATE = SITE "J13" LEVEL 1;
 COMP "cpu_reset" LOCATE = SITE "C12" LEVEL 1;
-COMP "rs_lcd" LOCATE = SITE "D18" LEVEL 1;
-COMP "lcd_spi_clk" LOCATE = SITE "C17" LEVEL 1;
+COMP "lcd_rst" LOCATE = SITE "E17" LEVEL 1;
+COMP "user_led4" LOCATE = SITE "R18" LEVEL 1;
+COMP "lcd_spi_clk" LOCATE = SITE "D18" LEVEL 1;
 COMP "user_btn0" LOCATE = SITE "N17" LEVEL 1;
 COMP "user_btn1" LOCATE = SITE "P18" LEVEL 1;
 COMP "user_btn2" LOCATE = SITE "P17" LEVEL 1;
@@ -24,16 +32,25 @@ COMP "user_sw7" LOCATE = SITE "R13" LEVEL 1;
 COMP "user_sw8" LOCATE = SITE "T8" LEVEL 1;
 COMP "user_sw9" LOCATE = SITE "U8" LEVEL 1;
 COMP "serial_tx" LOCATE = SITE "D4" LEVEL 1;
+COMP "user_led0" LOCATE = SITE "H17" LEVEL 1;
+COMP "lcd_rs" LOCATE = SITE "D17" LEVEL 1;
+COMP "user_led11" LOCATE = SITE "T16" LEVEL 1;
 COMP "user_sw10" LOCATE = SITE "R16" LEVEL 1;
 COMP "user_sw11" LOCATE = SITE "T13" LEVEL 1;
 COMP "user_sw12" LOCATE = SITE "H6" LEVEL 1;
 COMP "user_sw13" LOCATE = SITE "U12" LEVEL 1;
 COMP "user_sw14" LOCATE = SITE "U11" LEVEL 1;
 COMP "user_sw15" LOCATE = SITE "V10" LEVEL 1;
-COMP "lcd_spi_cs_n" LOCATE = SITE "F18" LEVEL 1;
-COMP "rst_lcd" LOCATE = SITE "E17" LEVEL 1;
+COMP "user_led7" LOCATE = SITE "U16" LEVEL 1;
+COMP "user_led13" LOCATE = SITE "V14" LEVEL 1;
+COMP "lcd_spi_cs_n" LOCATE = SITE "C17" LEVEL 1;
+COMP "user_led9" LOCATE = SITE "T15" LEVEL 1;
 COMP "serial_rx" LOCATE = SITE "C4" LEVEL 1;
-COMP "lcd_spi_mosi" LOCATE = SITE "D17" LEVEL 1;
+COMP "user_led15" LOCATE = SITE "V11" LEVEL 1;
+COMP "user_led3" LOCATE = SITE "N14" LEVEL 1;
+COMP "user_led5" LOCATE = SITE "V17" LEVEL 1;
+COMP "lcd_spi_mosi" LOCATE = SITE "E18" LEVEL 1;
+PIN XADC_pins<14> = BEL "XADC" PINNAME DCLK;
 PIN lm32_cpu/multiplier/Mmult_n00232_pins<117> = BEL
         "lm32_cpu/multiplier/Mmult_n00232" PINNAME CLK;
 PIN lm32_cpu/multiplier/Mmult_n00231_pins<147> = BEL
@@ -159,15 +176,32 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         BEL "uart_phy_rx_r" BEL "pending0" BEL "uart_phy_rx_reg_0" BEL
         "uart_phy_rx_reg_1" BEL "uart_phy_rx_reg_2" BEL "uart_phy_rx_reg_3"
         BEL "uart_phy_rx_reg_4" BEL "uart_phy_rx_reg_5" BEL
-        "uart_phy_rx_reg_6" BEL "uart_phy_rx_reg_7" BEL "interface_dat_w_0"
-        BEL "interface_dat_w_1" BEL "interface_dat_w_2" BEL
-        "interface_dat_w_3" BEL "interface_dat_w_4" BEL "interface_dat_w_5"
-        BEL "interface_dat_w_6" BEL "interface_dat_w_7" BEL "interface_adr_0"
-        BEL "interface_adr_1" BEL "interface_adr_2" BEL "interface_adr_3" BEL
-        "interface_adr_4" BEL "interface_adr_5" BEL "interface_adr_9" BEL
-        "interface_adr_10" BEL "interface_adr_11" BEL "interface_adr_12" BEL
-        "interface_adr_13" BEL "uart_phy_sink_ready" BEL
-        "uart_phy_phase_accumulator_rx_0" BEL
+        "uart_phy_rx_reg_6" BEL "uart_phy_rx_reg_7" BEL "temperature_status_0"
+        BEL "temperature_status_1" BEL "temperature_status_2" BEL
+        "temperature_status_3" BEL "temperature_status_4" BEL
+        "temperature_status_5" BEL "temperature_status_6" BEL
+        "temperature_status_7" BEL "temperature_status_8" BEL
+        "temperature_status_9" BEL "temperature_status_10" BEL
+        "temperature_status_11" BEL "vccbram_status_0" BEL "vccbram_status_1"
+        BEL "vccbram_status_2" BEL "vccbram_status_3" BEL "vccbram_status_4"
+        BEL "vccbram_status_5" BEL "vccbram_status_6" BEL "vccbram_status_7"
+        BEL "vccbram_status_8" BEL "vccbram_status_9" BEL "vccbram_status_10"
+        BEL "vccbram_status_11" BEL "vccint_status_0" BEL "vccint_status_1"
+        BEL "vccint_status_2" BEL "vccint_status_3" BEL "vccint_status_4" BEL
+        "vccint_status_5" BEL "vccint_status_6" BEL "vccint_status_7" BEL
+        "vccint_status_8" BEL "vccint_status_9" BEL "vccint_status_10" BEL
+        "vccint_status_11" BEL "vccaux_status_0" BEL "vccaux_status_1" BEL
+        "vccaux_status_2" BEL "vccaux_status_3" BEL "vccaux_status_4" BEL
+        "vccaux_status_5" BEL "vccaux_status_6" BEL "vccaux_status_7" BEL
+        "vccaux_status_8" BEL "vccaux_status_9" BEL "vccaux_status_10" BEL
+        "vccaux_status_11" BEL "interface_dat_w_0" BEL "interface_dat_w_1" BEL
+        "interface_dat_w_2" BEL "interface_dat_w_3" BEL "interface_dat_w_4"
+        BEL "interface_dat_w_5" BEL "interface_dat_w_6" BEL
+        "interface_dat_w_7" BEL "interface_adr_0" BEL "interface_adr_1" BEL
+        "interface_adr_2" BEL "interface_adr_3" BEL "interface_adr_4" BEL
+        "interface_adr_5" BEL "interface_adr_9" BEL "interface_adr_10" BEL
+        "interface_adr_11" BEL "interface_adr_12" BEL "interface_adr_13" BEL
+        "uart_phy_sink_ready" BEL "uart_phy_phase_accumulator_rx_0" BEL
         "uart_phy_phase_accumulator_rx_1" BEL
         "uart_phy_phase_accumulator_rx_2" BEL
         "uart_phy_phase_accumulator_rx_3" BEL
@@ -227,43 +261,43 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "dna_status_48" BEL "dna_status_49" BEL "dna_status_50" BEL
         "dna_status_51" BEL "dna_status_52" BEL "dna_status_53" BEL
         "dna_status_54" BEL "dna_status_55" BEL "dna_status_56" BEL
-        "ctrl_storage_full_30" BEL "ctrl_storage_full_31" BEL
-        "ctrl_storage_full_29" BEL "ctrl_storage_full_27" BEL
-        "ctrl_storage_full_23" BEL "ctrl_storage_full_26" BEL
-        "ctrl_storage_full_24" BEL "ctrl_storage_full_22" BEL
-        "ctrl_storage_full_19" BEL "ctrl_storage_full_15" BEL
-        "ctrl_storage_full_17" BEL "ctrl_storage_full_16" BEL
-        "ctrl_storage_full_13" BEL "ctrl_storage_full_11" BEL
-        "ctrl_storage_full_8" BEL "ctrl_storage_full_7" BEL
-        "ctrl_storage_full_2" BEL "ctrl_storage_full_1" BEL
+        "ctrl_storage_full_29" BEL "ctrl_storage_full_31" BEL
+        "ctrl_storage_full_30" BEL "ctrl_storage_full_27" BEL
+        "ctrl_storage_full_26" BEL "ctrl_storage_full_22" BEL
+        "ctrl_storage_full_24" BEL "ctrl_storage_full_23" BEL
+        "ctrl_storage_full_19" BEL "ctrl_storage_full_17" BEL
+        "ctrl_storage_full_13" BEL "ctrl_storage_full_16" BEL
+        "ctrl_storage_full_15" BEL "ctrl_storage_full_11" BEL
+        "ctrl_storage_full_8" BEL "ctrl_storage_full_1" BEL
+        "ctrl_storage_full_7" BEL "ctrl_storage_full_2" BEL
         "ctrl_storage_full_0" BEL "uart_eventmanager_storage_full_0" BEL
-        "uart_eventmanager_storage_full_1" BEL "uart_phy_storage_full_20" BEL
-        "uart_phy_storage_full_23" BEL "uart_phy_storage_full_21" BEL
-        "uart_phy_storage_full_18" BEL "uart_phy_storage_full_15" BEL
-        "uart_phy_storage_full_2" BEL "uart_phy_storage_full_7" BEL
-        "uart_phy_storage_full_5" BEL "uart_phy_storage_full_0" BEL
-        "ctrl_storage_full_21" BEL "ctrl_storage_full_28" BEL
-        "ctrl_storage_full_25" BEL "ctrl_storage_full_20" BEL
-        "ctrl_storage_full_18" BEL "ctrl_storage_full_10" BEL
-        "ctrl_storage_full_14" BEL "ctrl_storage_full_12" BEL
-        "ctrl_storage_full_9" BEL "ctrl_storage_full_6" BEL
-        "ctrl_storage_full_3" BEL "ctrl_storage_full_5" BEL
-        "ctrl_storage_full_4" BEL "uart_phy_storage_full_22" BEL
-        "uart_phy_storage_full_19" BEL "uart_phy_storage_full_14" BEL
-        "uart_phy_storage_full_17" BEL "uart_phy_storage_full_16" BEL
-        "uart_phy_storage_full_13" BEL "uart_phy_storage_full_12" BEL
+        "uart_eventmanager_storage_full_1" BEL "uart_phy_storage_full_23" BEL
+        "uart_phy_storage_full_21" BEL "uart_phy_storage_full_15" BEL
+        "uart_phy_storage_full_20" BEL "uart_phy_storage_full_18" BEL
+        "uart_phy_storage_full_7" BEL "uart_phy_storage_full_5" BEL
+        "uart_phy_storage_full_2" BEL "uart_phy_storage_full_0" BEL
+        "ctrl_storage_full_28" BEL "ctrl_storage_full_25" BEL
+        "ctrl_storage_full_18" BEL "ctrl_storage_full_21" BEL
+        "ctrl_storage_full_20" BEL "ctrl_storage_full_14" BEL
+        "ctrl_storage_full_12" BEL "ctrl_storage_full_6" BEL
+        "ctrl_storage_full_10" BEL "ctrl_storage_full_9" BEL
+        "ctrl_storage_full_5" BEL "ctrl_storage_full_4" BEL
+        "uart_phy_storage_full_19" BEL "ctrl_storage_full_3" BEL
+        "uart_phy_storage_full_22" BEL "uart_phy_storage_full_17" BEL
+        "uart_phy_storage_full_16" BEL "uart_phy_storage_full_12" BEL
+        "uart_phy_storage_full_14" BEL "uart_phy_storage_full_13" BEL
         "uart_phy_storage_full_11" BEL "uart_phy_storage_full_10" BEL
-        "uart_phy_storage_full_9" BEL "uart_phy_storage_full_8" BEL
-        "uart_phy_storage_full_3" BEL "uart_phy_storage_full_6" BEL
-        "uart_phy_storage_full_4" BEL "uart_phy_storage_full_1" BEL
-        "config_storage_full_24" BEL "config_storage_full_25" BEL
-        "config_storage_full_26" BEL "config_storage_full_27" BEL
-        "config_storage_full_28" BEL "config_storage_full_29" BEL
-        "config_storage_full_30" BEL "config_storage_full_31" BEL
+        "uart_phy_storage_full_6" BEL "uart_phy_storage_full_9" BEL
+        "uart_phy_storage_full_8" BEL "uart_phy_storage_full_4" BEL
+        "uart_phy_storage_full_3" BEL "uart_phy_storage_full_1" BEL
         "config_storage_full_16" BEL "config_storage_full_17" BEL
         "config_storage_full_18" BEL "config_storage_full_19" BEL
         "config_storage_full_20" BEL "config_storage_full_21" BEL
         "config_storage_full_22" BEL "config_storage_full_23" BEL
+        "config_storage_full_24" BEL "config_storage_full_25" BEL
+        "config_storage_full_26" BEL "config_storage_full_27" BEL
+        "config_storage_full_28" BEL "config_storage_full_29" BEL
+        "config_storage_full_30" BEL "config_storage_full_31" BEL
         "config_storage_full_8" BEL "config_storage_full_9" BEL
         "config_storage_full_10" BEL "config_storage_full_11" BEL
         "config_storage_full_12" BEL "config_storage_full_13" BEL
@@ -271,56 +305,55 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "config_offline" BEL "config_storage_full_1" BEL
         "config_storage_full_2" BEL "config_cs_polarity" BEL
         "config_clk_polarity" BEL "config_clk_phase" BEL "config_lsb_first"
-        BEL "config_half_duplex" BEL "xfer_storage_full_24" BEL
-        "xfer_storage_full_25" BEL "xfer_storage_full_26" BEL
-        "xfer_storage_full_27" BEL "xfer_storage_full_28" BEL
-        "xfer_storage_full_29" BEL "xfer_storage_full_30" BEL
-        "xfer_storage_full_31" BEL "xfer_storage_full_0" BEL
-        "xfer_storage_full_1" BEL "xfer_storage_full_2" BEL
-        "xfer_storage_full_3" BEL "xfer_storage_full_4" BEL
-        "xfer_storage_full_5" BEL "xfer_storage_full_6" BEL
-        "xfer_storage_full_7" BEL "xfer_storage_full_16" BEL
-        "xfer_storage_full_17" BEL "xfer_storage_full_18" BEL
-        "xfer_storage_full_19" BEL "xfer_storage_full_20" BEL
-        "xfer_storage_full_21" BEL "xfer_storage_full_22" BEL
-        "xfer_storage_full_23" BEL "xfer_storage_full_8" BEL
+        BEL "config_half_duplex" BEL "xfer_storage_full_8" BEL
         "xfer_storage_full_9" BEL "xfer_storage_full_10" BEL
         "xfer_storage_full_11" BEL "xfer_storage_full_12" BEL
         "xfer_storage_full_13" BEL "xfer_storage_full_14" BEL
-        "xfer_storage_full_15" BEL "mosi_data_storage_full_24" BEL
+        "xfer_storage_full_15" BEL "xfer_storage_full_24" BEL
+        "xfer_storage_full_25" BEL "xfer_storage_full_26" BEL
+        "xfer_storage_full_27" BEL "xfer_storage_full_28" BEL
+        "xfer_storage_full_29" BEL "xfer_storage_full_30" BEL
+        "xfer_storage_full_31" BEL "xfer_storage_full_16" BEL
+        "xfer_storage_full_17" BEL "xfer_storage_full_18" BEL
+        "xfer_storage_full_19" BEL "xfer_storage_full_20" BEL
+        "xfer_storage_full_21" BEL "xfer_storage_full_22" BEL
+        "xfer_storage_full_23" BEL "xfer_storage_full_0" BEL
+        "xfer_storage_full_1" BEL "xfer_storage_full_2" BEL
+        "xfer_storage_full_3" BEL "xfer_storage_full_4" BEL
+        "xfer_storage_full_5" BEL "xfer_storage_full_6" BEL
+        "xfer_storage_full_7" BEL "mosi_data_storage_full_24" BEL
         "mosi_data_storage_full_25" BEL "mosi_data_storage_full_26" BEL
         "mosi_data_storage_full_27" BEL "mosi_data_storage_full_28" BEL
         "mosi_data_storage_full_29" BEL "mosi_data_storage_full_30" BEL
-        "mosi_data_storage_full_31" BEL "mosi_data_storage_full_16" BEL
-        "mosi_data_storage_full_17" BEL "mosi_data_storage_full_18" BEL
-        "mosi_data_storage_full_19" BEL "mosi_data_storage_full_20" BEL
-        "mosi_data_storage_full_21" BEL "mosi_data_storage_full_22" BEL
-        "mosi_data_storage_full_23" BEL "timer0_load_storage_full_24" BEL
-        "timer0_load_storage_full_25" BEL "timer0_load_storage_full_26" BEL
-        "timer0_load_storage_full_27" BEL "timer0_load_storage_full_28" BEL
-        "timer0_load_storage_full_29" BEL "timer0_load_storage_full_30" BEL
-        "timer0_load_storage_full_31" BEL "mosi_data_storage_full_8" BEL
-        "mosi_data_storage_full_9" BEL "mosi_data_storage_full_10" BEL
-        "mosi_data_storage_full_11" BEL "mosi_data_storage_full_12" BEL
-        "mosi_data_storage_full_13" BEL "mosi_data_storage_full_14" BEL
-        "mosi_data_storage_full_15" BEL "mosi_data_storage_full_0" BEL
+        "mosi_data_storage_full_31" BEL "mosi_data_storage_full_0" BEL
         "mosi_data_storage_full_1" BEL "mosi_data_storage_full_2" BEL
         "mosi_data_storage_full_3" BEL "mosi_data_storage_full_4" BEL
         "mosi_data_storage_full_5" BEL "mosi_data_storage_full_6" BEL
-        "mosi_data_storage_full_7" BEL "timer0_load_storage_full_16" BEL
-        "timer0_load_storage_full_17" BEL "timer0_load_storage_full_18" BEL
-        "timer0_load_storage_full_19" BEL "timer0_load_storage_full_20" BEL
-        "timer0_load_storage_full_21" BEL "timer0_load_storage_full_22" BEL
-        "timer0_load_storage_full_23" BEL "timer0_load_storage_full_8" BEL
+        "mosi_data_storage_full_7" BEL "mosi_data_storage_full_16" BEL
+        "mosi_data_storage_full_17" BEL "mosi_data_storage_full_18" BEL
+        "mosi_data_storage_full_19" BEL "mosi_data_storage_full_20" BEL
+        "mosi_data_storage_full_21" BEL "mosi_data_storage_full_22" BEL
+        "mosi_data_storage_full_23" BEL "mosi_data_storage_full_8" BEL
+        "mosi_data_storage_full_9" BEL "mosi_data_storage_full_10" BEL
+        "mosi_data_storage_full_11" BEL "mosi_data_storage_full_12" BEL
+        "mosi_data_storage_full_13" BEL "mosi_data_storage_full_14" BEL
+        "mosi_data_storage_full_15" BEL "user_led8" BEL "user_led9" BEL
+        "user_led10" BEL "user_led11" BEL "user_led12" BEL "user_led13" BEL
+        "user_led14" BEL "user_led15" BEL "user_led0" BEL "user_led1" BEL
+        "user_led2" BEL "user_led3" BEL "user_led4" BEL "user_led5" BEL
+        "user_led6" BEL "user_led7" BEL "timer0_load_storage_full_8" BEL
         "timer0_load_storage_full_9" BEL "timer0_load_storage_full_10" BEL
         "timer0_load_storage_full_11" BEL "timer0_load_storage_full_12" BEL
         "timer0_load_storage_full_13" BEL "timer0_load_storage_full_14" BEL
-        "timer0_load_storage_full_15" BEL "timer0_reload_storage_full_16" BEL
-        "timer0_reload_storage_full_17" BEL "timer0_reload_storage_full_18"
-        BEL "timer0_reload_storage_full_19" BEL
-        "timer0_reload_storage_full_20" BEL "timer0_reload_storage_full_21"
-        BEL "timer0_reload_storage_full_22" BEL
-        "timer0_reload_storage_full_23" BEL "timer0_load_storage_full_0" BEL
+        "timer0_load_storage_full_15" BEL "timer0_load_storage_full_24" BEL
+        "timer0_load_storage_full_25" BEL "timer0_load_storage_full_26" BEL
+        "timer0_load_storage_full_27" BEL "timer0_load_storage_full_28" BEL
+        "timer0_load_storage_full_29" BEL "timer0_load_storage_full_30" BEL
+        "timer0_load_storage_full_31" BEL "timer0_load_storage_full_16" BEL
+        "timer0_load_storage_full_17" BEL "timer0_load_storage_full_18" BEL
+        "timer0_load_storage_full_19" BEL "timer0_load_storage_full_20" BEL
+        "timer0_load_storage_full_21" BEL "timer0_load_storage_full_22" BEL
+        "timer0_load_storage_full_23" BEL "timer0_load_storage_full_0" BEL
         "timer0_load_storage_full_1" BEL "timer0_load_storage_full_2" BEL
         "timer0_load_storage_full_3" BEL "timer0_load_storage_full_4" BEL
         "timer0_load_storage_full_5" BEL "timer0_load_storage_full_6" BEL
@@ -329,23 +362,28 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         BEL "timer0_reload_storage_full_27" BEL
         "timer0_reload_storage_full_28" BEL "timer0_reload_storage_full_29"
         BEL "timer0_reload_storage_full_30" BEL
-        "timer0_reload_storage_full_31" BEL "timer0_reload_storage_full_8" BEL
+        "timer0_reload_storage_full_31" BEL "timer0_reload_storage_full_0" BEL
+        "timer0_reload_storage_full_1" BEL "timer0_reload_storage_full_2" BEL
+        "timer0_reload_storage_full_3" BEL "timer0_reload_storage_full_4" BEL
+        "timer0_reload_storage_full_5" BEL "timer0_reload_storage_full_6" BEL
+        "timer0_reload_storage_full_7" BEL "timer0_reload_storage_full_16" BEL
+        "timer0_reload_storage_full_17" BEL "timer0_reload_storage_full_18"
+        BEL "timer0_reload_storage_full_19" BEL
+        "timer0_reload_storage_full_20" BEL "timer0_reload_storage_full_21"
+        BEL "timer0_reload_storage_full_22" BEL
+        "timer0_reload_storage_full_23" BEL "timer0_reload_storage_full_8" BEL
         "timer0_reload_storage_full_9" BEL "timer0_reload_storage_full_10" BEL
         "timer0_reload_storage_full_11" BEL "timer0_reload_storage_full_12"
         BEL "timer0_reload_storage_full_13" BEL
         "timer0_reload_storage_full_14" BEL "timer0_reload_storage_full_15"
-        BEL "timer0_reload_storage_full_0" BEL "timer0_reload_storage_full_1"
-        BEL "timer0_reload_storage_full_2" BEL "timer0_reload_storage_full_3"
-        BEL "timer0_reload_storage_full_4" BEL "timer0_reload_storage_full_5"
-        BEL "timer0_reload_storage_full_6" BEL "timer0_reload_storage_full_7"
         BEL "uart_phy_storage_full_24" BEL "uart_phy_storage_full_25" BEL
         "uart_phy_storage_full_26" BEL "uart_phy_storage_full_27" BEL
         "uart_phy_storage_full_28" BEL "uart_phy_storage_full_29" BEL
         "uart_phy_storage_full_30" BEL "uart_phy_storage_full_31" BEL
-        "memdat_1_0" BEL "memdat_1_1" BEL "memdat_1_2" BEL "memdat_1_3" BEL
-        "memdat_1_4" BEL "memdat_1_5" BEL "memdat_1_6" BEL "memdat_1_7" BEL
         "memdat_3_0" BEL "memdat_3_1" BEL "memdat_3_2" BEL "memdat_3_3" BEL
         "memdat_3_4" BEL "memdat_3_5" BEL "memdat_3_6" BEL "memdat_3_7" BEL
+        "memdat_1_0" BEL "memdat_1_1" BEL "memdat_1_2" BEL "memdat_1_3" BEL
+        "memdat_1_4" BEL "memdat_1_5" BEL "memdat_1_6" BEL "memdat_1_7" BEL
         "data_write_0" BEL "data_write_1" BEL "data_write_2" BEL
         "data_write_3" BEL "data_write_4" BEL "data_write_5" BEL
         "data_write_6" BEL "data_write_7" BEL "data_write_8" BEL
@@ -356,11 +394,15 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "data_write_21" BEL "data_write_22" BEL "data_write_23" BEL
         "data_write_24" BEL "data_write_25" BEL "data_write_26" BEL
         "data_write_27" BEL "data_write_28" BEL "data_write_29" BEL
-        "data_write_30" BEL "data_write_31" BEL "interface5_bank_bus_dat_r_0"
-        BEL "interface5_bank_bus_dat_r_1" BEL "interface5_bank_bus_dat_r_2"
-        BEL "interface5_bank_bus_dat_r_3" BEL "interface5_bank_bus_dat_r_4"
-        BEL "interface5_bank_bus_dat_r_5" BEL "interface5_bank_bus_dat_r_6"
-        BEL "interface5_bank_bus_dat_r_7" BEL
+        "data_write_30" BEL "data_write_31" BEL "interface6_bank_bus_dat_r_0"
+        BEL "interface6_bank_bus_dat_r_1" BEL "interface6_bank_bus_dat_r_2"
+        BEL "interface6_bank_bus_dat_r_3" BEL "interface6_bank_bus_dat_r_4"
+        BEL "interface6_bank_bus_dat_r_5" BEL "interface6_bank_bus_dat_r_6"
+        BEL "interface6_bank_bus_dat_r_7" BEL "interface10_bank_bus_dat_r_0"
+        BEL "interface10_bank_bus_dat_r_1" BEL "interface10_bank_bus_dat_r_2"
+        BEL "interface10_bank_bus_dat_r_3" BEL "interface10_bank_bus_dat_r_4"
+        BEL "interface10_bank_bus_dat_r_5" BEL "interface10_bank_bus_dat_r_6"
+        BEL "interface10_bank_bus_dat_r_7" BEL
         "uart_phy_phase_accumulator_tx_0" BEL
         "uart_phy_phase_accumulator_tx_1" BEL
         "uart_phy_phase_accumulator_tx_2" BEL
@@ -412,20 +454,24 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "interface2_bank_bus_dat_r_2" BEL "interface2_bank_bus_dat_r_3" BEL
         "interface2_bank_bus_dat_r_4" BEL "interface2_bank_bus_dat_r_5" BEL
         "interface2_bank_bus_dat_r_6" BEL "interface2_bank_bus_dat_r_7" BEL
-        "interface4_bank_bus_dat_r_0" BEL "interface8_bank_bus_dat_r_0" BEL
-        "interface8_bank_bus_dat_r_1" BEL "interface8_bank_bus_dat_r_2" BEL
-        "interface8_bank_bus_dat_r_3" BEL "interface8_bank_bus_dat_r_4" BEL
-        "interface8_bank_bus_dat_r_5" BEL "interface8_bank_bus_dat_r_6" BEL
-        "interface8_bank_bus_dat_r_7" BEL "uart_phy_tx_reg_0" BEL
+        "interface4_bank_bus_dat_r_0" BEL "interface4_bank_bus_dat_r_1" BEL
+        "interface4_bank_bus_dat_r_2" BEL "interface4_bank_bus_dat_r_3" BEL
+        "interface4_bank_bus_dat_r_4" BEL "interface4_bank_bus_dat_r_5" BEL
+        "interface4_bank_bus_dat_r_6" BEL "interface4_bank_bus_dat_r_7" BEL
+        "interface5_bank_bus_dat_r_0" BEL "interface9_bank_bus_dat_r_0" BEL
+        "interface9_bank_bus_dat_r_1" BEL "interface9_bank_bus_dat_r_2" BEL
+        "interface9_bank_bus_dat_r_3" BEL "interface9_bank_bus_dat_r_4" BEL
+        "interface9_bank_bus_dat_r_5" BEL "interface9_bank_bus_dat_r_6" BEL
+        "interface9_bank_bus_dat_r_7" BEL "uart_phy_tx_reg_0" BEL
         "uart_phy_tx_reg_1" BEL "uart_phy_tx_reg_2" BEL "uart_phy_tx_reg_3"
         BEL "uart_phy_tx_reg_4" BEL "uart_phy_tx_reg_5" BEL
         "uart_phy_tx_reg_6" BEL "uart_phy_tx_reg_7" BEL "machine_n_write_0"
         BEL "machine_n_write_1" BEL "machine_n_write_2" BEL
         "machine_n_write_3" BEL "machine_n_write_4" BEL "machine_n_write_5"
-        BEL "interface7_bank_bus_dat_r_0" BEL "interface7_bank_bus_dat_r_1"
-        BEL "interface7_bank_bus_dat_r_2" BEL "interface7_bank_bus_dat_r_3"
-        BEL "interface7_bank_bus_dat_r_4" BEL "interface7_bank_bus_dat_r_5"
-        BEL "interface7_bank_bus_dat_r_6" BEL "interface7_bank_bus_dat_r_7"
+        BEL "interface8_bank_bus_dat_r_0" BEL "interface8_bank_bus_dat_r_1"
+        BEL "interface8_bank_bus_dat_r_2" BEL "interface8_bank_bus_dat_r_3"
+        BEL "interface8_bank_bus_dat_r_4" BEL "interface8_bank_bus_dat_r_5"
+        BEL "interface8_bank_bus_dat_r_6" BEL "interface8_bank_bus_dat_r_7"
         BEL "timer0_value_status_0" BEL "timer0_value_status_1" BEL
         "timer0_value_status_2" BEL "timer0_value_status_3" BEL
         "timer0_value_status_4" BEL "timer0_value_status_5" BEL
@@ -455,10 +501,10 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "machine_data_23" BEL "machine_data_24" BEL "machine_data_25" BEL
         "machine_data_26" BEL "machine_data_27" BEL "machine_data_28" BEL
         "machine_data_29" BEL "machine_data_30" BEL "machine_data_31" BEL
-        "interface6_bank_bus_dat_r_0" BEL "interface6_bank_bus_dat_r_1" BEL
-        "interface6_bank_bus_dat_r_2" BEL "interface6_bank_bus_dat_r_3" BEL
-        "interface6_bank_bus_dat_r_4" BEL "interface6_bank_bus_dat_r_5" BEL
-        "interface6_bank_bus_dat_r_6" BEL "interface6_bank_bus_dat_r_7" BEL
+        "interface7_bank_bus_dat_r_0" BEL "interface7_bank_bus_dat_r_1" BEL
+        "interface7_bank_bus_dat_r_2" BEL "interface7_bank_bus_dat_r_3" BEL
+        "interface7_bank_bus_dat_r_4" BEL "interface7_bank_bus_dat_r_5" BEL
+        "interface7_bank_bus_dat_r_6" BEL "interface7_bank_bus_dat_r_7" BEL
         "data_read_0" BEL "data_read_1" BEL "data_read_2" BEL "data_read_3"
         BEL "data_read_4" BEL "data_read_5" BEL "data_read_6" BEL
         "data_read_7" BEL "data_read_8" BEL "data_read_9" BEL "data_read_10"
@@ -473,218 +519,219 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "interface3_bank_bus_dat_r_2" BEL "interface3_bank_bus_dat_r_3" BEL
         "interface3_bank_bus_dat_r_4" BEL "interface3_bank_bus_dat_r_5" BEL
         "interface3_bank_bus_dat_r_6" BEL "interface3_bank_bus_dat_r_7" BEL
-        "state_FSM_FFd2" BEL "state_FSM_FFd1" BEL "uart_phy_rx_bitcount_0" BEL
-        "uart_phy_rx_bitcount_1" BEL "uart_phy_rx_bitcount_2" BEL
-        "uart_phy_rx_bitcount_3" BEL "uart_phy_tx_bitcount_0" BEL
-        "uart_phy_tx_bitcount_1" BEL "uart_phy_tx_bitcount_2" BEL
-        "uart_phy_tx_bitcount_3" BEL "counter_0" BEL "counter_1" BEL
+        "state_FSM_FFd2" BEL "state_FSM_FFd1" BEL "counter_0" BEL "counter_1"
+        BEL "uart_phy_tx_bitcount_0" BEL "uart_phy_tx_bitcount_1" BEL
+        "uart_phy_tx_bitcount_2" BEL "uart_phy_tx_bitcount_3" BEL
+        "uart_tx_fifo_consume_0" BEL "uart_tx_fifo_consume_1" BEL
+        "uart_tx_fifo_consume_2" BEL "uart_tx_fifo_consume_3" BEL
+        "uart_phy_rx_bitcount_0" BEL "uart_phy_rx_bitcount_1" BEL
+        "uart_phy_rx_bitcount_2" BEL "uart_phy_rx_bitcount_3" BEL
         "uart_tx_fifo_produce_0" BEL "uart_tx_fifo_produce_1" BEL
         "uart_tx_fifo_produce_2" BEL "uart_tx_fifo_produce_3" BEL
         "uart_tx_fifo_level0_0" BEL "uart_tx_fifo_level0_1" BEL
         "uart_tx_fifo_level0_2" BEL "uart_tx_fifo_level0_3" BEL
-        "uart_tx_fifo_level0_4" BEL "uart_tx_fifo_consume_0" BEL
-        "uart_tx_fifo_consume_1" BEL "uart_tx_fifo_consume_2" BEL
-        "uart_tx_fifo_consume_3" BEL "uart_rx_fifo_produce_0" BEL
-        "uart_rx_fifo_produce_1" BEL "uart_rx_fifo_produce_2" BEL
-        "uart_rx_fifo_produce_3" BEL "uart_rx_fifo_consume_0" BEL
+        "uart_tx_fifo_level0_4" BEL "uart_rx_fifo_consume_0" BEL
         "uart_rx_fifo_consume_1" BEL "uart_rx_fifo_consume_2" BEL
-        "uart_rx_fifo_consume_3" BEL "uart_rx_fifo_level0_0" BEL
+        "uart_rx_fifo_consume_3" BEL "uart_rx_fifo_produce_0" BEL
+        "uart_rx_fifo_produce_1" BEL "uart_rx_fifo_produce_2" BEL
+        "uart_rx_fifo_produce_3" BEL "uart_rx_fifo_level0_0" BEL
         "uart_rx_fifo_level0_1" BEL "uart_rx_fifo_level0_2" BEL
-        "uart_rx_fifo_level0_3" BEL "uart_rx_fifo_level0_4" BEL "count_0" BEL
-        "count_3" BEL "count_1" BEL "count_2" BEL "count_4" BEL "count_5" BEL
-        "count_6" BEL "count_7" BEL "count_8" BEL "count_9" BEL "count_12" BEL
-        "count_10" BEL "count_11" BEL "count_13" BEL "count_14" BEL "count_15"
-        BEL "count_16" BEL "count_17" BEL "count_18" BEL "count_19" BEL
-        "machine_cnt_0" BEL "machine_cnt_1" BEL "machine_cnt_2" BEL
-        "machine_cnt_3" BEL "machine_cnt_4" BEL "machine_cnt_5" BEL
-        "machine_cnt_6" BEL "ctrl_bus_errors_0" BEL "ctrl_bus_errors_1" BEL
-        "ctrl_bus_errors_2" BEL "ctrl_bus_errors_3" BEL "ctrl_bus_errors_4"
-        BEL "ctrl_bus_errors_5" BEL "ctrl_bus_errors_6" BEL
-        "ctrl_bus_errors_7" BEL "ctrl_bus_errors_8" BEL "ctrl_bus_errors_9"
-        BEL "ctrl_bus_errors_10" BEL "ctrl_bus_errors_11" BEL
-        "ctrl_bus_errors_12" BEL "ctrl_bus_errors_13" BEL "ctrl_bus_errors_14"
-        BEL "ctrl_bus_errors_15" BEL "ctrl_bus_errors_16" BEL
-        "ctrl_bus_errors_17" BEL "ctrl_bus_errors_18" BEL "ctrl_bus_errors_19"
-        BEL "ctrl_bus_errors_20" BEL "ctrl_bus_errors_21" BEL
-        "ctrl_bus_errors_22" BEL "ctrl_bus_errors_23" BEL "ctrl_bus_errors_24"
-        BEL "ctrl_bus_errors_25" BEL "ctrl_bus_errors_26" BEL
-        "ctrl_bus_errors_27" BEL "ctrl_bus_errors_28" BEL "ctrl_bus_errors_29"
-        BEL "ctrl_bus_errors_30" BEL "ctrl_bus_errors_31" BEL "dna_cnt_0" BEL
+        "uart_rx_fifo_level0_3" BEL "uart_rx_fifo_level0_4" BEL "count_1" BEL
+        "count_0" BEL "count_2" BEL "count_3" BEL "count_6" BEL "count_4" BEL
+        "count_5" BEL "count_7" BEL "count_8" BEL "count_11" BEL "count_9" BEL
+        "count_10" BEL "count_12" BEL "count_13" BEL "count_14" BEL "count_15"
+        BEL "count_16" BEL "count_17" BEL "machine_cnt_0" BEL "machine_cnt_1"
+        BEL "machine_cnt_2" BEL "machine_cnt_3" BEL "machine_cnt_4" BEL
+        "machine_cnt_5" BEL "machine_cnt_6" BEL "count_18" BEL "count_19" BEL
+        "ctrl_bus_errors_0" BEL "ctrl_bus_errors_1" BEL "ctrl_bus_errors_2"
+        BEL "ctrl_bus_errors_3" BEL "ctrl_bus_errors_4" BEL
+        "ctrl_bus_errors_5" BEL "ctrl_bus_errors_6" BEL "ctrl_bus_errors_7"
+        BEL "ctrl_bus_errors_8" BEL "ctrl_bus_errors_9" BEL
+        "ctrl_bus_errors_10" BEL "ctrl_bus_errors_11" BEL "ctrl_bus_errors_12"
+        BEL "ctrl_bus_errors_13" BEL "ctrl_bus_errors_14" BEL
+        "ctrl_bus_errors_15" BEL "ctrl_bus_errors_16" BEL "ctrl_bus_errors_17"
+        BEL "ctrl_bus_errors_18" BEL "ctrl_bus_errors_19" BEL
+        "ctrl_bus_errors_20" BEL "ctrl_bus_errors_21" BEL "ctrl_bus_errors_22"
+        BEL "ctrl_bus_errors_23" BEL "ctrl_bus_errors_24" BEL
+        "ctrl_bus_errors_25" BEL "ctrl_bus_errors_26" BEL "ctrl_bus_errors_27"
+        BEL "ctrl_bus_errors_28" BEL "ctrl_bus_errors_29" BEL
+        "ctrl_bus_errors_30" BEL "ctrl_bus_errors_31" BEL "dna_cnt_0" BEL
         "dna_cnt_1" BEL "dna_cnt_2" BEL "dna_cnt_3" BEL "dna_cnt_4" BEL
         "dna_cnt_5" BEL "dna_cnt_6" BEL "inst_LPM_FF_1" BEL "inst_LPM_FF_0"
-        BEL "lm32_cpu/cc_31" BEL "lm32_cpu/cc_30" BEL "lm32_cpu/cc_29" BEL
-        "lm32_cpu/cc_28" BEL "lm32_cpu/cc_27" BEL "lm32_cpu/cc_26" BEL
-        "lm32_cpu/cc_25" BEL "lm32_cpu/cc_24" BEL "lm32_cpu/cc_23" BEL
-        "lm32_cpu/cc_22" BEL "lm32_cpu/cc_21" BEL "lm32_cpu/cc_20" BEL
-        "lm32_cpu/cc_19" BEL "lm32_cpu/cc_18" BEL "lm32_cpu/cc_17" BEL
-        "lm32_cpu/cc_16" BEL "lm32_cpu/cc_15" BEL "lm32_cpu/cc_14" BEL
-        "lm32_cpu/cc_13" BEL "lm32_cpu/cc_12" BEL "lm32_cpu/cc_11" BEL
-        "lm32_cpu/cc_10" BEL "lm32_cpu/cc_9" BEL "lm32_cpu/cc_8" BEL
-        "lm32_cpu/cc_7" BEL "lm32_cpu/cc_6" BEL "lm32_cpu/cc_5" BEL
-        "lm32_cpu/cc_4" BEL "lm32_cpu/cc_3" BEL "lm32_cpu/cc_2" BEL
-        "lm32_cpu/cc_1" BEL "lm32_cpu/cc_0" BEL "lm32_cpu/write_enable_w" BEL
-        "lm32_cpu/m_bypass_enable_m" BEL "lm32_cpu/branch_m" BEL
-        "lm32_cpu/csr_write_enable_x" BEL "lm32_cpu/eret_x" BEL
-        "lm32_cpu/scall_x" BEL "lm32_cpu/csr_x_2" BEL "lm32_cpu/csr_x_1" BEL
-        "lm32_cpu/csr_x_0" BEL "lm32_cpu/write_enable_x" BEL
-        "lm32_cpu/x_bypass_enable_x" BEL "lm32_cpu/branch_target_m_31" BEL
-        "lm32_cpu/branch_target_m_30" BEL "lm32_cpu/branch_target_m_29" BEL
-        "lm32_cpu/branch_target_m_28" BEL "lm32_cpu/branch_target_m_27" BEL
-        "lm32_cpu/branch_target_m_26" BEL "lm32_cpu/branch_target_m_25" BEL
-        "lm32_cpu/branch_target_m_24" BEL "lm32_cpu/branch_target_m_23" BEL
-        "lm32_cpu/branch_target_m_22" BEL "lm32_cpu/branch_target_m_21" BEL
-        "lm32_cpu/branch_target_m_20" BEL "lm32_cpu/branch_target_m_19" BEL
-        "lm32_cpu/branch_target_m_18" BEL "lm32_cpu/branch_target_m_17" BEL
-        "lm32_cpu/branch_target_m_16" BEL "lm32_cpu/branch_target_m_15" BEL
-        "lm32_cpu/branch_target_m_14" BEL "lm32_cpu/branch_target_m_13" BEL
-        "lm32_cpu/branch_target_m_12" BEL "lm32_cpu/branch_target_m_11" BEL
-        "lm32_cpu/branch_target_m_10" BEL "lm32_cpu/branch_target_m_9" BEL
-        "lm32_cpu/branch_target_m_8" BEL "lm32_cpu/branch_target_m_7" BEL
-        "lm32_cpu/branch_target_m_6" BEL "lm32_cpu/branch_target_m_5" BEL
-        "lm32_cpu/branch_target_m_4" BEL "lm32_cpu/branch_target_m_3" BEL
-        "lm32_cpu/branch_target_m_2" BEL "lm32_cpu/branch_target_x_31" BEL
-        "lm32_cpu/branch_target_x_30" BEL "lm32_cpu/branch_target_x_29" BEL
-        "lm32_cpu/branch_target_x_28" BEL "lm32_cpu/branch_target_x_27" BEL
-        "lm32_cpu/branch_target_x_26" BEL "lm32_cpu/branch_target_x_25" BEL
-        "lm32_cpu/branch_target_x_24" BEL "lm32_cpu/branch_target_x_23" BEL
-        "lm32_cpu/branch_target_x_22" BEL "lm32_cpu/branch_target_x_21" BEL
-        "lm32_cpu/branch_target_x_20" BEL "lm32_cpu/branch_target_x_19" BEL
-        "lm32_cpu/branch_target_x_18" BEL "lm32_cpu/branch_target_x_17" BEL
-        "lm32_cpu/branch_target_x_16" BEL "lm32_cpu/branch_target_x_15" BEL
-        "lm32_cpu/branch_target_x_14" BEL "lm32_cpu/branch_target_x_13" BEL
-        "lm32_cpu/branch_target_x_12" BEL "lm32_cpu/branch_target_x_11" BEL
-        "lm32_cpu/branch_target_x_10" BEL "lm32_cpu/branch_target_x_9" BEL
-        "lm32_cpu/branch_target_x_8" BEL "lm32_cpu/branch_target_x_7" BEL
-        "lm32_cpu/branch_target_x_6" BEL "lm32_cpu/branch_target_x_5" BEL
-        "lm32_cpu/branch_target_x_4" BEL "lm32_cpu/branch_target_x_3" BEL
-        "lm32_cpu/branch_target_x_2" BEL "lm32_cpu/operand_w_31" BEL
-        "lm32_cpu/operand_w_30" BEL "lm32_cpu/operand_w_29" BEL
-        "lm32_cpu/operand_w_28" BEL "lm32_cpu/operand_w_27" BEL
-        "lm32_cpu/operand_w_26" BEL "lm32_cpu/operand_w_25" BEL
-        "lm32_cpu/operand_w_24" BEL "lm32_cpu/operand_w_23" BEL
-        "lm32_cpu/operand_w_22" BEL "lm32_cpu/operand_w_21" BEL
-        "lm32_cpu/operand_w_20" BEL "lm32_cpu/operand_w_19" BEL
-        "lm32_cpu/operand_w_18" BEL "lm32_cpu/operand_w_17" BEL
-        "lm32_cpu/operand_w_16" BEL "lm32_cpu/operand_w_15" BEL
-        "lm32_cpu/operand_w_14" BEL "lm32_cpu/operand_w_13" BEL
-        "lm32_cpu/operand_w_12" BEL "lm32_cpu/operand_w_11" BEL
-        "lm32_cpu/operand_w_10" BEL "lm32_cpu/operand_w_9" BEL
-        "lm32_cpu/operand_w_8" BEL "lm32_cpu/operand_w_7" BEL
-        "lm32_cpu/operand_w_6" BEL "lm32_cpu/operand_w_5" BEL
-        "lm32_cpu/operand_w_4" BEL "lm32_cpu/operand_w_3" BEL
-        "lm32_cpu/operand_w_2" BEL "lm32_cpu/operand_w_1" BEL
-        "lm32_cpu/operand_w_0" BEL "lm32_cpu/operand_m_31" BEL
-        "lm32_cpu/operand_m_30" BEL "lm32_cpu/operand_m_29" BEL
-        "lm32_cpu/operand_m_28" BEL "lm32_cpu/operand_m_27" BEL
-        "lm32_cpu/operand_m_26" BEL "lm32_cpu/operand_m_25" BEL
-        "lm32_cpu/operand_m_24" BEL "lm32_cpu/operand_m_23" BEL
-        "lm32_cpu/operand_m_22" BEL "lm32_cpu/operand_m_21" BEL
-        "lm32_cpu/operand_m_20" BEL "lm32_cpu/operand_m_19" BEL
-        "lm32_cpu/operand_m_18" BEL "lm32_cpu/operand_m_17" BEL
-        "lm32_cpu/operand_m_16" BEL "lm32_cpu/operand_m_15" BEL
-        "lm32_cpu/operand_m_14" BEL "lm32_cpu/operand_m_13" BEL
-        "lm32_cpu/operand_m_12" BEL "lm32_cpu/operand_m_11" BEL
-        "lm32_cpu/operand_m_10" BEL "lm32_cpu/operand_m_9" BEL
-        "lm32_cpu/operand_m_8" BEL "lm32_cpu/operand_m_7" BEL
-        "lm32_cpu/operand_m_6" BEL "lm32_cpu/operand_m_5" BEL
-        "lm32_cpu/operand_m_4" BEL "lm32_cpu/operand_m_3" BEL
-        "lm32_cpu/operand_m_2" BEL "lm32_cpu/operand_m_1" BEL
-        "lm32_cpu/operand_m_0" BEL "lm32_cpu/condition_met_m" BEL
-        "lm32_cpu/eba_31" BEL "lm32_cpu/eba_30" BEL "lm32_cpu/eba_29" BEL
-        "lm32_cpu/eba_28" BEL "lm32_cpu/eba_27" BEL "lm32_cpu/eba_26" BEL
-        "lm32_cpu/eba_25" BEL "lm32_cpu/eba_24" BEL "lm32_cpu/eba_23" BEL
-        "lm32_cpu/eba_22" BEL "lm32_cpu/eba_21" BEL "lm32_cpu/eba_20" BEL
-        "lm32_cpu/eba_19" BEL "lm32_cpu/eba_18" BEL "lm32_cpu/eba_17" BEL
-        "lm32_cpu/eba_16" BEL "lm32_cpu/eba_15" BEL "lm32_cpu/eba_14" BEL
-        "lm32_cpu/eba_13" BEL "lm32_cpu/eba_12" BEL "lm32_cpu/eba_11" BEL
-        "lm32_cpu/eba_10" BEL "lm32_cpu/eba_9" BEL "lm32_cpu/operand_1_x_31"
-        BEL "lm32_cpu/operand_1_x_30" BEL "lm32_cpu/operand_1_x_29" BEL
-        "lm32_cpu/operand_1_x_28" BEL "lm32_cpu/operand_1_x_27" BEL
-        "lm32_cpu/operand_1_x_26" BEL "lm32_cpu/operand_1_x_25" BEL
-        "lm32_cpu/operand_1_x_24" BEL "lm32_cpu/operand_1_x_23" BEL
-        "lm32_cpu/operand_1_x_22" BEL "lm32_cpu/operand_1_x_21" BEL
-        "lm32_cpu/operand_1_x_20" BEL "lm32_cpu/operand_1_x_19" BEL
-        "lm32_cpu/operand_1_x_18" BEL "lm32_cpu/operand_1_x_17" BEL
-        "lm32_cpu/operand_1_x_16" BEL "lm32_cpu/operand_1_x_15" BEL
-        "lm32_cpu/operand_1_x_14" BEL "lm32_cpu/operand_1_x_13" BEL
-        "lm32_cpu/operand_1_x_12" BEL "lm32_cpu/operand_1_x_11" BEL
-        "lm32_cpu/operand_1_x_10" BEL "lm32_cpu/operand_1_x_9" BEL
-        "lm32_cpu/operand_1_x_8" BEL "lm32_cpu/operand_1_x_7" BEL
-        "lm32_cpu/operand_1_x_6" BEL "lm32_cpu/operand_1_x_5" BEL
-        "lm32_cpu/operand_1_x_4" BEL "lm32_cpu/operand_1_x_3" BEL
-        "lm32_cpu/operand_1_x_2" BEL "lm32_cpu/operand_1_x_1" BEL
-        "lm32_cpu/operand_1_x_0" BEL "lm32_cpu/store_operand_x_31" BEL
-        "lm32_cpu/store_operand_x_30" BEL "lm32_cpu/store_operand_x_29" BEL
-        "lm32_cpu/store_operand_x_28" BEL "lm32_cpu/store_operand_x_27" BEL
-        "lm32_cpu/store_operand_x_26" BEL "lm32_cpu/store_operand_x_25" BEL
-        "lm32_cpu/store_operand_x_24" BEL "lm32_cpu/store_operand_x_23" BEL
-        "lm32_cpu/store_operand_x_22" BEL "lm32_cpu/store_operand_x_21" BEL
-        "lm32_cpu/store_operand_x_20" BEL "lm32_cpu/store_operand_x_19" BEL
-        "lm32_cpu/store_operand_x_18" BEL "lm32_cpu/store_operand_x_17" BEL
-        "lm32_cpu/store_operand_x_16" BEL "lm32_cpu/store_operand_x_15" BEL
-        "lm32_cpu/store_operand_x_14" BEL "lm32_cpu/store_operand_x_13" BEL
-        "lm32_cpu/store_operand_x_12" BEL "lm32_cpu/store_operand_x_11" BEL
-        "lm32_cpu/store_operand_x_10" BEL "lm32_cpu/store_operand_x_9" BEL
-        "lm32_cpu/store_operand_x_8" BEL "lm32_cpu/store_operand_x_7" BEL
-        "lm32_cpu/store_operand_x_6" BEL "lm32_cpu/store_operand_x_5" BEL
-        "lm32_cpu/store_operand_x_4" BEL "lm32_cpu/store_operand_x_3" BEL
-        "lm32_cpu/store_operand_x_2" BEL "lm32_cpu/store_operand_x_1" BEL
-        "lm32_cpu/store_operand_x_0" BEL "lm32_cpu/branch_predict_taken_m" BEL
-        "lm32_cpu/write_idx_w_4" BEL "lm32_cpu/write_idx_w_3" BEL
-        "lm32_cpu/write_idx_w_2" BEL "lm32_cpu/write_idx_w_1" BEL
-        "lm32_cpu/write_idx_w_0" BEL "lm32_cpu/w_result_sel_mul_w" BEL
-        "lm32_cpu/w_result_sel_load_w" BEL "lm32_cpu/write_idx_m_4" BEL
-        "lm32_cpu/write_idx_m_3" BEL "lm32_cpu/write_idx_m_2" BEL
-        "lm32_cpu/write_idx_m_1" BEL "lm32_cpu/write_idx_m_0" BEL
-        "lm32_cpu/branch_predict_taken_x" BEL "lm32_cpu/load_m" BEL
-        "lm32_cpu/store_m" BEL "lm32_cpu/m_result_sel_shift_m" BEL
-        "lm32_cpu/m_result_sel_compare_m" BEL "lm32_cpu/operand_0_x_31" BEL
-        "lm32_cpu/operand_0_x_30" BEL "lm32_cpu/operand_0_x_29" BEL
-        "lm32_cpu/operand_0_x_28" BEL "lm32_cpu/operand_0_x_27" BEL
-        "lm32_cpu/operand_0_x_26" BEL "lm32_cpu/operand_0_x_25" BEL
-        "lm32_cpu/operand_0_x_24" BEL "lm32_cpu/operand_0_x_23" BEL
-        "lm32_cpu/operand_0_x_22" BEL "lm32_cpu/operand_0_x_21" BEL
-        "lm32_cpu/operand_0_x_20" BEL "lm32_cpu/operand_0_x_19" BEL
-        "lm32_cpu/operand_0_x_18" BEL "lm32_cpu/operand_0_x_17" BEL
-        "lm32_cpu/operand_0_x_16" BEL "lm32_cpu/operand_0_x_15" BEL
-        "lm32_cpu/operand_0_x_14" BEL "lm32_cpu/operand_0_x_13" BEL
-        "lm32_cpu/operand_0_x_12" BEL "lm32_cpu/operand_0_x_11" BEL
-        "lm32_cpu/operand_0_x_10" BEL "lm32_cpu/operand_0_x_9" BEL
-        "lm32_cpu/operand_0_x_8" BEL "lm32_cpu/operand_0_x_7" BEL
-        "lm32_cpu/operand_0_x_6" BEL "lm32_cpu/operand_0_x_5" BEL
-        "lm32_cpu/operand_0_x_4" BEL "lm32_cpu/operand_0_x_3" BEL
-        "lm32_cpu/operand_0_x_2" BEL "lm32_cpu/operand_0_x_1" BEL
-        "lm32_cpu/operand_0_x_0" BEL "lm32_cpu/exception_w" BEL
-        "lm32_cpu/valid_w" BEL "lm32_cpu/exception_m" BEL
-        "lm32_cpu/condition_x_2" BEL "lm32_cpu/condition_x_1" BEL
-        "lm32_cpu/condition_x_0" BEL "lm32_cpu/direction_x" BEL
-        "lm32_cpu/branch_predict_x" BEL "lm32_cpu/adder_op_x_n" BEL
-        "lm32_cpu/adder_op_x" BEL "lm32_cpu/store_x" BEL "lm32_cpu/load_x" BEL
-        "lm32_cpu/write_idx_x_4" BEL "lm32_cpu/write_idx_x_3" BEL
-        "lm32_cpu/write_idx_x_2" BEL "lm32_cpu/write_idx_x_1" BEL
-        "lm32_cpu/write_idx_x_0" BEL "lm32_cpu/x_result_sel_add_x" BEL
-        "lm32_cpu/x_result_sel_mc_arith_x" BEL "lm32_cpu/x_result_sel_csr_x"
-        BEL "lm32_cpu/x_result_sel_sext_x" BEL "lm32_cpu/interrupt_unit/im_31"
-        BEL "lm32_cpu/interrupt_unit/im_30" BEL
-        "lm32_cpu/interrupt_unit/im_29" BEL "lm32_cpu/interrupt_unit/im_28"
-        BEL "lm32_cpu/interrupt_unit/im_27" BEL
-        "lm32_cpu/interrupt_unit/im_26" BEL "lm32_cpu/interrupt_unit/im_25"
-        BEL "lm32_cpu/interrupt_unit/im_24" BEL
-        "lm32_cpu/interrupt_unit/im_23" BEL "lm32_cpu/interrupt_unit/im_22"
-        BEL "lm32_cpu/interrupt_unit/im_21" BEL
-        "lm32_cpu/interrupt_unit/im_20" BEL "lm32_cpu/interrupt_unit/im_19"
-        BEL "lm32_cpu/interrupt_unit/im_18" BEL
-        "lm32_cpu/interrupt_unit/im_17" BEL "lm32_cpu/interrupt_unit/im_16"
-        BEL "lm32_cpu/interrupt_unit/im_15" BEL
-        "lm32_cpu/interrupt_unit/im_14" BEL "lm32_cpu/interrupt_unit/im_13"
-        BEL "lm32_cpu/interrupt_unit/im_12" BEL
-        "lm32_cpu/interrupt_unit/im_11" BEL "lm32_cpu/interrupt_unit/im_10"
-        BEL "lm32_cpu/interrupt_unit/im_9" BEL "lm32_cpu/interrupt_unit/im_8"
-        BEL "lm32_cpu/interrupt_unit/im_7" BEL "lm32_cpu/interrupt_unit/im_6"
-        BEL "lm32_cpu/interrupt_unit/im_5" BEL "lm32_cpu/interrupt_unit/im_4"
-        BEL "lm32_cpu/interrupt_unit/im_3" BEL "lm32_cpu/interrupt_unit/im_2"
-        BEL "lm32_cpu/interrupt_unit/im_1" BEL "lm32_cpu/interrupt_unit/im_0"
-        BEL "lm32_cpu/instruction_unit/pc_f_31" BEL
+        PIN "XADC_pins<14>" BEL "lm32_cpu/cc_31" BEL "lm32_cpu/cc_30" BEL
+        "lm32_cpu/cc_29" BEL "lm32_cpu/cc_28" BEL "lm32_cpu/cc_27" BEL
+        "lm32_cpu/cc_26" BEL "lm32_cpu/cc_25" BEL "lm32_cpu/cc_24" BEL
+        "lm32_cpu/cc_23" BEL "lm32_cpu/cc_22" BEL "lm32_cpu/cc_21" BEL
+        "lm32_cpu/cc_20" BEL "lm32_cpu/cc_19" BEL "lm32_cpu/cc_18" BEL
+        "lm32_cpu/cc_17" BEL "lm32_cpu/cc_16" BEL "lm32_cpu/cc_15" BEL
+        "lm32_cpu/cc_14" BEL "lm32_cpu/cc_13" BEL "lm32_cpu/cc_12" BEL
+        "lm32_cpu/cc_11" BEL "lm32_cpu/cc_10" BEL "lm32_cpu/cc_9" BEL
+        "lm32_cpu/cc_8" BEL "lm32_cpu/cc_7" BEL "lm32_cpu/cc_6" BEL
+        "lm32_cpu/cc_5" BEL "lm32_cpu/cc_4" BEL "lm32_cpu/cc_3" BEL
+        "lm32_cpu/cc_2" BEL "lm32_cpu/cc_1" BEL "lm32_cpu/cc_0" BEL
+        "lm32_cpu/write_enable_w" BEL "lm32_cpu/m_bypass_enable_m" BEL
+        "lm32_cpu/branch_m" BEL "lm32_cpu/csr_write_enable_x" BEL
+        "lm32_cpu/eret_x" BEL "lm32_cpu/scall_x" BEL "lm32_cpu/csr_x_2" BEL
+        "lm32_cpu/csr_x_1" BEL "lm32_cpu/csr_x_0" BEL
+        "lm32_cpu/write_enable_x" BEL "lm32_cpu/x_bypass_enable_x" BEL
+        "lm32_cpu/branch_target_m_31" BEL "lm32_cpu/branch_target_m_30" BEL
+        "lm32_cpu/branch_target_m_29" BEL "lm32_cpu/branch_target_m_28" BEL
+        "lm32_cpu/branch_target_m_27" BEL "lm32_cpu/branch_target_m_26" BEL
+        "lm32_cpu/branch_target_m_25" BEL "lm32_cpu/branch_target_m_24" BEL
+        "lm32_cpu/branch_target_m_23" BEL "lm32_cpu/branch_target_m_22" BEL
+        "lm32_cpu/branch_target_m_21" BEL "lm32_cpu/branch_target_m_20" BEL
+        "lm32_cpu/branch_target_m_19" BEL "lm32_cpu/branch_target_m_18" BEL
+        "lm32_cpu/branch_target_m_17" BEL "lm32_cpu/branch_target_m_16" BEL
+        "lm32_cpu/branch_target_m_15" BEL "lm32_cpu/branch_target_m_14" BEL
+        "lm32_cpu/branch_target_m_13" BEL "lm32_cpu/branch_target_m_12" BEL
+        "lm32_cpu/branch_target_m_11" BEL "lm32_cpu/branch_target_m_10" BEL
+        "lm32_cpu/branch_target_m_9" BEL "lm32_cpu/branch_target_m_8" BEL
+        "lm32_cpu/branch_target_m_7" BEL "lm32_cpu/branch_target_m_6" BEL
+        "lm32_cpu/branch_target_m_5" BEL "lm32_cpu/branch_target_m_4" BEL
+        "lm32_cpu/branch_target_m_3" BEL "lm32_cpu/branch_target_m_2" BEL
+        "lm32_cpu/branch_target_x_31" BEL "lm32_cpu/branch_target_x_30" BEL
+        "lm32_cpu/branch_target_x_29" BEL "lm32_cpu/branch_target_x_28" BEL
+        "lm32_cpu/branch_target_x_27" BEL "lm32_cpu/branch_target_x_26" BEL
+        "lm32_cpu/branch_target_x_25" BEL "lm32_cpu/branch_target_x_24" BEL
+        "lm32_cpu/branch_target_x_23" BEL "lm32_cpu/branch_target_x_22" BEL
+        "lm32_cpu/branch_target_x_21" BEL "lm32_cpu/branch_target_x_20" BEL
+        "lm32_cpu/branch_target_x_19" BEL "lm32_cpu/branch_target_x_18" BEL
+        "lm32_cpu/branch_target_x_17" BEL "lm32_cpu/branch_target_x_16" BEL
+        "lm32_cpu/branch_target_x_15" BEL "lm32_cpu/branch_target_x_14" BEL
+        "lm32_cpu/branch_target_x_13" BEL "lm32_cpu/branch_target_x_12" BEL
+        "lm32_cpu/branch_target_x_11" BEL "lm32_cpu/branch_target_x_10" BEL
+        "lm32_cpu/branch_target_x_9" BEL "lm32_cpu/branch_target_x_8" BEL
+        "lm32_cpu/branch_target_x_7" BEL "lm32_cpu/branch_target_x_6" BEL
+        "lm32_cpu/branch_target_x_5" BEL "lm32_cpu/branch_target_x_4" BEL
+        "lm32_cpu/branch_target_x_3" BEL "lm32_cpu/branch_target_x_2" BEL
+        "lm32_cpu/operand_w_31" BEL "lm32_cpu/operand_w_30" BEL
+        "lm32_cpu/operand_w_29" BEL "lm32_cpu/operand_w_28" BEL
+        "lm32_cpu/operand_w_27" BEL "lm32_cpu/operand_w_26" BEL
+        "lm32_cpu/operand_w_25" BEL "lm32_cpu/operand_w_24" BEL
+        "lm32_cpu/operand_w_23" BEL "lm32_cpu/operand_w_22" BEL
+        "lm32_cpu/operand_w_21" BEL "lm32_cpu/operand_w_20" BEL
+        "lm32_cpu/operand_w_19" BEL "lm32_cpu/operand_w_18" BEL
+        "lm32_cpu/operand_w_17" BEL "lm32_cpu/operand_w_16" BEL
+        "lm32_cpu/operand_w_15" BEL "lm32_cpu/operand_w_14" BEL
+        "lm32_cpu/operand_w_13" BEL "lm32_cpu/operand_w_12" BEL
+        "lm32_cpu/operand_w_11" BEL "lm32_cpu/operand_w_10" BEL
+        "lm32_cpu/operand_w_9" BEL "lm32_cpu/operand_w_8" BEL
+        "lm32_cpu/operand_w_7" BEL "lm32_cpu/operand_w_6" BEL
+        "lm32_cpu/operand_w_5" BEL "lm32_cpu/operand_w_4" BEL
+        "lm32_cpu/operand_w_3" BEL "lm32_cpu/operand_w_2" BEL
+        "lm32_cpu/operand_w_1" BEL "lm32_cpu/operand_w_0" BEL
+        "lm32_cpu/operand_m_31" BEL "lm32_cpu/operand_m_30" BEL
+        "lm32_cpu/operand_m_29" BEL "lm32_cpu/operand_m_28" BEL
+        "lm32_cpu/operand_m_27" BEL "lm32_cpu/operand_m_26" BEL
+        "lm32_cpu/operand_m_25" BEL "lm32_cpu/operand_m_24" BEL
+        "lm32_cpu/operand_m_23" BEL "lm32_cpu/operand_m_22" BEL
+        "lm32_cpu/operand_m_21" BEL "lm32_cpu/operand_m_20" BEL
+        "lm32_cpu/operand_m_19" BEL "lm32_cpu/operand_m_18" BEL
+        "lm32_cpu/operand_m_17" BEL "lm32_cpu/operand_m_16" BEL
+        "lm32_cpu/operand_m_15" BEL "lm32_cpu/operand_m_14" BEL
+        "lm32_cpu/operand_m_13" BEL "lm32_cpu/operand_m_12" BEL
+        "lm32_cpu/operand_m_11" BEL "lm32_cpu/operand_m_10" BEL
+        "lm32_cpu/operand_m_9" BEL "lm32_cpu/operand_m_8" BEL
+        "lm32_cpu/operand_m_7" BEL "lm32_cpu/operand_m_6" BEL
+        "lm32_cpu/operand_m_5" BEL "lm32_cpu/operand_m_4" BEL
+        "lm32_cpu/operand_m_3" BEL "lm32_cpu/operand_m_2" BEL
+        "lm32_cpu/operand_m_1" BEL "lm32_cpu/operand_m_0" BEL
+        "lm32_cpu/condition_met_m" BEL "lm32_cpu/eba_31" BEL "lm32_cpu/eba_30"
+        BEL "lm32_cpu/eba_29" BEL "lm32_cpu/eba_28" BEL "lm32_cpu/eba_27" BEL
+        "lm32_cpu/eba_26" BEL "lm32_cpu/eba_25" BEL "lm32_cpu/eba_24" BEL
+        "lm32_cpu/eba_23" BEL "lm32_cpu/eba_22" BEL "lm32_cpu/eba_21" BEL
+        "lm32_cpu/eba_20" BEL "lm32_cpu/eba_19" BEL "lm32_cpu/eba_18" BEL
+        "lm32_cpu/eba_17" BEL "lm32_cpu/eba_16" BEL "lm32_cpu/eba_15" BEL
+        "lm32_cpu/eba_14" BEL "lm32_cpu/eba_13" BEL "lm32_cpu/eba_12" BEL
+        "lm32_cpu/eba_11" BEL "lm32_cpu/eba_10" BEL "lm32_cpu/eba_9" BEL
+        "lm32_cpu/operand_1_x_31" BEL "lm32_cpu/operand_1_x_30" BEL
+        "lm32_cpu/operand_1_x_29" BEL "lm32_cpu/operand_1_x_28" BEL
+        "lm32_cpu/operand_1_x_27" BEL "lm32_cpu/operand_1_x_26" BEL
+        "lm32_cpu/operand_1_x_25" BEL "lm32_cpu/operand_1_x_24" BEL
+        "lm32_cpu/operand_1_x_23" BEL "lm32_cpu/operand_1_x_22" BEL
+        "lm32_cpu/operand_1_x_21" BEL "lm32_cpu/operand_1_x_20" BEL
+        "lm32_cpu/operand_1_x_19" BEL "lm32_cpu/operand_1_x_18" BEL
+        "lm32_cpu/operand_1_x_17" BEL "lm32_cpu/operand_1_x_16" BEL
+        "lm32_cpu/operand_1_x_15" BEL "lm32_cpu/operand_1_x_14" BEL
+        "lm32_cpu/operand_1_x_13" BEL "lm32_cpu/operand_1_x_12" BEL
+        "lm32_cpu/operand_1_x_11" BEL "lm32_cpu/operand_1_x_10" BEL
+        "lm32_cpu/operand_1_x_9" BEL "lm32_cpu/operand_1_x_8" BEL
+        "lm32_cpu/operand_1_x_7" BEL "lm32_cpu/operand_1_x_6" BEL
+        "lm32_cpu/operand_1_x_5" BEL "lm32_cpu/operand_1_x_4" BEL
+        "lm32_cpu/operand_1_x_3" BEL "lm32_cpu/operand_1_x_2" BEL
+        "lm32_cpu/operand_1_x_1" BEL "lm32_cpu/operand_1_x_0" BEL
+        "lm32_cpu/store_operand_x_31" BEL "lm32_cpu/store_operand_x_30" BEL
+        "lm32_cpu/store_operand_x_29" BEL "lm32_cpu/store_operand_x_28" BEL
+        "lm32_cpu/store_operand_x_27" BEL "lm32_cpu/store_operand_x_26" BEL
+        "lm32_cpu/store_operand_x_25" BEL "lm32_cpu/store_operand_x_24" BEL
+        "lm32_cpu/store_operand_x_23" BEL "lm32_cpu/store_operand_x_22" BEL
+        "lm32_cpu/store_operand_x_21" BEL "lm32_cpu/store_operand_x_20" BEL
+        "lm32_cpu/store_operand_x_19" BEL "lm32_cpu/store_operand_x_18" BEL
+        "lm32_cpu/store_operand_x_17" BEL "lm32_cpu/store_operand_x_16" BEL
+        "lm32_cpu/store_operand_x_15" BEL "lm32_cpu/store_operand_x_14" BEL
+        "lm32_cpu/store_operand_x_13" BEL "lm32_cpu/store_operand_x_12" BEL
+        "lm32_cpu/store_operand_x_11" BEL "lm32_cpu/store_operand_x_10" BEL
+        "lm32_cpu/store_operand_x_9" BEL "lm32_cpu/store_operand_x_8" BEL
+        "lm32_cpu/store_operand_x_7" BEL "lm32_cpu/store_operand_x_6" BEL
+        "lm32_cpu/store_operand_x_5" BEL "lm32_cpu/store_operand_x_4" BEL
+        "lm32_cpu/store_operand_x_3" BEL "lm32_cpu/store_operand_x_2" BEL
+        "lm32_cpu/store_operand_x_1" BEL "lm32_cpu/store_operand_x_0" BEL
+        "lm32_cpu/branch_predict_taken_m" BEL "lm32_cpu/write_idx_w_4" BEL
+        "lm32_cpu/write_idx_w_3" BEL "lm32_cpu/write_idx_w_2" BEL
+        "lm32_cpu/write_idx_w_1" BEL "lm32_cpu/write_idx_w_0" BEL
+        "lm32_cpu/w_result_sel_mul_w" BEL "lm32_cpu/w_result_sel_load_w" BEL
+        "lm32_cpu/write_idx_m_4" BEL "lm32_cpu/write_idx_m_3" BEL
+        "lm32_cpu/write_idx_m_2" BEL "lm32_cpu/write_idx_m_1" BEL
+        "lm32_cpu/write_idx_m_0" BEL "lm32_cpu/branch_predict_taken_x" BEL
+        "lm32_cpu/load_m" BEL "lm32_cpu/store_m" BEL
+        "lm32_cpu/m_result_sel_shift_m" BEL "lm32_cpu/m_result_sel_compare_m"
+        BEL "lm32_cpu/operand_0_x_31" BEL "lm32_cpu/operand_0_x_30" BEL
+        "lm32_cpu/operand_0_x_29" BEL "lm32_cpu/operand_0_x_28" BEL
+        "lm32_cpu/operand_0_x_27" BEL "lm32_cpu/operand_0_x_26" BEL
+        "lm32_cpu/operand_0_x_25" BEL "lm32_cpu/operand_0_x_24" BEL
+        "lm32_cpu/operand_0_x_23" BEL "lm32_cpu/operand_0_x_22" BEL
+        "lm32_cpu/operand_0_x_21" BEL "lm32_cpu/operand_0_x_20" BEL
+        "lm32_cpu/operand_0_x_19" BEL "lm32_cpu/operand_0_x_18" BEL
+        "lm32_cpu/operand_0_x_17" BEL "lm32_cpu/operand_0_x_16" BEL
+        "lm32_cpu/operand_0_x_15" BEL "lm32_cpu/operand_0_x_14" BEL
+        "lm32_cpu/operand_0_x_13" BEL "lm32_cpu/operand_0_x_12" BEL
+        "lm32_cpu/operand_0_x_11" BEL "lm32_cpu/operand_0_x_10" BEL
+        "lm32_cpu/operand_0_x_9" BEL "lm32_cpu/operand_0_x_8" BEL
+        "lm32_cpu/operand_0_x_7" BEL "lm32_cpu/operand_0_x_6" BEL
+        "lm32_cpu/operand_0_x_5" BEL "lm32_cpu/operand_0_x_4" BEL
+        "lm32_cpu/operand_0_x_3" BEL "lm32_cpu/operand_0_x_2" BEL
+        "lm32_cpu/operand_0_x_1" BEL "lm32_cpu/operand_0_x_0" BEL
+        "lm32_cpu/exception_w" BEL "lm32_cpu/valid_w" BEL
+        "lm32_cpu/exception_m" BEL "lm32_cpu/condition_x_2" BEL
+        "lm32_cpu/condition_x_1" BEL "lm32_cpu/condition_x_0" BEL
+        "lm32_cpu/direction_x" BEL "lm32_cpu/branch_predict_x" BEL
+        "lm32_cpu/adder_op_x_n" BEL "lm32_cpu/adder_op_x" BEL
+        "lm32_cpu/store_x" BEL "lm32_cpu/load_x" BEL "lm32_cpu/write_idx_x_4"
+        BEL "lm32_cpu/write_idx_x_3" BEL "lm32_cpu/write_idx_x_2" BEL
+        "lm32_cpu/write_idx_x_1" BEL "lm32_cpu/write_idx_x_0" BEL
+        "lm32_cpu/x_result_sel_add_x" BEL "lm32_cpu/x_result_sel_mc_arith_x"
+        BEL "lm32_cpu/x_result_sel_csr_x" BEL "lm32_cpu/x_result_sel_sext_x"
+        BEL "lm32_cpu/interrupt_unit/im_31" BEL
+        "lm32_cpu/interrupt_unit/im_30" BEL "lm32_cpu/interrupt_unit/im_29"
+        BEL "lm32_cpu/interrupt_unit/im_28" BEL
+        "lm32_cpu/interrupt_unit/im_27" BEL "lm32_cpu/interrupt_unit/im_26"
+        BEL "lm32_cpu/interrupt_unit/im_25" BEL
+        "lm32_cpu/interrupt_unit/im_24" BEL "lm32_cpu/interrupt_unit/im_23"
+        BEL "lm32_cpu/interrupt_unit/im_22" BEL
+        "lm32_cpu/interrupt_unit/im_21" BEL "lm32_cpu/interrupt_unit/im_20"
+        BEL "lm32_cpu/interrupt_unit/im_19" BEL
+        "lm32_cpu/interrupt_unit/im_18" BEL "lm32_cpu/interrupt_unit/im_17"
+        BEL "lm32_cpu/interrupt_unit/im_16" BEL
+        "lm32_cpu/interrupt_unit/im_15" BEL "lm32_cpu/interrupt_unit/im_14"
+        BEL "lm32_cpu/interrupt_unit/im_13" BEL
+        "lm32_cpu/interrupt_unit/im_12" BEL "lm32_cpu/interrupt_unit/im_11"
+        BEL "lm32_cpu/interrupt_unit/im_10" BEL "lm32_cpu/interrupt_unit/im_9"
+        BEL "lm32_cpu/interrupt_unit/im_8" BEL "lm32_cpu/interrupt_unit/im_7"
+        BEL "lm32_cpu/interrupt_unit/im_6" BEL "lm32_cpu/interrupt_unit/im_5"
+        BEL "lm32_cpu/interrupt_unit/im_4" BEL "lm32_cpu/interrupt_unit/im_3"
+        BEL "lm32_cpu/interrupt_unit/im_2" BEL "lm32_cpu/interrupt_unit/im_1"
+        BEL "lm32_cpu/interrupt_unit/im_0" BEL
+        "lm32_cpu/instruction_unit/pc_f_31" BEL
         "lm32_cpu/instruction_unit/pc_f_30" BEL
         "lm32_cpu/instruction_unit/pc_f_29" BEL
         "lm32_cpu/instruction_unit/pc_f_28" BEL
@@ -1369,8 +1416,8 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "lm32_cpu/mc_arithmetic/b_4" BEL "lm32_cpu/mc_arithmetic/b_3" BEL
         "lm32_cpu/mc_arithmetic/b_2" BEL "lm32_cpu/mc_arithmetic/b_1" BEL
         "lm32_cpu/mc_arithmetic/b_0" BEL "uart_phy_tx_busy" BEL
-        "uart_tx_pending" BEL "uart_phy_rx_busy" BEL "uart_rx_pending" BEL
-        "pending1" BEL "uart_rx_fifo_readable" BEL "timer0_zero_pending" BEL
+        "uart_phy_rx_busy" BEL "uart_tx_pending" BEL "uart_rx_fifo_readable"
+        BEL "uart_rx_pending" BEL "timer0_zero_pending" BEL "pending1" BEL
         "grant" BEL "uart_tx_fifo_readable" BEL "serial_tx" BEL
         "lm32_cpu/write_enable_m" BEL "lm32_cpu/instruction_unit/i_cyc_o" BEL
         "lm32_cpu/load_store_unit/d_sel_o_3" BEL
@@ -1381,7 +1428,7 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "lm32_cpu/load_store_unit/stall_wb_load" BEL
         "lm32_cpu/load_store_unit/d_we_o" BEL "machine_write0" BEL
         "machine_bias1" BEL "machine_clk" BEL "bus_wishbone_ack" BEL
-        "timer0_en_storage_full" BEL "rs_storage_full" BEL
+        "rs_storage_full" BEL "timer0_en_storage_full" BEL
         "timer0_eventmanager_storage_full" BEL "cs_0" BEL "lm32_cpu/valid_m"
         BEL "lm32_cpu/valid_d" BEL "lm32_cpu/valid_x" BEL
         "lm32_cpu/interrupt_unit/ie" BEL "lm32_cpu/interrupt_unit/eie" BEL

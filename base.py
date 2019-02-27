@@ -7,7 +7,7 @@ from litex.build.xilinx import XilinxPlatform
 
 from litex.soc.integration.soc_core import *
 from litex.soc.integration.builder import *
-from litex.soc.cores import dna
+from litex.soc.cores import dna, xadc
 from litex.soc.cores.spi import SPIMaster
 
 from ios import Led, Button, Switch
@@ -18,6 +18,22 @@ from ios import Led, Button, Switch
 #
 
 _io = [
+    ("user_led",  0, Pins("H17"), IOStandard("LVCMOS33")),
+    ("user_led",  1, Pins("K15"), IOStandard("LVCMOS33")),
+    ("user_led",  2, Pins("J13"), IOStandard("LVCMOS33")),
+    ("user_led",  3, Pins("N14"), IOStandard("LVCMOS33")),
+    ("user_led",  4, Pins("R18"), IOStandard("LVCMOS33")),
+    ("user_led",  5, Pins("V17"), IOStandard("LVCMOS33")),
+    ("user_led",  6, Pins("U17"), IOStandard("LVCMOS33")),
+    ("user_led",  7, Pins("U16"), IOStandard("LVCMOS33")),
+    ("user_led",  8, Pins("V16"), IOStandard("LVCMOS33")),
+    ("user_led",  9, Pins("T15"), IOStandard("LVCMOS33")),
+    ("user_led", 10, Pins("U14"), IOStandard("LVCMOS33")),
+    ("user_led", 11, Pins("T16"), IOStandard("LVCMOS33")),
+    ("user_led", 12, Pins("V15"), IOStandard("LVCMOS33")),
+    ("user_led", 13, Pins("V14"), IOStandard("LVCMOS33")),
+    ("user_led", 14, Pins("V12"), IOStandard("LVCMOS33")),
+    ("user_led", 15, Pins("V11"), IOStandard("LVCMOS33")),
 
     ("user_sw",  0, Pins("J15"), IOStandard("LVCMOS33")),
     ("user_sw",  1, Pins("L16"), IOStandard("LVCMOS33")),
@@ -41,7 +57,8 @@ _io = [
     ("user_btn", 2, Pins("P17"), IOStandard("LVCMOS33")),
     ("user_btn", 3, Pins("M17"), IOStandard("LVCMOS33")),
     ("user_btn", 4, Pins("M18"), IOStandard("LVCMOS33")),
-    
+
+
     ("clk100", 0, Pins("E3"), IOStandard("LVCMOS33")),
 
     ("cpu_reset", 0, Pins("C12"), IOStandard("LVCMOS33")),
@@ -53,17 +70,16 @@ _io = [
     ),
 
     ("lcd_spi", 0,
-        Subsignal("cs_n", Pins("F18")),
-        Subsignal("clk", Pins("C17")),
-        Subsignal("mosi", Pins("D17")),
-        Subsignal("miso", Pins("G18")),
+        Subsignal("cs_n", Pins("C17")),
+        Subsignal("clk", Pins("D18")),
+        Subsignal("mosi", Pins("E18")),
+		Subsignal("miso", Pins("G17")),
         IOStandard("LVCMOS33")
     ),
-	("rs_lcd", 0, Pins("D18"), IOStandard("LVCMOS33")),#SE AÑADIÓ
-    ("rst_lcd", 0, Pins("E17"), IOStandard("LVCMOS33")),
-
+	("lcd_rs",0,Pins("D17"), IOStandard("LVCMOS33")),
+	("lcd_rst",0,Pins("E17"), IOStandard("LVCMOS33")),
 ]
- 
+
 
 class Platform(XilinxPlatform):
     default_clk_name = "clk100"
@@ -94,6 +110,7 @@ class BaseSoC(SoCCore):
     csr_peripherals = [
         "dna",
         "xadc",
+        "leds",
         "switches",
         "buttons",
         "lcd",
@@ -114,31 +131,35 @@ class BaseSoC(SoCCore):
         # Clock Reset Generation
         self.submodules.crg = CRG(platform.request("clk100"), ~platform.request("cpu_reset"))
 
-        #RST lcd
-        rst=platform.request("rst_lcd")
-        rst=1
-		#RS DE LA PANTALLA
-
-        rs = platform.request("rs_lcd")
-        self.submodules.rs=Led(rs)
         # FPGA identification
         self.submodules.dna = dna.DNA()
 
+        # FPGA Temperature/Voltage
+        self.submodules.xadc = xadc.XADC()
 
+        # Led
+        user_leds = Cat(*[platform.request("user_led", i) for i in range(16)])
+        self.submodules.leds = Led(user_leds)
 
         # Switches
         user_switches = Cat(*[platform.request("user_sw", i) for i in range(16)])
         self.submodules.switches = Switch(user_switches)
 
+		#RS y RST LCD
+        rs= platform.request("lcd_rs")
+        self.submodules.rs= Led(rs)
+        rst= platform.request("lcd_rst")
+        rst=1
+
         # Buttons
         user_buttons = Cat(*[platform.request("user_btn", i) for i in range(5)])
         self.submodules.buttons = Button(user_buttons)
 
-
-        # Lcd
+       # LCD
         self.submodules.lcd = SPIMaster(platform.request("lcd_spi"))
 
         
+
 
 soc = BaseSoC(platform)
 

@@ -13,11 +13,11 @@ extern uint32_t csr_readl(uint32_t addr);
 #endif /* ! CSR_ACCESSORS_DEFINED */
 
 /* buttons */
-#define CSR_BUTTONS_BASE 0xe0005800
-#define CSR_BUTTONS_IN_ADDR 0xe0005800
+#define CSR_BUTTONS_BASE 0xe0006000
+#define CSR_BUTTONS_IN_ADDR 0xe0006000
 #define CSR_BUTTONS_IN_SIZE 1
 static inline unsigned char buttons_in_read(void) {
-	unsigned char r = csr_readl(0xe0005800);
+	unsigned char r = csr_readl(0xe0006000);
 	return r;
 }
 
@@ -87,115 +87,130 @@ static inline unsigned long long int dna_id_read(void) {
 }
 
 /* lcd */
-#define CSR_LCD_BASE 0xe0006000
-#define CSR_LCD_CONFIG_ADDR 0xe0006000
+#define CSR_LCD_BASE 0xe0006800
+#define CSR_LCD_CONFIG_ADDR 0xe0006800
 #define CSR_LCD_CONFIG_SIZE 4
 static inline unsigned int lcd_config_read(void) {
-	unsigned int r = csr_readl(0xe0006000);
+	unsigned int r = csr_readl(0xe0006800);
 	r <<= 8;
-	r |= csr_readl(0xe0006004);
+	r |= csr_readl(0xe0006804);
 	r <<= 8;
-	r |= csr_readl(0xe0006008);
+	r |= csr_readl(0xe0006808);
 	r <<= 8;
-	r |= csr_readl(0xe000600c);
+	r |= csr_readl(0xe000680c);
 	return r;
 }
 static inline void lcd_config_write(unsigned int value) {
-	csr_writel(value >> 24, 0xe0006000);
-	csr_writel(value >> 16, 0xe0006004);
-	csr_writel(value >> 8, 0xe0006008);
-	csr_writel(value, 0xe000600c);
+	csr_writel(value >> 24, 0xe0006800);
+	csr_writel(value >> 16, 0xe0006804);
+	csr_writel(value >> 8, 0xe0006808);
+	csr_writel(value, 0xe000680c);
 }
-#define CSR_LCD_XFER_ADDR 0xe0006010
+#define CSR_LCD_XFER_ADDR 0xe0006810
 #define CSR_LCD_XFER_SIZE 4
 static inline unsigned int lcd_xfer_read(void) {
-	unsigned int r = csr_readl(0xe0006010);
+	unsigned int r = csr_readl(0xe0006810);
 	r <<= 8;
-	r |= csr_readl(0xe0006014);
+	r |= csr_readl(0xe0006814);
 	r <<= 8;
-	r |= csr_readl(0xe0006018);
+	r |= csr_readl(0xe0006818);
 	r <<= 8;
-	r |= csr_readl(0xe000601c);
+	r |= csr_readl(0xe000681c);
 	return r;
 }
 static inline void lcd_xfer_write(unsigned int value) {
-	csr_writel(value >> 24, 0xe0006010);
-	csr_writel(value >> 16, 0xe0006014);
-	csr_writel(value >> 8, 0xe0006018);
-	csr_writel(value, 0xe000601c);
+	csr_writel(value >> 24, 0xe0006810);
+	csr_writel(value >> 16, 0xe0006814);
+	csr_writel(value >> 8, 0xe0006818);
+	csr_writel(value, 0xe000681c);
 }
-#define CSR_LCD_START_ADDR 0xe0006020
+#define CSR_LCD_START_ADDR 0xe0006820
 #define CSR_LCD_START_SIZE 1
 static inline unsigned char lcd_start_read(void) {
-	unsigned char r = csr_readl(0xe0006020);
+	unsigned char r = csr_readl(0xe0006820);
 	return r;
 }
 static inline void lcd_start_write(unsigned char value) {
-	csr_writel(value, 0xe0006020);
+	csr_writel(value, 0xe0006820);
 }
-#define CSR_LCD_ACTIVE_ADDR 0xe0006024
+#define CSR_LCD_ACTIVE_ADDR 0xe0006824
 #define CSR_LCD_ACTIVE_SIZE 1
 static inline unsigned char lcd_active_read(void) {
-	unsigned char r = csr_readl(0xe0006024);
+	unsigned char r = csr_readl(0xe0006824);
 	return r;
 }
-#define CSR_LCD_PENDING_ADDR 0xe0006028
+#define CSR_LCD_PENDING_ADDR 0xe0006828
 #define CSR_LCD_PENDING_SIZE 1
 static inline unsigned char lcd_pending_read(void) {
-	unsigned char r = csr_readl(0xe0006028);
+	unsigned char r = csr_readl(0xe0006828);
 	return r;
 }
-#define CSR_LCD_MOSI_DATA_ADDR 0xe000602c
+#define CSR_LCD_MOSI_DATA_ADDR 0xe000682c
 #define CSR_LCD_MOSI_DATA_SIZE 4
 static inline unsigned int lcd_mosi_data_read(void) {
-	unsigned int r = csr_readl(0xe000602c);
+	unsigned int r = csr_readl(0xe000682c);
 	r <<= 8;
-	r |= csr_readl(0xe0006030);
+	r |= csr_readl(0xe0006830);
 	r <<= 8;
-	r |= csr_readl(0xe0006034);
+	r |= csr_readl(0xe0006834);
 	r <<= 8;
-	r |= csr_readl(0xe0006038);
+	r |= csr_readl(0xe0006838);
 	return r;
 }
 static inline void lcd_mosi_data_write(unsigned int value) {
-	csr_writel(value >> 24, 0xe000602c);
-	csr_writel(value >> 16, 0xe0006030);
-	csr_writel(value >> 8, 0xe0006034);
-	csr_writel(value, 0xe0006038);
+	csr_writel(value >> 24, 0xe000682c);
+	csr_writel(value >> 16, 0xe0006830);
+	csr_writel(value >> 8, 0xe0006834);
+	csr_writel(value, 0xe0006838);
 }
-#define CSR_LCD_MISO_DATA_ADDR 0xe000603c
+#define CSR_LCD_MISO_DATA_ADDR 0xe000683c
 #define CSR_LCD_MISO_DATA_SIZE 4
 static inline unsigned int lcd_miso_data_read(void) {
-	unsigned int r = csr_readl(0xe000603c);
+	unsigned int r = csr_readl(0xe000683c);
 	r <<= 8;
-	r |= csr_readl(0xe0006040);
+	r |= csr_readl(0xe0006840);
 	r <<= 8;
-	r |= csr_readl(0xe0006044);
+	r |= csr_readl(0xe0006844);
 	r <<= 8;
-	r |= csr_readl(0xe0006048);
+	r |= csr_readl(0xe0006848);
 	return r;
 }
 
-/* rs */
-#define CSR_RS_BASE 0xe0006800
-#define CSR_RS_OUT_ADDR 0xe0006800
-#define CSR_RS_OUT_SIZE 1
-static inline unsigned char rs_out_read(void) {
-	unsigned char r = csr_readl(0xe0006800);
-	return r;
-}
-static inline void rs_out_write(unsigned char value) {
-	csr_writel(value, 0xe0006800);
-}
-
-/* switches */
-#define CSR_SWITCHES_BASE 0xe0005000
-#define CSR_SWITCHES_IN_ADDR 0xe0005000
-#define CSR_SWITCHES_IN_SIZE 2
-static inline unsigned short int switches_in_read(void) {
+/* leds */
+#define CSR_LEDS_BASE 0xe0005000
+#define CSR_LEDS_OUT_ADDR 0xe0005000
+#define CSR_LEDS_OUT_SIZE 2
+static inline unsigned short int leds_out_read(void) {
 	unsigned short int r = csr_readl(0xe0005000);
 	r <<= 8;
 	r |= csr_readl(0xe0005004);
+	return r;
+}
+static inline void leds_out_write(unsigned short int value) {
+	csr_writel(value >> 8, 0xe0005000);
+	csr_writel(value, 0xe0005004);
+}
+
+/* rs */
+#define CSR_RS_BASE 0xe0007000
+#define CSR_RS_OUT_ADDR 0xe0007000
+#define CSR_RS_OUT_SIZE 1
+static inline unsigned char rs_out_read(void) {
+	unsigned char r = csr_readl(0xe0007000);
+	return r;
+}
+static inline void rs_out_write(unsigned char value) {
+	csr_writel(value, 0xe0007000);
+}
+
+/* switches */
+#define CSR_SWITCHES_BASE 0xe0005800
+#define CSR_SWITCHES_IN_ADDR 0xe0005800
+#define CSR_SWITCHES_IN_SIZE 2
+static inline unsigned short int switches_in_read(void) {
+	unsigned short int r = csr_readl(0xe0005800);
+	r <<= 8;
+	r |= csr_readl(0xe0005804);
 	return r;
 }
 
@@ -365,6 +380,41 @@ static inline void uart_phy_tuning_word_write(unsigned int value) {
 	csr_writel(value >> 16, 0xe0001004);
 	csr_writel(value >> 8, 0xe0001008);
 	csr_writel(value, 0xe000100c);
+}
+
+/* xadc */
+#define CSR_XADC_BASE 0xe0004800
+#define CSR_XADC_TEMPERATURE_ADDR 0xe0004800
+#define CSR_XADC_TEMPERATURE_SIZE 2
+static inline unsigned short int xadc_temperature_read(void) {
+	unsigned short int r = csr_readl(0xe0004800);
+	r <<= 8;
+	r |= csr_readl(0xe0004804);
+	return r;
+}
+#define CSR_XADC_VCCINT_ADDR 0xe0004808
+#define CSR_XADC_VCCINT_SIZE 2
+static inline unsigned short int xadc_vccint_read(void) {
+	unsigned short int r = csr_readl(0xe0004808);
+	r <<= 8;
+	r |= csr_readl(0xe000480c);
+	return r;
+}
+#define CSR_XADC_VCCAUX_ADDR 0xe0004810
+#define CSR_XADC_VCCAUX_SIZE 2
+static inline unsigned short int xadc_vccaux_read(void) {
+	unsigned short int r = csr_readl(0xe0004810);
+	r <<= 8;
+	r |= csr_readl(0xe0004814);
+	return r;
+}
+#define CSR_XADC_VCCBRAM_ADDR 0xe0004818
+#define CSR_XADC_VCCBRAM_SIZE 2
+static inline unsigned short int xadc_vccbram_read(void) {
+	unsigned short int r = csr_readl(0xe0004818);
+	r <<= 8;
+	r |= csr_readl(0xe000481c);
+	return r;
 }
 
 /* identifier_mem */

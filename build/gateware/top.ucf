@@ -2,8 +2,22 @@ NET "serial_tx" LOC=D4 | IOSTANDARD=LVCMOS33; # serial:0.tx
 NET "serial_rx" LOC=C4 | IOSTANDARD=LVCMOS33; # serial:0.rx
 NET "clk100" LOC=E3 | IOSTANDARD=LVCMOS33; # clk100:0
 NET "cpu_reset" LOC=C12 | IOSTANDARD=LVCMOS33; # cpu_reset:0
-NET "rst_lcd" LOC=E17 | IOSTANDARD=LVCMOS33; # rst_lcd:0
-NET "rs_lcd" LOC=D18 | IOSTANDARD=LVCMOS33; # rs_lcd:0
+NET "user_led0" LOC=H17 | IOSTANDARD=LVCMOS33; # user_led:0
+NET "user_led1" LOC=K15 | IOSTANDARD=LVCMOS33; # user_led:1
+NET "user_led2" LOC=J13 | IOSTANDARD=LVCMOS33; # user_led:2
+NET "user_led3" LOC=N14 | IOSTANDARD=LVCMOS33; # user_led:3
+NET "user_led4" LOC=R18 | IOSTANDARD=LVCMOS33; # user_led:4
+NET "user_led5" LOC=V17 | IOSTANDARD=LVCMOS33; # user_led:5
+NET "user_led6" LOC=U17 | IOSTANDARD=LVCMOS33; # user_led:6
+NET "user_led7" LOC=U16 | IOSTANDARD=LVCMOS33; # user_led:7
+NET "user_led8" LOC=V16 | IOSTANDARD=LVCMOS33; # user_led:8
+NET "user_led9" LOC=T15 | IOSTANDARD=LVCMOS33; # user_led:9
+NET "user_led10" LOC=U14 | IOSTANDARD=LVCMOS33; # user_led:10
+NET "user_led11" LOC=T16 | IOSTANDARD=LVCMOS33; # user_led:11
+NET "user_led12" LOC=V15 | IOSTANDARD=LVCMOS33; # user_led:12
+NET "user_led13" LOC=V14 | IOSTANDARD=LVCMOS33; # user_led:13
+NET "user_led14" LOC=V12 | IOSTANDARD=LVCMOS33; # user_led:14
+NET "user_led15" LOC=V11 | IOSTANDARD=LVCMOS33; # user_led:15
 NET "user_sw0" LOC=J15 | IOSTANDARD=LVCMOS33; # user_sw:0
 NET "user_sw1" LOC=L16 | IOSTANDARD=LVCMOS33; # user_sw:1
 NET "user_sw2" LOC=M13 | IOSTANDARD=LVCMOS33; # user_sw:2
@@ -20,15 +34,17 @@ NET "user_sw12" LOC=H6 | IOSTANDARD=LVCMOS33; # user_sw:12
 NET "user_sw13" LOC=U12 | IOSTANDARD=LVCMOS33; # user_sw:13
 NET "user_sw14" LOC=U11 | IOSTANDARD=LVCMOS33; # user_sw:14
 NET "user_sw15" LOC=V10 | IOSTANDARD=LVCMOS33; # user_sw:15
+NET "lcd_rs" LOC=D17 | IOSTANDARD=LVCMOS33; # lcd_rs:0
+NET "lcd_rst" LOC=E17 | IOSTANDARD=LVCMOS33; # lcd_rst:0
 NET "user_btn0" LOC=N17 | IOSTANDARD=LVCMOS33; # user_btn:0
 NET "user_btn1" LOC=P18 | IOSTANDARD=LVCMOS33; # user_btn:1
 NET "user_btn2" LOC=P17 | IOSTANDARD=LVCMOS33; # user_btn:2
 NET "user_btn3" LOC=M17 | IOSTANDARD=LVCMOS33; # user_btn:3
 NET "user_btn4" LOC=M18 | IOSTANDARD=LVCMOS33; # user_btn:4
-NET "lcd_spi_cs_n" LOC=F18 | IOSTANDARD=LVCMOS33; # lcd_spi:0.cs_n
-NET "lcd_spi_clk" LOC=C17 | IOSTANDARD=LVCMOS33; # lcd_spi:0.clk
-NET "lcd_spi_mosi" LOC=D17 | IOSTANDARD=LVCMOS33; # lcd_spi:0.mosi
-NET "lcd_spi_miso" LOC=G18 | IOSTANDARD=LVCMOS33; # lcd_spi:0.miso
+NET "lcd_spi_cs_n" LOC=C17 | IOSTANDARD=LVCMOS33; # lcd_spi:0.cs_n
+NET "lcd_spi_clk" LOC=D18 | IOSTANDARD=LVCMOS33; # lcd_spi:0.clk
+NET "lcd_spi_mosi" LOC=E18 | IOSTANDARD=LVCMOS33; # lcd_spi:0.mosi
+NET "lcd_spi_miso" LOC=G17 | IOSTANDARD=LVCMOS33; # lcd_spi:0.miso
 
 
 NET "clk100" TNM_NET = "PRDclk100";

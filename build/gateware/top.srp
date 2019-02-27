@@ -31,7 +31,7 @@ TABLE OF CONTENTS
 ---- Source Parameters
 Input File Name                    : "top.prj"
 Input Format                       : MIXED
-Verilog Include Directory          : {/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl /opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/config }
+Verilog Include Directory          : {/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/config /opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl }
 
 ---- Target Parameters
 Output File Name                   : "top.ngc"
@@ -53,184 +53,201 @@ WARNING:Xst:29 - Optimization Effort not specified
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dp_ram.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 31.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 49.
 Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v" included at line 61.
 WARNING:HDLCompiler:1591 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v" Line 186: Root scope declaration is not allowed in verilog 95/2K mode
-Parsing module <lm32_dp_ram>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
-Parsing module <lm32_adder>.
+Parsing module <lm32_addsub>.
 Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v" into library work
 Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
 Parsing module <lm32_mc_arithmetic>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 57.
-Parsing module <lm32_icache>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_debug.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 53.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
-Parsing module <lm32_logic_op>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
-Parsing module <lm32_shifter>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 56.
-Parsing module <lm32_decoder>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 71.
-Parsing module <lm32_instruction_unit>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 63.
-Parsing module <lm32_load_store_unit>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dp_ram.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 31.
+Parsing module <lm32_dp_ram>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dtlb.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 32.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_itlb.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 32.
 Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v" into library work
 Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
 Parsing module <lm32_multiplier>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_itlb.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 32.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 63.
+Parsing module <lm32_load_store_unit>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 52.
+Parsing module <lm32_dcache>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
+Parsing module <lm32_logic_op>.
+Analyzing Verilog file "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" into library work
+Parsing module <top>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
+Parsing module <lm32_shifter>.
 Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v" into library work
 Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 93.
 Parsing module <lm32_cpu>.
 WARNING:HDLCompiler:924 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v" Line 653: Attribute target identifier preserve_driver not found in this scope
 WARNING:HDLCompiler:924 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v" Line 652: Attribute target identifier preserve_signal not found in this scope
-Analyzing Verilog file "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" into library work
-Parsing module <top>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 55.
-Parsing module <lm32_ram>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 49.
-Parsing module <lm32_addsub>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 71.
+Parsing module <lm32_instruction_unit>.
 Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v" into library work
 Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
 Parsing module <lm32_interrupt>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 52.
-Parsing module <lm32_dcache>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dtlb.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 32.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 55.
+Parsing module <lm32_ram>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_debug.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 53.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 56.
+Parsing module <lm32_decoder>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 57.
+Parsing module <lm32_icache>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
+Parsing module <lm32_adder>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2036: Port I_LOCK_O is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2218: Port I_LOCK_O is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2352: Port JTAGBUSY is not connected to this instance
 
 Elaborating module <top>.
 
 Elaborating module <$unit_1>.
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 38: Using initial value of ctrl_reset_reset_w since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 82: Using initial value of rom_bus_err since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 95: Using initial value of sram_bus_err since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 110: Using initial value of main_ram_bus_err since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 129: Using initial value of bus_wishbone_err since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 146: Using initial value of uart_phy_source_first since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 147: Using initial value of uart_phy_source_last since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 183: Using initial value of uart_tx_fifo_sink_first since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 184: Using initial value of uart_tx_fifo_sink_last since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 200: Using initial value of uart_tx_fifo_replace since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 237: Using initial value of uart_rx_fifo_replace since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 255: Using initial value of uart_reset since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 267: Using initial value of timer0_update_value_w since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 370: Using initial value of start_w since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 54: Using initial value of ctrl_reset_reset_w since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 98: Using initial value of rom_bus_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 111: Using initial value of sram_bus_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 126: Using initial value of main_ram_bus_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 145: Using initial value of bus_wishbone_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 162: Using initial value of uart_phy_source_first since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 163: Using initial value of uart_phy_source_last since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 199: Using initial value of uart_tx_fifo_sink_first since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 200: Using initial value of uart_tx_fifo_sink_last since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 216: Using initial value of uart_tx_fifo_replace since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 253: Using initial value of uart_rx_fifo_replace since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 271: Using initial value of uart_reset since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 283: Using initial value of timer0_update_value_w since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 401: Using initial value of start_w since it is never assigned
 Reading initialization file \"mem.init\".
-WARNING:HDLCompiler:1670 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2077: Signal <mem> in initial block is partially initialized.
+WARNING:HDLCompiler:1670 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2259: Signal <mem> in initial block is partially initialized.
 Reading initialization file \"mem_2.init\".
-WARNING:HDLCompiler:1670 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2113: Signal <mem_2> in initial block is partially initialized.
+WARNING:HDLCompiler:1670 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2295: Signal <mem_2> in initial block is partially initialized.
 Reading initialization file \"mem_3.init\".
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 683: Assignment to uart_phy_sink_first ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 684: Assignment to uart_phy_sink_last ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 688: Assignment to uart_phy_source_ready ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 734: Assignment to uart_tx_fifo_level1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 759: Assignment to uart_rx_fifo_source_first ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 760: Assignment to uart_rx_fifo_source_last ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 764: Assignment to uart_rx_fifo_level1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 796: Assignment to config_padding0 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 797: Assignment to xfer_padding0 ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 810: Result of 16-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 905: Assignment to rom_bus_dat_w ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 906: Assignment to rom_bus_sel ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 908: Assignment to rom_bus_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 909: Assignment to rom_bus_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 910: Assignment to rom_bus_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 916: Assignment to sram_bus_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 917: Assignment to sram_bus_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 923: Assignment to main_ram_bus_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 924: Assignment to main_ram_bus_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 927: Assignment to bus_wishbone_sel ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 930: Assignment to bus_wishbone_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 931: Assignment to bus_wishbone_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 952: Assignment to csrbank0_in_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 953: Assignment to csrbank0_in_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 956: Assignment to ctrl_reset_reset_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 966: Assignment to csrbank1_bus_errors3_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 967: Assignment to csrbank1_bus_errors3_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 968: Assignment to csrbank1_bus_errors2_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 969: Assignment to csrbank1_bus_errors2_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 970: Assignment to csrbank1_bus_errors1_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 971: Assignment to csrbank1_bus_errors1_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 972: Assignment to csrbank1_bus_errors0_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 973: Assignment to csrbank1_bus_errors0_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 974: Assignment to ctrl_storage ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 984: Assignment to csrbank2_id7_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 985: Assignment to csrbank2_id7_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 986: Assignment to csrbank2_id6_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 987: Assignment to csrbank2_id6_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 988: Assignment to csrbank2_id5_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 989: Assignment to csrbank2_id5_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 990: Assignment to csrbank2_id4_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 991: Assignment to csrbank2_id4_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 992: Assignment to csrbank2_id3_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 993: Assignment to csrbank2_id3_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 994: Assignment to csrbank2_id2_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 995: Assignment to csrbank2_id2_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 996: Assignment to csrbank2_id1_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 997: Assignment to csrbank2_id1_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 998: Assignment to csrbank2_id0_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 999: Assignment to csrbank2_id0_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1035: Assignment to csrbank3_active_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1036: Assignment to csrbank3_active_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1037: Assignment to csrbank3_pending_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1038: Assignment to csrbank3_pending_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1047: Assignment to csrbank3_miso_data3_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1048: Assignment to csrbank3_miso_data3_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1049: Assignment to csrbank3_miso_data2_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1050: Assignment to csrbank3_miso_data2_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1051: Assignment to csrbank3_miso_data1_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1052: Assignment to csrbank3_miso_data1_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1053: Assignment to csrbank3_miso_data0_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1054: Assignment to csrbank3_miso_data0_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1082: Assignment to csrbank5_in1_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1083: Assignment to csrbank5_in1_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1084: Assignment to csrbank5_in0_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1085: Assignment to csrbank5_in0_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1107: Assignment to timer0_update_value_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1109: Assignment to csrbank6_value3_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1110: Assignment to csrbank6_value3_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1111: Assignment to csrbank6_value2_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1112: Assignment to csrbank6_value2_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1113: Assignment to csrbank6_value1_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1114: Assignment to csrbank6_value1_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1115: Assignment to csrbank6_value0_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1116: Assignment to csrbank6_value0_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1117: Assignment to timer0_eventmanager_status_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1118: Assignment to timer0_eventmanager_status_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1144: Assignment to csrbank7_txfull_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1145: Assignment to csrbank7_txfull_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1146: Assignment to csrbank7_rxempty_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1147: Assignment to csrbank7_rxempty_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1148: Assignment to uart_eventmanager_status_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1149: Assignment to uart_eventmanager_status_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1191: Assignment to sram_bus_we1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1201: Assignment to sram_bus_dat_w1 ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1293: Result of 16-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1293: Assignment to xilinxmultiregimpl1 ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1295: Result of 5-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1295: Assignment to xilinxmultiregimpl2 ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1320: Result of 32-bit expression is truncated to fit in 8-bit target.
-WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1321: Result of 30-bit expression is truncated to fit in 14-bit target.
-WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1493: Result of 58-bit expression is truncated to fit in 57-bit target.
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1301: Assignment to ctrl_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 754: Assignment to uart_phy_sink_first ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 755: Assignment to uart_phy_sink_last ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 759: Assignment to uart_phy_source_ready ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 805: Assignment to uart_tx_fifo_level1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 830: Assignment to uart_rx_fifo_source_first ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 831: Assignment to uart_rx_fifo_source_last ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 835: Assignment to uart_rx_fifo_level1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 868: Assignment to config_padding0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 869: Assignment to xfer_padding0 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 882: Result of 16-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 977: Assignment to rom_bus_dat_w ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 978: Assignment to rom_bus_sel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 980: Assignment to rom_bus_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 981: Assignment to rom_bus_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 982: Assignment to rom_bus_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 988: Assignment to sram_bus_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 989: Assignment to sram_bus_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 995: Assignment to main_ram_bus_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 996: Assignment to main_ram_bus_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 999: Assignment to bus_wishbone_sel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1002: Assignment to bus_wishbone_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1003: Assignment to bus_wishbone_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1024: Assignment to csrbank0_in_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1025: Assignment to csrbank0_in_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1028: Assignment to ctrl_reset_reset_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1038: Assignment to csrbank1_bus_errors3_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1039: Assignment to csrbank1_bus_errors3_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1040: Assignment to csrbank1_bus_errors2_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1041: Assignment to csrbank1_bus_errors2_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1042: Assignment to csrbank1_bus_errors1_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1043: Assignment to csrbank1_bus_errors1_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1044: Assignment to csrbank1_bus_errors0_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1045: Assignment to csrbank1_bus_errors0_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1046: Assignment to ctrl_storage ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1056: Assignment to csrbank2_id7_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1057: Assignment to csrbank2_id7_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1058: Assignment to csrbank2_id6_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1059: Assignment to csrbank2_id6_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1060: Assignment to csrbank2_id5_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1061: Assignment to csrbank2_id5_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1062: Assignment to csrbank2_id4_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1063: Assignment to csrbank2_id4_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1064: Assignment to csrbank2_id3_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1065: Assignment to csrbank2_id3_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1066: Assignment to csrbank2_id2_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1067: Assignment to csrbank2_id2_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1068: Assignment to csrbank2_id1_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1069: Assignment to csrbank2_id1_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1070: Assignment to csrbank2_id0_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1071: Assignment to csrbank2_id0_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1107: Assignment to csrbank3_active_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1108: Assignment to csrbank3_active_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1109: Assignment to csrbank3_pending_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1110: Assignment to csrbank3_pending_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1119: Assignment to csrbank3_miso_data3_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1120: Assignment to csrbank3_miso_data3_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1121: Assignment to csrbank3_miso_data2_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1122: Assignment to csrbank3_miso_data2_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1123: Assignment to csrbank3_miso_data1_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1124: Assignment to csrbank3_miso_data1_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1125: Assignment to csrbank3_miso_data0_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1126: Assignment to csrbank3_miso_data0_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1162: Assignment to csrbank6_in1_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1163: Assignment to csrbank6_in1_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1164: Assignment to csrbank6_in0_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1165: Assignment to csrbank6_in0_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1187: Assignment to timer0_update_value_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1189: Assignment to csrbank7_value3_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1190: Assignment to csrbank7_value3_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1191: Assignment to csrbank7_value2_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1192: Assignment to csrbank7_value2_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1193: Assignment to csrbank7_value1_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1194: Assignment to csrbank7_value1_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1195: Assignment to csrbank7_value0_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1196: Assignment to csrbank7_value0_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1197: Assignment to timer0_eventmanager_status_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1198: Assignment to timer0_eventmanager_status_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1224: Assignment to csrbank8_txfull_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1225: Assignment to csrbank8_txfull_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1226: Assignment to csrbank8_rxempty_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1227: Assignment to csrbank8_rxempty_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1228: Assignment to uart_eventmanager_status_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1229: Assignment to uart_eventmanager_status_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1253: Assignment to csrbank10_temperature1_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1254: Assignment to csrbank10_temperature1_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1255: Assignment to csrbank10_temperature0_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1256: Assignment to csrbank10_temperature0_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1257: Assignment to csrbank10_vccint1_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1258: Assignment to csrbank10_vccint1_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1259: Assignment to csrbank10_vccint0_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1260: Assignment to csrbank10_vccint0_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1261: Assignment to csrbank10_vccaux1_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1262: Assignment to csrbank10_vccaux1_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1263: Assignment to csrbank10_vccaux0_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1264: Assignment to csrbank10_vccaux0_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1265: Assignment to csrbank10_vccbram1_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1266: Assignment to csrbank10_vccbram1_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1267: Assignment to csrbank10_vccbram0_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1268: Assignment to csrbank10_vccbram0_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1300: Assignment to sram_bus_we1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1312: Assignment to sram_bus_dat_w1 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1404: Result of 16-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1404: Assignment to xilinxmultiregimpl1 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1406: Result of 5-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1406: Assignment to xilinxmultiregimpl2 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1431: Result of 32-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1432: Result of 30-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1604: Result of 58-bit expression is truncated to fit in 57-bit target.
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1412: Assignment to ctrl_re ignored, since the identifier is never used
 
 Elaborating module <lm32_cpu(eba_reset=32'b0)>.
 
@@ -275,12 +292,22 @@ WARNING:HDLCompiler:1127 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/su
 WARNING:HDLCompiler:413 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v" Line 176: Result of 32-bit expression is truncated to fit in 1-bit target.
 WARNING:HDLCompiler:1127 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v" Line 176: Assignment to im_csr_read_data ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v" Line 2678: Assignment to x_result_sel_logic_x ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2130: Assignment to uart_tx_fifo_wrport_dat_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2147: Assignment to uart_rx_fifo_wrport_dat_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2312: Assignment to uart_tx_fifo_wrport_dat_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2329: Assignment to uart_rx_fifo_wrport_dat_r ignored, since the identifier is never used
 
 Elaborating module <DNA_PORT>.
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2171: Assignment to cs_n_t_i ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2174: Assignment to clk_t_i ignored, since the identifier is never used
+
+Elaborating module <XADC(INIT_40=16'b1001000000000000,INIT_41=14'b10111011110000,INIT_42=11'b10000000000,INIT_48=15'b100011100000001,INIT_49=4'b1111,INIT_4A=15'b100011100000000,INIT_4B=1'b0,INIT_4C=1'b0,INIT_4D=1'b0,INIT_4E=1'b0,INIT_4F=1'b0,INIT_50=16'b1011010111101101,INIT_51=15'b101100110011001,INIT_52=16'b1010000101000111,INIT_53=16'b1101110111011101,INIT_54=16'b1010100100111010,INIT_55=15'b101000100010001,INIT_56=16'b1001000111101011,INIT_57=16'b1010111001001110,INIT_58=15'b101100110011001,INIT_5C=15'b101000100010001)>.
+WARNING:HDLCompiler:189 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2380: Size mismatch in connection of port <DI>. Formal port size is 16-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2383: Size mismatch in connection of port <VAUXN>. Formal port size is 16-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:189 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2384: Size mismatch in connection of port <VAUXP>. Formal port size is 16-bit while actual signal size is 1-bit.
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2387: Assignment to alarm ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2388: Assignment to busy ignored, since the identifier is never used
+WARNING:HDLCompiler:189 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2389: Size mismatch in connection of port <CHANNEL>. Formal port size is 5-bit while actual signal size is 7-bit.
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2393: Assignment to eos ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2394: Assignment to ot ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2398: Assignment to cs_n_t_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2401: Assignment to clk_t_i ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -300,13 +327,13 @@ Synthesizing Unit <top>.
     Set property "shreg_extract = no" for signal <xilinxmultiregimpl0_regs0>.
     Set property "register_balancing = no" for signal <xilinxmultiregimpl0_regs1>.
     Set property "shreg_extract = no" for signal <xilinxmultiregimpl0_regs1>.
-WARNING:Xst:647 - Input <rst_lcd> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 2038: Output port <I_CTI_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 2038: Output port <I_BTE_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 2038: Output port <D_CTI_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 2038: Output port <D_BTE_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 2038: Output port <I_LOCK_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 2038: Output port <D_LOCK_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
+WARNING:Xst:647 - Input <lcd_rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 2220: Output port <I_CTI_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 2220: Output port <I_BTE_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 2220: Output port <D_CTI_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 2220: Output port <D_BTE_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 2220: Output port <I_LOCK_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 2220: Output port <D_LOCK_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
 WARNING:Xst:2999 - Signal 'mem', unconnected in block 'top', is tied to its initial value.
 WARNING:Xst:2999 - Signal 'mem_3', unconnected in block 'top', is tied to its initial value.
     Found 8192x32-bit single-port Read Only RAM <Mram_mem> for signal <mem>.
@@ -359,6 +386,10 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <mem_3>,
     Found 1-bit register for signal <timer0_zero_old_trigger>.
     Found 7-bit register for signal <dna_cnt>.
     Found 57-bit register for signal <dna_status>.
+    Found 12-bit register for signal <temperature_status>.
+    Found 12-bit register for signal <vccint_status>.
+    Found 12-bit register for signal <vccaux_status>.
+    Found 12-bit register for signal <vccbram_status>.
     Found 32-bit register for signal <data_read>.
     Found 16-bit register for signal <cs>.
     Found 6-bit register for signal <machine_n_write>.
@@ -510,9 +541,26 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <mem_3>,
     Found 1-bit register for signal <mosi_data_storage_full<1>>.
     Found 1-bit register for signal <mosi_data_storage_full<0>>.
     Found 8-bit register for signal <interface4_bank_bus_dat_r>.
-    Found 1-bit register for signal <rs_lcd>.
+    Found 1-bit register for signal <user_led15>.
+    Found 1-bit register for signal <user_led14>.
+    Found 1-bit register for signal <user_led13>.
+    Found 1-bit register for signal <user_led12>.
+    Found 1-bit register for signal <user_led11>.
+    Found 1-bit register for signal <user_led10>.
+    Found 1-bit register for signal <user_led9>.
+    Found 1-bit register for signal <user_led8>.
+    Found 1-bit register for signal <user_led7>.
+    Found 1-bit register for signal <user_led6>.
+    Found 1-bit register for signal <user_led5>.
+    Found 1-bit register for signal <user_led4>.
+    Found 1-bit register for signal <user_led3>.
+    Found 1-bit register for signal <user_led2>.
+    Found 1-bit register for signal <user_led1>.
+    Found 1-bit register for signal <user_led0>.
     Found 8-bit register for signal <interface5_bank_bus_dat_r>.
+    Found 1-bit register for signal <lcd_rs>.
     Found 8-bit register for signal <interface6_bank_bus_dat_r>.
+    Found 8-bit register for signal <interface7_bank_bus_dat_r>.
     Found 1-bit register for signal <timer0_load_storage_full<31>>.
     Found 1-bit register for signal <timer0_load_storage_full<30>>.
     Found 1-bit register for signal <timer0_load_storage_full<29>>.
@@ -579,9 +627,9 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <mem_3>,
     Found 1-bit register for signal <timer0_reload_storage_full<0>>.
     Found 1-bit register for signal <timer0_en_storage_full>.
     Found 1-bit register for signal <timer0_eventmanager_storage_full>.
-    Found 8-bit register for signal <interface7_bank_bus_dat_r>.
-    Found 2-bit register for signal <uart_eventmanager_storage_full>.
     Found 8-bit register for signal <interface8_bank_bus_dat_r>.
+    Found 2-bit register for signal <uart_eventmanager_storage_full>.
+    Found 8-bit register for signal <interface9_bank_bus_dat_r>.
     Found 1-bit register for signal <uart_phy_storage_full<31>>.
     Found 1-bit register for signal <uart_phy_storage_full<30>>.
     Found 1-bit register for signal <uart_phy_storage_full<29>>.
@@ -614,6 +662,7 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <mem_3>,
     Found 1-bit register for signal <uart_phy_storage_full<2>>.
     Found 1-bit register for signal <uart_phy_storage_full<1>>.
     Found 1-bit register for signal <uart_phy_storage_full<0>>.
+    Found 8-bit register for signal <interface10_bank_bus_dat_r>.
     Found 1-bit register for signal <xilinxmultiregimpl0_regs0>.
     Found 1-bit register for signal <xilinxmultiregimpl0_regs1>.
     Found 16-bit register for signal <xilinxmultiregimpl1_regs0>.
@@ -641,43 +690,44 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <mem_3>,
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 5-bit subtractor for signal <uart_tx_fifo_level0[4]_GND_1_o_sub_393_OUT> created at line 1432.
-    Found 5-bit subtractor for signal <uart_rx_fifo_level0[4]_GND_1_o_sub_402_OUT> created at line 1454.
-    Found 32-bit subtractor for signal <timer0_value[31]_GND_1_o_sub_406_OUT> created at line 1475.
-    Found 8-bit subtractor for signal <machine_cnt[7]_GND_1_o_sub_421_OUT> created at line 1519.
-    Found 6-bit subtractor for signal <machine_n_write[5]_GND_1_o_sub_427_OUT> created at line 1546.
-    Found 6-bit subtractor for signal <machine_n_read[5]_GND_1_o_sub_428_OUT> created at line 1549.
-    Found 20-bit subtractor for signal <count[19]_GND_1_o_sub_435_OUT> created at line 1575.
-    Found 32-bit adder for signal <ctrl_bus_errors[31]_GND_1_o_add_348_OUT> created at line 1304.
-    Found 2-bit adder for signal <counter[1]_GND_1_o_add_355_OUT> created at line 1333.
-    Found 4-bit adder for signal <uart_phy_tx_bitcount[3]_GND_1_o_add_358_OUT> created at line 1347.
-    Found 33-bit adder for signal <n1857> created at line 1363.
-    Found 4-bit adder for signal <uart_phy_rx_bitcount[3]_GND_1_o_add_370_OUT> created at line 1376.
-    Found 33-bit adder for signal <n1862> created at line 1395.
-    Found 4-bit adder for signal <uart_tx_fifo_produce[3]_GND_1_o_add_386_OUT> created at line 1421.
-    Found 4-bit adder for signal <uart_tx_fifo_consume[3]_GND_1_o_add_388_OUT> created at line 1424.
-    Found 5-bit adder for signal <uart_tx_fifo_level0[4]_GND_1_o_add_390_OUT> created at line 1428.
-    Found 4-bit adder for signal <uart_rx_fifo_produce[3]_GND_1_o_add_395_OUT> created at line 1443.
-    Found 4-bit adder for signal <uart_rx_fifo_consume[3]_GND_1_o_add_397_OUT> created at line 1446.
-    Found 5-bit adder for signal <uart_rx_fifo_level0[4]_GND_1_o_add_399_OUT> created at line 1450.
-    Found 7-bit adder for signal <dna_cnt[6]_GND_1_o_add_410_OUT> created at line 1491.
-    Found 8-bit 12-to-1 multiplexer for signal <interface1_bank_bus_adr[3]_GND_1_o_wide_mux_439_OUT> created at line 1590.
-    Found 8-bit 8-to-1 multiplexer for signal <interface2_bank_bus_adr[2]_csrbank2_id0_w[7]_wide_mux_441_OUT> created at line 1635.
-    Found 8-bit 22-to-1 multiplexer for signal <interface3_bank_bus_adr[4]_GND_1_o_wide_mux_443_OUT> created at line 1665.
-    Found 8-bit 21-to-1 multiplexer for signal <interface6_bank_bus_adr[4]_GND_1_o_wide_mux_449_OUT> created at line 1789.
-    Found 8-bit 7-to-1 multiplexer for signal <interface7_bank_bus_adr[2]_GND_1_o_wide_mux_451_OUT> created at line 1879.
-    Found 8-bit 4-to-1 multiplexer for signal <interface8_bank_bus_adr[1]_csrbank8_tuning_word0_w[7]_wide_mux_454_OUT> created at line 1906.
-    Found 1-bit tristate buffer for signal <lcd_spi_cs_n> created at line 2170
-    Found 1-bit tristate buffer for signal <lcd_spi_clk> created at line 2173
-    Found 1-bit tristate buffer for signal <lcd_spi_mosi> created at line 2176
-    Found 7-bit comparator greater for signal <dna_cnt[6]_PWR_1_o_LessThan_410_o> created at line 1490
-    Found 7-bit comparator greater for signal <dna_cnt[6]_GND_1_o_LessThan_648_o> created at line 2165
+    Found 5-bit subtractor for signal <uart_tx_fifo_level0[4]_GND_1_o_sub_433_OUT> created at line 1543.
+    Found 5-bit subtractor for signal <uart_rx_fifo_level0[4]_GND_1_o_sub_442_OUT> created at line 1565.
+    Found 32-bit subtractor for signal <timer0_value[31]_GND_1_o_sub_446_OUT> created at line 1586.
+    Found 8-bit subtractor for signal <machine_cnt[7]_GND_1_o_sub_474_OUT> created at line 1646.
+    Found 6-bit subtractor for signal <machine_n_write[5]_GND_1_o_sub_480_OUT> created at line 1673.
+    Found 6-bit subtractor for signal <machine_n_read[5]_GND_1_o_sub_481_OUT> created at line 1676.
+    Found 20-bit subtractor for signal <count[19]_GND_1_o_sub_488_OUT> created at line 1702.
+    Found 32-bit adder for signal <ctrl_bus_errors[31]_GND_1_o_add_388_OUT> created at line 1415.
+    Found 2-bit adder for signal <counter[1]_GND_1_o_add_395_OUT> created at line 1444.
+    Found 4-bit adder for signal <uart_phy_tx_bitcount[3]_GND_1_o_add_398_OUT> created at line 1458.
+    Found 33-bit adder for signal <n1995> created at line 1474.
+    Found 4-bit adder for signal <uart_phy_rx_bitcount[3]_GND_1_o_add_410_OUT> created at line 1487.
+    Found 33-bit adder for signal <n2000> created at line 1506.
+    Found 4-bit adder for signal <uart_tx_fifo_produce[3]_GND_1_o_add_426_OUT> created at line 1532.
+    Found 4-bit adder for signal <uart_tx_fifo_consume[3]_GND_1_o_add_428_OUT> created at line 1535.
+    Found 5-bit adder for signal <uart_tx_fifo_level0[4]_GND_1_o_add_430_OUT> created at line 1539.
+    Found 4-bit adder for signal <uart_rx_fifo_produce[3]_GND_1_o_add_435_OUT> created at line 1554.
+    Found 4-bit adder for signal <uart_rx_fifo_consume[3]_GND_1_o_add_437_OUT> created at line 1557.
+    Found 5-bit adder for signal <uart_rx_fifo_level0[4]_GND_1_o_add_439_OUT> created at line 1561.
+    Found 7-bit adder for signal <dna_cnt[6]_GND_1_o_add_450_OUT> created at line 1602.
+    Found 8-bit 12-to-1 multiplexer for signal <interface1_bank_bus_adr[3]_GND_1_o_wide_mux_492_OUT> created at line 1717.
+    Found 8-bit 8-to-1 multiplexer for signal <interface2_bank_bus_adr[2]_csrbank2_id0_w[7]_wide_mux_494_OUT> created at line 1762.
+    Found 8-bit 22-to-1 multiplexer for signal <interface3_bank_bus_adr[4]_GND_1_o_wide_mux_496_OUT> created at line 1792.
+    Found 8-bit 21-to-1 multiplexer for signal <interface7_bank_bus_adr[4]_GND_1_o_wide_mux_504_OUT> created at line 1934.
+    Found 8-bit 7-to-1 multiplexer for signal <interface8_bank_bus_adr[2]_GND_1_o_wide_mux_506_OUT> created at line 2024.
+    Found 8-bit 4-to-1 multiplexer for signal <interface9_bank_bus_adr[1]_csrbank9_tuning_word0_w[7]_wide_mux_509_OUT> created at line 2051.
+    Found 8-bit 8-to-1 multiplexer for signal <interface10_bank_bus_adr[2]_csrbank10_vccbram0_w[7]_wide_mux_511_OUT> created at line 2081.
+    Found 1-bit tristate buffer for signal <lcd_spi_cs_n> created at line 2397
+    Found 1-bit tristate buffer for signal <lcd_spi_clk> created at line 2400
+    Found 1-bit tristate buffer for signal <lcd_spi_mosi> created at line 2403
+    Found 7-bit comparator greater for signal <dna_cnt[6]_PWR_1_o_LessThan_450_o> created at line 1601
+    Found 7-bit comparator greater for signal <dna_cnt[6]_GND_1_o_LessThan_718_o> created at line 2347
     Summary:
 	inferred   6 RAM(s).
 	inferred  18 Adder/Subtractor(s).
-	inferred 930 D-type flip-flop(s).
+	inferred 1010 D-type flip-flop(s).
 	inferred   2 Comparator(s).
-	inferred 139 Multiplexer(s).
+	inferred 143 Multiplexer(s).
 	inferred   3 Tristate(s).
 	inferred   1 Finite State Machine(s).
 Unit <top> synthesized.
@@ -1122,10 +1172,10 @@ Macro Statistics
  6-bit subtractor                                      : 3
  7-bit adder                                           : 1
  8-bit subtractor                                      : 3
-# Registers                                            : 294
+# Registers                                            : 302
  1-bit register                                        : 164
  10-bit register                                       : 5
- 12-bit register                                       : 1
+ 12-bit register                                       : 5
  13-bit register                                       : 1
  14-bit register                                       : 1
  16-bit register                                       : 3
@@ -1140,7 +1190,7 @@ Macro Statistics
  57-bit register                                       : 1
  6-bit register                                        : 4
  7-bit register                                        : 1
- 8-bit register                                        : 39
+ 8-bit register                                        : 43
 # Comparators                                          : 13
  1-bit comparator equal                                : 1
  21-bit comparator equal                               : 2
@@ -1148,7 +1198,7 @@ Macro Statistics
  32-bit comparator greater                             : 1
  5-bit comparator equal                                : 6
  7-bit comparator greater                              : 2
-# Multiplexers                                         : 287
+# Multiplexers                                         : 291
  1-bit 2-to-1 multiplexer                              : 135
  1-bit 4-to-1 multiplexer                              : 32
  1-bit 8-to-1 multiplexer                              : 1
@@ -1163,12 +1213,12 @@ Macro Statistics
  5-bit 2-to-1 multiplexer                              : 3
  6-bit 2-to-1 multiplexer                              : 6
  8-bit 12-to-1 multiplexer                             : 1
- 8-bit 2-to-1 multiplexer                              : 29
+ 8-bit 2-to-1 multiplexer                              : 32
  8-bit 21-to-1 multiplexer                             : 1
  8-bit 22-to-1 multiplexer                             : 1
  8-bit 4-to-1 multiplexer                              : 1
  8-bit 7-to-1 multiplexer                              : 1
- 8-bit 8-to-1 multiplexer                              : 1
+ 8-bit 8-to-1 multiplexer                              : 2
 # Logic shifters                                       : 1
  64-bit shifter logical right                          : 1
 # Tristates                                            : 3
@@ -1294,16 +1344,16 @@ Unit <lm32_ram_2> synthesized (advanced).
 
 Synthesizing (advanced) Unit <top>.
 The following registers are absorbed into counter <ctrl_bus_errors>: 1 register on signal <ctrl_bus_errors>.
-The following registers are absorbed into counter <uart_phy_tx_bitcount>: 1 register on signal <uart_phy_tx_bitcount>.
 The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <uart_phy_tx_bitcount>: 1 register on signal <uart_phy_tx_bitcount>.
 The following registers are absorbed into counter <uart_phy_rx_bitcount>: 1 register on signal <uart_phy_rx_bitcount>.
-The following registers are absorbed into counter <uart_tx_fifo_produce>: 1 register on signal <uart_tx_fifo_produce>.
 The following registers are absorbed into counter <uart_tx_fifo_consume>: 1 register on signal <uart_tx_fifo_consume>.
-The following registers are absorbed into counter <uart_rx_fifo_produce>: 1 register on signal <uart_rx_fifo_produce>.
+The following registers are absorbed into counter <uart_tx_fifo_produce>: 1 register on signal <uart_tx_fifo_produce>.
 The following registers are absorbed into counter <uart_tx_fifo_level0>: 1 register on signal <uart_tx_fifo_level0>.
 The following registers are absorbed into counter <uart_rx_fifo_consume>: 1 register on signal <uart_rx_fifo_consume>.
-The following registers are absorbed into counter <dna_cnt>: 1 register on signal <dna_cnt>.
+The following registers are absorbed into counter <uart_rx_fifo_produce>: 1 register on signal <uart_rx_fifo_produce>.
 The following registers are absorbed into counter <uart_rx_fifo_level0>: 1 register on signal <uart_rx_fifo_level0>.
+The following registers are absorbed into counter <dna_cnt>: 1 register on signal <dna_cnt>.
 The following registers are absorbed into counter <machine_cnt>: 1 register on signal <machine_cnt>.
 The following registers are absorbed into counter <count>: 1 register on signal <count>.
 INFO:Xst:3231 - The small RAM <Mram_mem_3> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
@@ -1316,24 +1366,6 @@ INFO:Xst:3231 - The small RAM <Mram_mem_3> will be implemented on LUTs in order 
     |     addrA          | connected to signal <memadr_3>      |          |
     |     diA            | connected to signal <GND>           |          |
     |     doA            | connected to internal node          |          |
-    -----------------------------------------------------------------------
-INFO:Xst:3226 - The RAM <Mram_mem_1> will be implemented as a BLOCK RAM, absorbing the following register(s): <memadr_1>
-    -----------------------------------------------------------------------
-    | ram_type           | Block                               |          |
-    -----------------------------------------------------------------------
-    | Port A                                                              |
-    |     aspect ratio   | 1024-word x 32-bit                  |          |
-    |     mode           | write-first                         |          |
-    |     clkA           | connected to signal <clk100>        | rise     |
-    |     weA<3>         | connected to signal <sram_we<3>>    | high     |
-    |     weA<2>         | connected to signal <sram_we<2>>    | high     |
-    |     weA<1>         | connected to signal <sram_we<1>>    | high     |
-    |     weA<0>         | connected to signal <sram_we<0>>    | high     |
-    |     addrA          | connected to signal <array_muxed0<9:0>> |          |
-    |     diA            | connected to signal <array_muxed1>  |          |
-    |     doA            | connected to signal <sram_bus_dat_r0> |          |
-    -----------------------------------------------------------------------
-    | optimization       | speed                               |          |
     -----------------------------------------------------------------------
 INFO:Xst:3226 - The RAM <Mram_mem_2> will be implemented as a BLOCK RAM, absorbing the following register(s): <memadr_2>
     -----------------------------------------------------------------------
@@ -1350,6 +1382,24 @@ INFO:Xst:3226 - The RAM <Mram_mem_2> will be implemented as a BLOCK RAM, absorbi
     |     addrA          | connected to signal <array_muxed0<11:0>> |          |
     |     diA            | connected to signal <array_muxed1>  |          |
     |     doA            | connected to signal <main_ram_bus_dat_r> |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3226 - The RAM <Mram_mem_1> will be implemented as a BLOCK RAM, absorbing the following register(s): <memadr_1>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk100>        | rise     |
+    |     weA<3>         | connected to signal <sram_we<3>>    | high     |
+    |     weA<2>         | connected to signal <sram_we<2>>    | high     |
+    |     weA<1>         | connected to signal <sram_we<1>>    | high     |
+    |     weA<0>         | connected to signal <sram_we<0>>    | high     |
+    |     addrA          | connected to signal <array_muxed0<9:0>> |          |
+    |     diA            | connected to signal <array_muxed1>  |          |
+    |     doA            | connected to signal <sram_bus_dat_r0> |          |
     -----------------------------------------------------------------------
     | optimization       | speed                               |          |
     -----------------------------------------------------------------------
@@ -1404,10 +1454,10 @@ Unit <top> synthesized (advanced).
 WARNING:Xst:2677 - Node <interface_adr_6> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <interface_adr_7> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <interface_adr_8> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <memdat_1_8> of sequential type is unconnected in block <top>.
-WARNING:Xst:2677 - Node <memdat_1_9> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <memdat_3_8> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <memdat_3_9> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <memdat_1_8> of sequential type is unconnected in block <top>.
+WARNING:Xst:2677 - Node <memdat_1_9> of sequential type is unconnected in block <top>.
 
 =========================================================================
 Advanced HDL Synthesis Report
@@ -1442,8 +1492,8 @@ Macro Statistics
  6-bit down counter                                    : 1
  7-bit up counter                                      : 1
  8-bit down counter                                    : 3
-# Registers                                            : 2002
- Flip-Flops                                            : 2002
+# Registers                                            : 2082
+ Flip-Flops                                            : 2082
 # Comparators                                          : 13
  1-bit comparator equal                                : 1
  21-bit comparator equal                               : 2
@@ -1451,8 +1501,8 @@ Macro Statistics
  32-bit comparator greater                             : 1
  5-bit comparator equal                                : 6
  7-bit comparator greater                              : 2
-# Multiplexers                                         : 622
- 1-bit 2-to-1 multiplexer                              : 489
+# Multiplexers                                         : 633
+ 1-bit 2-to-1 multiplexer                              : 497
  1-bit 4-to-1 multiplexer                              : 32
  1-bit 8-to-1 multiplexer                              : 9
  10-bit 2-to-1 multiplexer                             : 1
@@ -1465,11 +1515,12 @@ Macro Statistics
  5-bit 2-to-1 multiplexer                              : 3
  6-bit 2-to-1 multiplexer                              : 5
  8-bit 12-to-1 multiplexer                             : 1
- 8-bit 2-to-1 multiplexer                              : 19
+ 8-bit 2-to-1 multiplexer                              : 21
  8-bit 21-to-1 multiplexer                             : 1
  8-bit 22-to-1 multiplexer                             : 1
  8-bit 4-to-1 multiplexer                              : 1
  8-bit 7-to-1 multiplexer                              : 1
+ 8-bit 8-to-1 multiplexer                              : 1
 # Logic shifters                                       : 1
  64-bit shifter logical right                          : 1
 # FSMs                                                 : 4
@@ -1591,13 +1642,13 @@ WARNING:Xst:1710 - FF/Latch <d_cti_o_1> (without init value) has a constant valu
 WARNING:Xst:1293 - FF/Latch <interface0_bank_bus_dat_r_5> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_6> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_7> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_2> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_3> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_5> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_6> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_7> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_2> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_3> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_5> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_6> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_7> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <cs_1> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <cs_2> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <cs_3> of sequential type is unconnected in block <top>.
@@ -1734,8 +1785,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1990
- Flip-Flops                                            : 1990
+# Registers                                            : 2070
+ Flip-Flops                                            : 2070
 
 =========================================================================
 
@@ -1758,24 +1809,24 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3312
+# BELS                             : 3350
 #      GND                         : 1
 #      INV                         : 60
 #      LUT1                        : 94
-#      LUT2                        : 351
-#      LUT3                        : 422
-#      LUT4                        : 192
-#      LUT5                        : 420
-#      LUT6                        : 1008
+#      LUT2                        : 350
+#      LUT3                        : 434
+#      LUT4                        : 194
+#      LUT5                        : 424
+#      LUT6                        : 1022
 #      MUXCY                       : 376
-#      MUXF7                       : 26
+#      MUXF7                       : 33
 #      VCC                         : 1
 #      XORCY                       : 361
-# FlipFlops/Latches                : 1990
+# FlipFlops/Latches                : 2070
 #      FD                          : 57
 #      FDE                         : 113
-#      FDR                         : 457
-#      FDRE                        : 1276
+#      FDR                         : 473
+#      FDRE                        : 1340
 #      FDS                         : 2
 #      FDSE                        : 85
 # RAMS                             : 97
@@ -1784,15 +1835,16 @@ Primitive and Black Box Usage:
 #      RAMB36E1                    : 15
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 29
+# IO Buffers                       : 45
 #      IBUF                        : 24
 #      IOBUF                       : 1
-#      OBUF                        : 2
+#      OBUF                        : 18
 #      OBUFT                       : 2
 # DSPs                             : 3
 #      DSP48E1                     : 3
-# Others                           : 1
+# Others                           : 2
 #      DNA_PORT                    : 1
+#      XADC                        : 1
 
 Device utilization summary:
 ---------------------------
@@ -1801,22 +1853,22 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1990  out of  126800     1%  
- Number of Slice LUTs:                 2707  out of  63400     4%  
-    Number used as Logic:              2547  out of  63400     4%  
+ Number of Slice Registers:            2070  out of  126800     1%  
+ Number of Slice LUTs:                 2738  out of  63400     4%  
+    Number used as Logic:              2578  out of  63400     4%  
     Number used as Memory:              160  out of  19000     0%  
        Number used as RAM:              160
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3431
-   Number with an unused Flip Flop:    1441  out of   3431    41%  
-   Number with an unused LUT:           724  out of   3431    21%  
-   Number of fully used LUT-FF pairs:  1266  out of   3431    36%  
-   Number of unique control sets:        78
+ Number of LUT Flip Flop pairs used:   3521
+   Number with an unused Flip Flop:    1451  out of   3521    41%  
+   Number with an unused LUT:           783  out of   3521    22%  
+   Number of fully used LUT-FF pairs:  1287  out of   3521    36%  
+   Number of unique control sets:        84
 
 IO Utilization: 
- Number of IOs:                          31
- Number of bonded IOBs:                  30  out of    210    14%  
+ Number of IOs:                          47
+ Number of bonded IOBs:                  46  out of    210    21%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               16  out of    135    11%  
@@ -1845,7 +1897,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk100                             | BUFGP                  | 2090  |
+clk100                             | BUFGP                  | 2170  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1859,7 +1911,7 @@ Speed Grade: -1
    Minimum period: 7.319ns (Maximum Frequency: 136.631MHz)
    Minimum input arrival time before clock: 2.279ns
    Maximum output required time after clock: 2.760ns
-   Maximum combinational path delay: No path found
+   Maximum combinational path delay: 0.726ns
 
 Timing Details:
 ---------------
@@ -1868,7 +1920,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk100'
   Clock period: 7.319ns (frequency: 136.631MHz)
-  Total number of paths / destination ports: 267314 / 6615
+  Total number of paths / destination ports: 267714 / 6743
 -------------------------------------------------------------------------
 Delay:               7.319ns (Levels of Logic = 1)
   Source:            lm32_cpu/multiplier/Mmult_n0023 (DSP)
@@ -1889,7 +1941,7 @@ Delay:               7.319ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk100'
-  Total number of paths / destination ports: 26 / 25
+  Total number of paths / destination ports: 362 / 121
 -------------------------------------------------------------------------
 Offset:              2.279ns (Levels of Logic = 4)
   Source:            lcd_spi_miso (PAD)
@@ -1901,9 +1953,9 @@ Offset:              2.279ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             1   0.001   0.536  lcd_spi_miso_IBUF (lcd_spi_miso_IBUF)
-     LUT5:I3->O            1   0.124   0.421  Mmux_machine_data[31]_machine_data[31]_mux_425_OUT110 (Mmux_machine_data[31]_machine_data[31]_mux_425_OUT1)
-     LUT6:I5->O            1   0.124   0.919  Mmux_machine_data[31]_machine_data[31]_mux_425_OUT111 (Mmux_machine_data[31]_machine_data[31]_mux_425_OUT11)
-     LUT6:I1->O            1   0.124   0.000  Mmux_machine_data[31]_machine_data[31]_mux_425_OUT113 (machine_data[31]_machine_data[31]_mux_425_OUT<0>)
+     LUT5:I3->O            1   0.124   0.421  Mmux_machine_data[31]_machine_data[31]_mux_478_OUT110 (Mmux_machine_data[31]_machine_data[31]_mux_478_OUT1)
+     LUT6:I5->O            1   0.124   0.919  Mmux_machine_data[31]_machine_data[31]_mux_478_OUT111 (Mmux_machine_data[31]_machine_data[31]_mux_478_OUT11)
+     LUT6:I1->O            1   0.124   0.000  Mmux_machine_data[31]_machine_data[31]_mux_478_OUT113 (machine_data[31]_machine_data[31]_mux_478_OUT<0>)
      FDR:D                     0.030          machine_data_0
     ----------------------------------------
     Total                      2.279ns (0.403ns logic, 1.876ns route)
@@ -1911,7 +1963,7 @@ Offset:              2.279ns (Levels of Logic = 4)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk100'
-  Total number of paths / destination ports: 34 / 8
+  Total number of paths / destination ports: 51 / 25
 -------------------------------------------------------------------------
 Offset:              2.760ns (Levels of Logic = 3)
   Source:            machine_n_write_3 (FF)
@@ -1923,12 +1975,30 @@ Offset:              2.760ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             4   0.478   0.959  machine_n_write_3 (machine_n_write_3)
-     LUT6:I0->O           23   0.124   0.676  _n2471<5>1 (_n2471)
+     LUT6:I0->O           23   0.124   0.676  _n2770<5>1 (_n2770)
      LUT6:I4->O            1   0.124   0.399  mosi_t_oe_inv1 (mosi_t_oe_inv)
      IOBUF:T->IO               0.000          lcd_spi_mosi_IOBUF (lcd_spi_mosi)
     ----------------------------------------
     Total                      2.760ns (0.726ns logic, 2.034ns route)
                                        (26.3% logic, 73.7% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 7 / 7
+-------------------------------------------------------------------------
+Delay:               0.726ns (Levels of Logic = 1)
+  Source:            clk100 (PAD)
+  Destination:       XADC:DCLK (PAD)
+
+  Data Path: clk100 to XADC:DCLK
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     BUFGP:I->O         2150   0.000   0.726  clk100_BUFGP (clk100_BUFGP)
+    XADC:DCLK                  0.000          XADC
+    ----------------------------------------
+    Total                      0.726ns (0.000ns logic, 0.726ns route)
+                                       (0.0% logic, 100.0% route)
 
 =========================================================================
 
@@ -1947,14 +2017,14 @@ clk100         |    7.319|         |         |         |
 
 
 Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 18.67 secs
+Total CPU time to Xst completion: 18.20 secs
  
 --> 
 
 
-Total memory usage is 533360 kilobytes
+Total memory usage is 534500 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  282 (   0 filtered)
+Number of warnings :  307 (   0 filtered)
 Number of infos    :   46 (   0 filtered)
 
