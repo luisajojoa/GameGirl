@@ -85,7 +85,7 @@ static void help(void)
 	puts("led                             - led test");
 	puts("sw                             - switch test");
 	puts("lcd                             - test lcd");
-	puts("lcd-buttons                             - test lcd with buttons");
+	puts("test                             - test lcd with buttons");
 }
 
 static void reboot(void)
@@ -377,12 +377,13 @@ static void lcd_test(void)
 	lcd_configure();
 	lcd_initialize();
 
-	while(i<9680){
-	lcd_write(1,"0x08ff");
+	while(i<38720){
+	lcd_write(1,0x08ff);
 	i++;
 	}
-	i=0;
-	while(i<9680){
+	
+	//i=0;
+	/*while(i<9680){
 	lcd_write(1,0x001f);
 	i++;
 	}
@@ -390,9 +391,91 @@ static void lcd_test(void)
 	while(i<19360){
 	lcd_write(1,0xffe0);
 	i++;
-	}
+	}*/
 }
 
+void gametest(void)
+{
+	
+	int x=220;
+	int y=176;
+	int numtilesx=4;
+	int numtilesy=2;
+
+	int screen[x*y];
+
+
+	//Creacion tiles
+	/*for (int z=0;z<((numtilesx)*(numtilesy));z++){
+		for(int i=0;i<(y/numtilesy);i++){
+			for(int j=0;j<(x/numtilesx);j++){
+				if(z==0){					
+					screen[j+((x/numtilesx)*z)][i+((y/numtilesy)*z)]=(0xffff);
+				}
+				if(z==1){
+					screen[j+((x/numtilesx)*z)][i+((y/numtilesy)*z)]=(0xf32f);
+				}
+				if(z==2){
+					screen[j+((x/numtilesx)*z)][i+((y/numtilesy)*z)]=(0x03ef);
+				}
+				if(z==3){
+					screen[j+((x/numtilesx)*z)][i+((y/numtilesy)*z)]=(0x07e0);
+				}
+				if(z==4){
+					screen[j+((x/numtilesx)*z)][i+((y/numtilesy)*z)]=(0x9e66);
+				}
+				if(z==5){
+					screen[j+((x/numtilesx)*z)][i+((y/numtilesy)*z)]=(0x867d);
+				}
+                if(z==6){
+					screen[j+((x/numtilesx)*z)][i+((y/numtilesy)*z)]=(0x000f);
+				}
+                if(z==7){
+					screen[j+((x/numtilesx)*z)][i+((y/numtilesy)*z)]=(0x8000);
+				}
+			}
+		}
+	}*/
+	int n=0;
+	
+	while(n < y/numtilesy ){
+			for(int i=0; i < (x) ; i++){
+					if(i <= ((x/numtilesx)*1)){
+						lcd_write(1,0xf000);
+					} else if(i <= ((x/numtilesx)*2) && i> ((x/numtilesx)*(2-1))){
+						lcd_write(1,0xf565);
+					} 
+					 else if(i <= ((x/numtilesx)*3) && i> ((x/numtilesx)*(3-1))){
+						lcd_write(1,0xf00b);
+					} else if(i <= ((x/numtilesx)*4) && i> ((x/numtilesx)*(4-1))){
+						lcd_write(1,0xfafa);
+					}	
+
+					else{
+						lcd_write(1,0xffff);			
+					}			
+			}
+
+		n++;
+	}
+	while(n < (y/numtilesy)*2 ){
+		for(int i=0; i < (x) ; i++){
+				if(i <= ((x/numtilesx)*1)){
+					lcd_write(1,0x0567);
+				} else if(i <= ((x/numtilesx)*2) && i> ((x/numtilesx)*(2-1))){
+					lcd_write(1,0x1143);
+				} else if(i <= ((x/numtilesx)*3) && i> ((x/numtilesx)*(3-1))){
+					lcd_write(1,0x0bbb);
+				} else if(i <= ((x/numtilesx)*4) && i> ((x/numtilesx)*(4-1))){
+					lcd_write(1,0x0aaa);
+				}					
+				else{
+					lcd_write(1,0xffff);			
+				}			
+		}
+		n++;
+	}
+}
 
 static void lcdbuttons_test(void)
 {
@@ -438,8 +521,8 @@ static void console_service(void)
 		switch_test();
 	else if(strcmp(token, "lcd") == 0)
 		lcd_test();
-	else if(strcmp(token, "lcd-buttons") == 0)
-		lcdbuttons_test();
+	else if(strcmp(token, "test") == 0)
+		gametest();
 	prompt();
 }
 
