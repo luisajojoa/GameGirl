@@ -20,21 +20,24 @@ class _PWM(Module, AutoCSR):
 
         count = Signal(32)
 
-        self.sync += [
+        self.sync += [count.eq(count+1),
             If(enable,
-                # If count < width, set pwm to 1
-                # Else 0
-                If(count < width,
-                    pwm.eq(1)
-                ).Else(
-                    pwm.eq(0)
-                ),
-                # If count reach period, set count to 0
-                If(count == period-1,
+			    If( count < width,
+                    pwm.eq(1)    
+                ).Elif(count==period,
                     count.eq(0)
                 ).Else(
-                    count.eq(count+1)
+                    pwm.eq(0)                
                 )
+                # If count < width, set pwm to 1
+                # Else 0
+                # TO BE COMPLETED
+                # [...]
+                # TO BE COMPLETED
+                # If count reach period, set count to 0
+                # TO BE COMPLETED
+                # [...]
+                # TO BE COMPLETED
             ).Else(
                 count.eq(0),
                 pwm.eq(0)

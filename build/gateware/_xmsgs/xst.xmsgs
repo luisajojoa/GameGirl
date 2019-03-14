@@ -14,385 +14,223 @@
 <msg type="warning" file="HDLCompiler" num="924" delta="old" >"/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v" Line 652: Attribute target identifier <arg fmt="%s" index="1">preserve_signal</arg> not found in this scope
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2218: Port <arg fmt="%s" index="1">I_LOCK_O</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1647: Port <arg fmt="%s" index="1">I_LOCK_O</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2352: Port <arg fmt="%s" index="1">JTAGBUSY</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 17: Using initial value of <arg fmt="%s" index="1">ctrl_reset_reset_w</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 54: Using initial value of <arg fmt="%s" index="1">ctrl_reset_reset_w</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 61: Using initial value of <arg fmt="%s" index="1">rom_bus_err</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 98: Using initial value of <arg fmt="%s" index="1">rom_bus_err</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 74: Using initial value of <arg fmt="%s" index="1">sram_bus_err</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 111: Using initial value of <arg fmt="%s" index="1">sram_bus_err</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 89: Using initial value of <arg fmt="%s" index="1">main_ram_bus_err</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 126: Using initial value of <arg fmt="%s" index="1">main_ram_bus_err</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 108: Using initial value of <arg fmt="%s" index="1">bus_wishbone_err</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 145: Using initial value of <arg fmt="%s" index="1">bus_wishbone_err</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 125: Using initial value of <arg fmt="%s" index="1">uart_phy_source_first</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 162: Using initial value of <arg fmt="%s" index="1">uart_phy_source_first</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 126: Using initial value of <arg fmt="%s" index="1">uart_phy_source_last</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 163: Using initial value of <arg fmt="%s" index="1">uart_phy_source_last</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 162: Using initial value of <arg fmt="%s" index="1">uart_tx_fifo_sink_first</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 199: Using initial value of <arg fmt="%s" index="1">uart_tx_fifo_sink_first</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 163: Using initial value of <arg fmt="%s" index="1">uart_tx_fifo_sink_last</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 200: Using initial value of <arg fmt="%s" index="1">uart_tx_fifo_sink_last</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 179: Using initial value of <arg fmt="%s" index="1">uart_tx_fifo_replace</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 216: Using initial value of <arg fmt="%s" index="1">uart_tx_fifo_replace</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 216: Using initial value of <arg fmt="%s" index="1">uart_rx_fifo_replace</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 253: Using initial value of <arg fmt="%s" index="1">uart_rx_fifo_replace</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 234: Using initial value of <arg fmt="%s" index="1">uart_reset</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 271: Using initial value of <arg fmt="%s" index="1">uart_reset</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 246: Using initial value of <arg fmt="%s" index="1">timer0_update_value_w</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 283: Using initial value of <arg fmt="%s" index="1">timer0_update_value_w</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 354: Using initial value of <arg fmt="%s" index="1">start_w</arg> since it is never assigned
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="872" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 401: Using initial value of <arg fmt="%s" index="1">start_w</arg> since it is never assigned
+<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1688: Signal &lt;<arg fmt="%s" index="1">mem</arg>&gt; in initial block is partially initialized.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2259: Signal &lt;<arg fmt="%s" index="1">mem</arg>&gt; in initial block is partially initialized.
+<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1724: Signal &lt;<arg fmt="%s" index="1">mem_2</arg>&gt; in initial block is partially initialized.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1670" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2295: Signal &lt;<arg fmt="%s" index="1">mem_2</arg>&gt; in initial block is partially initialized.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 557: Assignment to <arg fmt="%s" index="1">uart_phy_sink_first</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 754: Assignment to <arg fmt="%s" index="1">uart_phy_sink_first</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 558: Assignment to <arg fmt="%s" index="1">uart_phy_sink_last</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 755: Assignment to <arg fmt="%s" index="1">uart_phy_sink_last</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 562: Assignment to <arg fmt="%s" index="1">uart_phy_source_ready</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 759: Assignment to <arg fmt="%s" index="1">uart_phy_source_ready</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 608: Assignment to <arg fmt="%s" index="1">uart_tx_fifo_level1</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 805: Assignment to <arg fmt="%s" index="1">uart_tx_fifo_level1</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 633: Assignment to <arg fmt="%s" index="1">uart_rx_fifo_source_first</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 830: Assignment to <arg fmt="%s" index="1">uart_rx_fifo_source_first</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 634: Assignment to <arg fmt="%s" index="1">uart_rx_fifo_source_last</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 831: Assignment to <arg fmt="%s" index="1">uart_rx_fifo_source_last</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 638: Assignment to <arg fmt="%s" index="1">uart_rx_fifo_level1</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 835: Assignment to <arg fmt="%s" index="1">uart_rx_fifo_level1</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 681: Assignment to <arg fmt="%s" index="1">config_padding0</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 868: Assignment to <arg fmt="%s" index="1">config_padding0</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 682: Assignment to <arg fmt="%s" index="1">xfer_padding0</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 869: Assignment to <arg fmt="%s" index="1">xfer_padding0</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 695: Result of <arg fmt="%d" index="1">16</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 882: Result of <arg fmt="%d" index="1">16</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 790: Assignment to <arg fmt="%s" index="1">rom_bus_dat_w</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 977: Assignment to <arg fmt="%s" index="1">rom_bus_dat_w</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 791: Assignment to <arg fmt="%s" index="1">rom_bus_sel</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 978: Assignment to <arg fmt="%s" index="1">rom_bus_sel</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 793: Assignment to <arg fmt="%s" index="1">rom_bus_we</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 980: Assignment to <arg fmt="%s" index="1">rom_bus_we</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 794: Assignment to <arg fmt="%s" index="1">rom_bus_cti</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 981: Assignment to <arg fmt="%s" index="1">rom_bus_cti</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 795: Assignment to <arg fmt="%s" index="1">rom_bus_bte</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 982: Assignment to <arg fmt="%s" index="1">rom_bus_bte</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 801: Assignment to <arg fmt="%s" index="1">sram_bus_cti</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 988: Assignment to <arg fmt="%s" index="1">sram_bus_cti</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 802: Assignment to <arg fmt="%s" index="1">sram_bus_bte</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 989: Assignment to <arg fmt="%s" index="1">sram_bus_bte</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 808: Assignment to <arg fmt="%s" index="1">main_ram_bus_cti</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 995: Assignment to <arg fmt="%s" index="1">main_ram_bus_cti</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 809: Assignment to <arg fmt="%s" index="1">main_ram_bus_bte</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 996: Assignment to <arg fmt="%s" index="1">main_ram_bus_bte</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 812: Assignment to <arg fmt="%s" index="1">bus_wishbone_sel</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 999: Assignment to <arg fmt="%s" index="1">bus_wishbone_sel</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 815: Assignment to <arg fmt="%s" index="1">bus_wishbone_cti</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1002: Assignment to <arg fmt="%s" index="1">bus_wishbone_cti</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 816: Assignment to <arg fmt="%s" index="1">bus_wishbone_bte</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1003: Assignment to <arg fmt="%s" index="1">bus_wishbone_bte</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 837: Assignment to <arg fmt="%s" index="1">csrbank0_in_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1024: Assignment to <arg fmt="%s" index="1">csrbank0_in_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 838: Assignment to <arg fmt="%s" index="1">csrbank0_in_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1025: Assignment to <arg fmt="%s" index="1">csrbank0_in_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 839: Assignment to <arg fmt="%s" index="1">status_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1028: Assignment to <arg fmt="%s" index="1">ctrl_reset_reset_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 840: Assignment to <arg fmt="%s" index="1">status_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1038: Assignment to <arg fmt="%s" index="1">csrbank1_bus_errors3_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 849: Assignment to <arg fmt="%s" index="1">ctrl_reset_reset_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1039: Assignment to <arg fmt="%s" index="1">csrbank1_bus_errors3_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 853: Assignment to <arg fmt="%s" index="1">csrbank1_bus_errors_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1040: Assignment to <arg fmt="%s" index="1">csrbank1_bus_errors2_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 854: Assignment to <arg fmt="%s" index="1">csrbank1_bus_errors_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1041: Assignment to <arg fmt="%s" index="1">csrbank1_bus_errors2_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 855: Assignment to <arg fmt="%s" index="1">ctrl_storage</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1042: Assignment to <arg fmt="%s" index="1">csrbank1_bus_errors1_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 859: Assignment to <arg fmt="%s" index="1">csrbank2_id1_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1043: Assignment to <arg fmt="%s" index="1">csrbank1_bus_errors1_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 860: Assignment to <arg fmt="%s" index="1">csrbank2_id1_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1044: Assignment to <arg fmt="%s" index="1">csrbank1_bus_errors0_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 861: Assignment to <arg fmt="%s" index="1">csrbank2_id0_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1045: Assignment to <arg fmt="%s" index="1">csrbank1_bus_errors0_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 862: Assignment to <arg fmt="%s" index="1">csrbank2_id0_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1046: Assignment to <arg fmt="%s" index="1">ctrl_storage</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 880: Assignment to <arg fmt="%s" index="1">csrbank3_active_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1056: Assignment to <arg fmt="%s" index="1">csrbank2_id7_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 881: Assignment to <arg fmt="%s" index="1">csrbank3_active_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1057: Assignment to <arg fmt="%s" index="1">csrbank2_id7_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 882: Assignment to <arg fmt="%s" index="1">csrbank3_pending_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1058: Assignment to <arg fmt="%s" index="1">csrbank2_id6_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 883: Assignment to <arg fmt="%s" index="1">csrbank3_pending_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1059: Assignment to <arg fmt="%s" index="1">csrbank2_id6_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 886: Assignment to <arg fmt="%s" index="1">csrbank3_miso_data_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1060: Assignment to <arg fmt="%s" index="1">csrbank2_id5_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 887: Assignment to <arg fmt="%s" index="1">csrbank3_miso_data_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1061: Assignment to <arg fmt="%s" index="1">csrbank2_id5_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 909: Assignment to <arg fmt="%s" index="1">timer0_update_value_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1062: Assignment to <arg fmt="%s" index="1">csrbank2_id4_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 911: Assignment to <arg fmt="%s" index="1">csrbank5_value_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1063: Assignment to <arg fmt="%s" index="1">csrbank2_id4_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 912: Assignment to <arg fmt="%s" index="1">csrbank5_value_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1064: Assignment to <arg fmt="%s" index="1">csrbank2_id3_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 913: Assignment to <arg fmt="%s" index="1">timer0_eventmanager_status_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1065: Assignment to <arg fmt="%s" index="1">csrbank2_id3_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 914: Assignment to <arg fmt="%s" index="1">timer0_eventmanager_status_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1066: Assignment to <arg fmt="%s" index="1">csrbank2_id2_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 931: Assignment to <arg fmt="%s" index="1">csrbank6_txfull_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1067: Assignment to <arg fmt="%s" index="1">csrbank2_id2_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 932: Assignment to <arg fmt="%s" index="1">csrbank6_txfull_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1068: Assignment to <arg fmt="%s" index="1">csrbank2_id1_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 933: Assignment to <arg fmt="%s" index="1">csrbank6_rxempty_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1069: Assignment to <arg fmt="%s" index="1">csrbank2_id1_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 934: Assignment to <arg fmt="%s" index="1">csrbank6_rxempty_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1070: Assignment to <arg fmt="%s" index="1">csrbank2_id0_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 935: Assignment to <arg fmt="%s" index="1">uart_eventmanager_status_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1071: Assignment to <arg fmt="%s" index="1">csrbank2_id0_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 936: Assignment to <arg fmt="%s" index="1">uart_eventmanager_status_re</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1107: Assignment to <arg fmt="%s" index="1">csrbank3_active_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 967: Assignment to <arg fmt="%s" index="1">sram_bus_we1</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1108: Assignment to <arg fmt="%s" index="1">csrbank3_active_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 976: Assignment to <arg fmt="%s" index="1">sram_bus_dat_w1</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1109: Assignment to <arg fmt="%s" index="1">csrbank3_pending_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1093: Result of <arg fmt="%d" index="1">30</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">14</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1110: Assignment to <arg fmt="%s" index="1">csrbank3_pending_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1265: Result of <arg fmt="%d" index="1">58</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">57</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1119: Assignment to <arg fmt="%s" index="1">csrbank3_miso_data3_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1120: Assignment to <arg fmt="%s" index="1">csrbank3_miso_data3_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1121: Assignment to <arg fmt="%s" index="1">csrbank3_miso_data2_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1122: Assignment to <arg fmt="%s" index="1">csrbank3_miso_data2_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1123: Assignment to <arg fmt="%s" index="1">csrbank3_miso_data1_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1124: Assignment to <arg fmt="%s" index="1">csrbank3_miso_data1_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1125: Assignment to <arg fmt="%s" index="1">csrbank3_miso_data0_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1126: Assignment to <arg fmt="%s" index="1">csrbank3_miso_data0_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1162: Assignment to <arg fmt="%s" index="1">csrbank6_in1_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1163: Assignment to <arg fmt="%s" index="1">csrbank6_in1_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1164: Assignment to <arg fmt="%s" index="1">csrbank6_in0_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1165: Assignment to <arg fmt="%s" index="1">csrbank6_in0_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1187: Assignment to <arg fmt="%s" index="1">timer0_update_value_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1189: Assignment to <arg fmt="%s" index="1">csrbank7_value3_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1190: Assignment to <arg fmt="%s" index="1">csrbank7_value3_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1191: Assignment to <arg fmt="%s" index="1">csrbank7_value2_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1192: Assignment to <arg fmt="%s" index="1">csrbank7_value2_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1193: Assignment to <arg fmt="%s" index="1">csrbank7_value1_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1194: Assignment to <arg fmt="%s" index="1">csrbank7_value1_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1195: Assignment to <arg fmt="%s" index="1">csrbank7_value0_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1196: Assignment to <arg fmt="%s" index="1">csrbank7_value0_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1197: Assignment to <arg fmt="%s" index="1">timer0_eventmanager_status_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1198: Assignment to <arg fmt="%s" index="1">timer0_eventmanager_status_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1224: Assignment to <arg fmt="%s" index="1">csrbank8_txfull_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1225: Assignment to <arg fmt="%s" index="1">csrbank8_txfull_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1226: Assignment to <arg fmt="%s" index="1">csrbank8_rxempty_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1227: Assignment to <arg fmt="%s" index="1">csrbank8_rxempty_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1228: Assignment to <arg fmt="%s" index="1">uart_eventmanager_status_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1229: Assignment to <arg fmt="%s" index="1">uart_eventmanager_status_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1253: Assignment to <arg fmt="%s" index="1">csrbank10_temperature1_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1254: Assignment to <arg fmt="%s" index="1">csrbank10_temperature1_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1255: Assignment to <arg fmt="%s" index="1">csrbank10_temperature0_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1256: Assignment to <arg fmt="%s" index="1">csrbank10_temperature0_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1257: Assignment to <arg fmt="%s" index="1">csrbank10_vccint1_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1258: Assignment to <arg fmt="%s" index="1">csrbank10_vccint1_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1259: Assignment to <arg fmt="%s" index="1">csrbank10_vccint0_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1260: Assignment to <arg fmt="%s" index="1">csrbank10_vccint0_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1261: Assignment to <arg fmt="%s" index="1">csrbank10_vccaux1_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1262: Assignment to <arg fmt="%s" index="1">csrbank10_vccaux1_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1263: Assignment to <arg fmt="%s" index="1">csrbank10_vccaux0_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1264: Assignment to <arg fmt="%s" index="1">csrbank10_vccaux0_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1265: Assignment to <arg fmt="%s" index="1">csrbank10_vccbram1_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1266: Assignment to <arg fmt="%s" index="1">csrbank10_vccbram1_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1267: Assignment to <arg fmt="%s" index="1">csrbank10_vccbram0_r</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1268: Assignment to <arg fmt="%s" index="1">csrbank10_vccbram0_re</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1300: Assignment to <arg fmt="%s" index="1">sram_bus_we1</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1312: Assignment to <arg fmt="%s" index="1">sram_bus_dat_w1</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1404: Result of <arg fmt="%d" index="1">16</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1404: Assignment to <arg fmt="%s" index="1">xilinxmultiregimpl1</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1406: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1406: Assignment to <arg fmt="%s" index="1">xilinxmultiregimpl2</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1431: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1432: Result of <arg fmt="%d" index="1">30</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">14</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1604: Result of <arg fmt="%d" index="1">58</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">57</arg>-bit target.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1412: Assignment to <arg fmt="%s" index="1">ctrl_re</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1073: Assignment to <arg fmt="%s" index="1">re</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v" Line 910: Assignment to <arg fmt="%s" index="1">pc_x</arg> ignored, since the identifier is never used
@@ -434,61 +272,37 @@
 <msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v" Line 2678: Assignment to <arg fmt="%s" index="1">x_result_sel_logic_x</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2312: Assignment to <arg fmt="%s" index="1">uart_tx_fifo_wrport_dat_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1741: Assignment to <arg fmt="%s" index="1">uart_tx_fifo_wrport_dat_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2329: Assignment to <arg fmt="%s" index="1">uart_rx_fifo_wrport_dat_r</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1758: Assignment to <arg fmt="%s" index="1">uart_rx_fifo_wrport_dat_r</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2380: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">DI</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1782: Assignment to <arg fmt="%s" index="1">cs_n_t_i</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2383: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">VAUXN</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2384: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">VAUXP</arg>&gt;. Formal port size is <arg fmt="%d" index="2">16</arg>-bit while actual signal size is <arg fmt="%d" index="1">1</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2387: Assignment to <arg fmt="%s" index="1">alarm</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2388: Assignment to <arg fmt="%s" index="1">busy</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="189" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2389: Size mismatch in connection of port &lt;<arg fmt="%s" index="3">CHANNEL</arg>&gt;. Formal port size is <arg fmt="%d" index="2">5</arg>-bit while actual signal size is <arg fmt="%d" index="1">7</arg>-bit.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2393: Assignment to <arg fmt="%s" index="1">eos</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2394: Assignment to <arg fmt="%s" index="1">ot</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2398: Assignment to <arg fmt="%s" index="1">cs_n_t_i</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 2401: Assignment to <arg fmt="%s" index="1">clk_t_i</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1785: Assignment to <arg fmt="%s" index="1">clk_t_i</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">lcd_rst</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v</arg>&quot; line <arg fmt="%s" index="2">2220</arg>: Output port &lt;<arg fmt="%s" index="3">I_CTI_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm32_cpu</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v</arg>&quot; line <arg fmt="%s" index="2">1649</arg>: Output port &lt;<arg fmt="%s" index="3">I_CTI_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm32_cpu</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v</arg>&quot; line <arg fmt="%s" index="2">2220</arg>: Output port &lt;<arg fmt="%s" index="3">I_BTE_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm32_cpu</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v</arg>&quot; line <arg fmt="%s" index="2">1649</arg>: Output port &lt;<arg fmt="%s" index="3">I_BTE_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm32_cpu</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v</arg>&quot; line <arg fmt="%s" index="2">2220</arg>: Output port &lt;<arg fmt="%s" index="3">D_CTI_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm32_cpu</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v</arg>&quot; line <arg fmt="%s" index="2">1649</arg>: Output port &lt;<arg fmt="%s" index="3">D_CTI_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm32_cpu</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v</arg>&quot; line <arg fmt="%s" index="2">2220</arg>: Output port &lt;<arg fmt="%s" index="3">D_BTE_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm32_cpu</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v</arg>&quot; line <arg fmt="%s" index="2">1649</arg>: Output port &lt;<arg fmt="%s" index="3">D_BTE_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm32_cpu</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v</arg>&quot; line <arg fmt="%s" index="2">2220</arg>: Output port &lt;<arg fmt="%s" index="3">I_LOCK_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm32_cpu</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v</arg>&quot; line <arg fmt="%s" index="2">1649</arg>: Output port &lt;<arg fmt="%s" index="3">I_LOCK_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm32_cpu</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v</arg>&quot; line <arg fmt="%s" index="2">2220</arg>: Output port &lt;<arg fmt="%s" index="3">D_LOCK_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm32_cpu</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v</arg>&quot; line <arg fmt="%s" index="2">1649</arg>: Output port &lt;<arg fmt="%s" index="3">D_LOCK_O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">lm32_cpu</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">mem</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">top</arg>&apos;, is tied to its initial value.
@@ -558,14 +372,14 @@
 <msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_mem_3</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_mem_2</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
-
 <msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_mem_1</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
 
-<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_storage</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
-</msg>
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_mem_2</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
 
 <msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_storage_1</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="old" >The small RAM &lt;<arg fmt="%s" index="1">Mram_storage_2</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
 </msg>
 
 <msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_mem</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
@@ -591,78 +405,6 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">memdat_1_9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">bus_wishbone_dat_r_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
-</msg>
-
 <msg type="info" file="Xst" num="2261" delta="old" >The FF/Latch &lt;<arg fmt="%s" index="1">i_cyc_o</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">lm32_instruction_unit</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i_stb_o&gt; </arg>
 </msg>
 
@@ -681,16 +423,16 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mmult_n00233</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">lm32_multiplier</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_storage9</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_storage10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
-</msg>
-
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_storage_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_storage_110</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_storage_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">Mram_storage_210</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">memop_pc_w_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">lm32_cpu</arg>&gt;.
@@ -795,34 +537,262 @@
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">d_cti_o_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">lm32_load_store_unit</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface6_bank_bus_dat_r_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_21</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_20</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_19</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_18</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_17</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_16</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_15</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_14</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_13</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface5_bank_bus_dat_r_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface5_bank_bus_dat_r_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface5_bank_bus_dat_r_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface5_bank_bus_dat_r_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface5_bank_bus_dat_r_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface5_bank_bus_dat_r_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface5_bank_bus_dat_r_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_12</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_11</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface4_bank_bus_dat_r_1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_31</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_30</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_29</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_28</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_27</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_26</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_25</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_24</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_23</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">interface0_bank_bus_dat_r_22</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">top</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cs_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">top</arg>&gt;.
