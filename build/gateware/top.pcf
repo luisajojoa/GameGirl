@@ -1,11 +1,12 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Mar 14 09:21:23 2019
+// Written by: Map P.20131013 on Thu Mar 14 10:02:01 2019
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "clk100" LOCATE = SITE "E3" LEVEL 1;
 COMP "cpu_reset" LOCATE = SITE "C12" LEVEL 1;
 COMP "lcd_rst" LOCATE = SITE "D17" LEVEL 1;
+COMP "user_led0" LOCATE = SITE "H17" LEVEL 1;
 COMP "lcd_spi_clk" LOCATE = SITE "E18" LEVEL 1;
 COMP "user_btn0" LOCATE = SITE "N17" LEVEL 1;
 COMP "serial_tx" LOCATE = SITE "D4" LEVEL 1;
@@ -125,7 +126,7 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "bus_wishbone_dat_r_28" BEL "bus_wishbone_dat_r_29" BEL
         "bus_wishbone_dat_r_30" BEL "bus_wishbone_dat_r_31" BEL
         "uart_tx_old_trigger" BEL "uart_rx_old_trigger" BEL
-        "timer0_zero_old_trigger" BEL "active" BEL "zero_old_trigger" BEL
+        "timer0_zero_old_trigger" BEL "zero_old_trigger" BEL "active" BEL
         "slave_sel_r_0" BEL "slave_sel_r_1" BEL "slave_sel_r_2" BEL
         "slave_sel_r_3" BEL "sel_r" BEL "uart_phy_rx_r" BEL "pending0" BEL
         "uart_phy_rx_reg_0" BEL "uart_phy_rx_reg_1" BEL "uart_phy_rx_reg_2"
@@ -408,77 +409,77 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "interface2_bank_bus_dat_r_27" BEL "interface2_bank_bus_dat_r_28" BEL
         "interface2_bank_bus_dat_r_29" BEL "interface2_bank_bus_dat_r_30" BEL
         "interface2_bank_bus_dat_r_31" BEL "interface4_bank_bus_dat_r_0" BEL
-        "interface7_bank_bus_dat_r_0" BEL "interface7_bank_bus_dat_r_1" BEL
-        "interface7_bank_bus_dat_r_2" BEL "interface7_bank_bus_dat_r_3" BEL
-        "interface7_bank_bus_dat_r_4" BEL "interface7_bank_bus_dat_r_5" BEL
-        "interface7_bank_bus_dat_r_6" BEL "interface7_bank_bus_dat_r_7" BEL
-        "interface7_bank_bus_dat_r_8" BEL "interface7_bank_bus_dat_r_9" BEL
-        "interface7_bank_bus_dat_r_10" BEL "interface7_bank_bus_dat_r_11" BEL
-        "interface7_bank_bus_dat_r_12" BEL "interface7_bank_bus_dat_r_13" BEL
-        "interface7_bank_bus_dat_r_14" BEL "interface7_bank_bus_dat_r_15" BEL
-        "interface7_bank_bus_dat_r_16" BEL "interface7_bank_bus_dat_r_17" BEL
-        "interface7_bank_bus_dat_r_18" BEL "interface7_bank_bus_dat_r_19" BEL
-        "interface7_bank_bus_dat_r_20" BEL "interface7_bank_bus_dat_r_21" BEL
-        "interface7_bank_bus_dat_r_22" BEL "interface7_bank_bus_dat_r_23" BEL
-        "interface7_bank_bus_dat_r_24" BEL "interface7_bank_bus_dat_r_25" BEL
-        "interface7_bank_bus_dat_r_26" BEL "interface7_bank_bus_dat_r_27" BEL
-        "interface7_bank_bus_dat_r_28" BEL "interface7_bank_bus_dat_r_29" BEL
-        "interface7_bank_bus_dat_r_30" BEL "interface7_bank_bus_dat_r_31" BEL
-        "uart_phy_tx_reg_0" BEL "uart_phy_tx_reg_1" BEL "uart_phy_tx_reg_2"
-        BEL "uart_phy_tx_reg_3" BEL "uart_phy_tx_reg_4" BEL
-        "uart_phy_tx_reg_5" BEL "uart_phy_tx_reg_6" BEL "uart_phy_tx_reg_7"
-        BEL "machine_n_write_0" BEL "machine_n_write_1" BEL
-        "machine_n_write_2" BEL "machine_n_write_3" BEL "machine_n_write_4"
-        BEL "machine_n_write_5" BEL "interface6_bank_bus_dat_r_0" BEL
-        "interface6_bank_bus_dat_r_1" BEL "interface6_bank_bus_dat_r_2" BEL
-        "interface6_bank_bus_dat_r_3" BEL "interface6_bank_bus_dat_r_4" BEL
-        "interface6_bank_bus_dat_r_5" BEL "interface6_bank_bus_dat_r_6" BEL
-        "interface6_bank_bus_dat_r_7" BEL "timer0_value_status_0" BEL
-        "timer0_value_status_1" BEL "timer0_value_status_2" BEL
-        "timer0_value_status_3" BEL "timer0_value_status_4" BEL
-        "timer0_value_status_5" BEL "timer0_value_status_6" BEL
-        "timer0_value_status_7" BEL "timer0_value_status_8" BEL
-        "timer0_value_status_9" BEL "timer0_value_status_10" BEL
-        "timer0_value_status_11" BEL "timer0_value_status_12" BEL
-        "timer0_value_status_13" BEL "timer0_value_status_14" BEL
-        "timer0_value_status_15" BEL "timer0_value_status_16" BEL
-        "timer0_value_status_17" BEL "timer0_value_status_18" BEL
-        "timer0_value_status_19" BEL "timer0_value_status_20" BEL
-        "timer0_value_status_21" BEL "timer0_value_status_22" BEL
-        "timer0_value_status_23" BEL "timer0_value_status_24" BEL
-        "timer0_value_status_25" BEL "timer0_value_status_26" BEL
-        "timer0_value_status_27" BEL "timer0_value_status_28" BEL
-        "timer0_value_status_29" BEL "timer0_value_status_30" BEL
-        "timer0_value_status_31" BEL "machine_n_read_0" BEL "machine_n_read_1"
-        BEL "machine_n_read_2" BEL "machine_n_read_3" BEL "machine_n_read_4"
-        BEL "machine_n_read_5" BEL "uart_phy_source_valid" BEL
-        "machine_data_0" BEL "machine_data_1" BEL "machine_data_2" BEL
-        "machine_data_3" BEL "machine_data_4" BEL "machine_data_5" BEL
-        "machine_data_6" BEL "machine_data_7" BEL "machine_data_8" BEL
-        "machine_data_9" BEL "machine_data_10" BEL "machine_data_11" BEL
-        "machine_data_12" BEL "machine_data_13" BEL "machine_data_14" BEL
-        "machine_data_15" BEL "machine_data_16" BEL "machine_data_17" BEL
-        "machine_data_18" BEL "machine_data_19" BEL "machine_data_20" BEL
-        "machine_data_21" BEL "machine_data_22" BEL "machine_data_23" BEL
-        "machine_data_24" BEL "machine_data_25" BEL "machine_data_26" BEL
-        "machine_data_27" BEL "machine_data_28" BEL "machine_data_29" BEL
-        "machine_data_30" BEL "machine_data_31" BEL
-        "interface5_bank_bus_dat_r_0" BEL "interface5_bank_bus_dat_r_1" BEL
-        "interface5_bank_bus_dat_r_2" BEL "interface5_bank_bus_dat_r_3" BEL
-        "interface5_bank_bus_dat_r_4" BEL "interface5_bank_bus_dat_r_5" BEL
-        "interface5_bank_bus_dat_r_6" BEL "interface5_bank_bus_dat_r_7" BEL
-        "interface5_bank_bus_dat_r_8" BEL "interface5_bank_bus_dat_r_9" BEL
-        "interface5_bank_bus_dat_r_10" BEL "interface5_bank_bus_dat_r_11" BEL
-        "interface5_bank_bus_dat_r_12" BEL "interface5_bank_bus_dat_r_13" BEL
-        "interface5_bank_bus_dat_r_14" BEL "interface5_bank_bus_dat_r_15" BEL
-        "interface5_bank_bus_dat_r_16" BEL "interface5_bank_bus_dat_r_17" BEL
-        "interface5_bank_bus_dat_r_18" BEL "interface5_bank_bus_dat_r_19" BEL
-        "interface5_bank_bus_dat_r_20" BEL "interface5_bank_bus_dat_r_21" BEL
-        "interface5_bank_bus_dat_r_22" BEL "interface5_bank_bus_dat_r_23" BEL
-        "interface5_bank_bus_dat_r_24" BEL "interface5_bank_bus_dat_r_25" BEL
-        "interface5_bank_bus_dat_r_26" BEL "interface5_bank_bus_dat_r_27" BEL
-        "interface5_bank_bus_dat_r_28" BEL "interface5_bank_bus_dat_r_29" BEL
-        "interface5_bank_bus_dat_r_30" BEL "interface5_bank_bus_dat_r_31" BEL
+        "interface5_bank_bus_dat_r_0" BEL "interface8_bank_bus_dat_r_0" BEL
+        "interface8_bank_bus_dat_r_1" BEL "interface8_bank_bus_dat_r_2" BEL
+        "interface8_bank_bus_dat_r_3" BEL "interface8_bank_bus_dat_r_4" BEL
+        "interface8_bank_bus_dat_r_5" BEL "interface8_bank_bus_dat_r_6" BEL
+        "interface8_bank_bus_dat_r_7" BEL "interface8_bank_bus_dat_r_8" BEL
+        "interface8_bank_bus_dat_r_9" BEL "interface8_bank_bus_dat_r_10" BEL
+        "interface8_bank_bus_dat_r_11" BEL "interface8_bank_bus_dat_r_12" BEL
+        "interface8_bank_bus_dat_r_13" BEL "interface8_bank_bus_dat_r_14" BEL
+        "interface8_bank_bus_dat_r_15" BEL "interface8_bank_bus_dat_r_16" BEL
+        "interface8_bank_bus_dat_r_17" BEL "interface8_bank_bus_dat_r_18" BEL
+        "interface8_bank_bus_dat_r_19" BEL "interface8_bank_bus_dat_r_20" BEL
+        "interface8_bank_bus_dat_r_21" BEL "interface8_bank_bus_dat_r_22" BEL
+        "interface8_bank_bus_dat_r_23" BEL "interface8_bank_bus_dat_r_24" BEL
+        "interface8_bank_bus_dat_r_25" BEL "interface8_bank_bus_dat_r_26" BEL
+        "interface8_bank_bus_dat_r_27" BEL "interface8_bank_bus_dat_r_28" BEL
+        "interface8_bank_bus_dat_r_29" BEL "interface8_bank_bus_dat_r_30" BEL
+        "interface8_bank_bus_dat_r_31" BEL "uart_phy_tx_reg_0" BEL
+        "uart_phy_tx_reg_1" BEL "uart_phy_tx_reg_2" BEL "uart_phy_tx_reg_3"
+        BEL "uart_phy_tx_reg_4" BEL "uart_phy_tx_reg_5" BEL
+        "uart_phy_tx_reg_6" BEL "uart_phy_tx_reg_7" BEL "machine_n_write_0"
+        BEL "machine_n_write_1" BEL "machine_n_write_2" BEL
+        "machine_n_write_3" BEL "machine_n_write_4" BEL "machine_n_write_5"
+        BEL "interface7_bank_bus_dat_r_0" BEL "interface7_bank_bus_dat_r_1"
+        BEL "interface7_bank_bus_dat_r_2" BEL "interface7_bank_bus_dat_r_3"
+        BEL "interface7_bank_bus_dat_r_4" BEL "interface7_bank_bus_dat_r_5"
+        BEL "interface7_bank_bus_dat_r_6" BEL "interface7_bank_bus_dat_r_7"
+        BEL "timer0_value_status_0" BEL "timer0_value_status_1" BEL
+        "timer0_value_status_2" BEL "timer0_value_status_3" BEL
+        "timer0_value_status_4" BEL "timer0_value_status_5" BEL
+        "timer0_value_status_6" BEL "timer0_value_status_7" BEL
+        "timer0_value_status_8" BEL "timer0_value_status_9" BEL
+        "timer0_value_status_10" BEL "timer0_value_status_11" BEL
+        "timer0_value_status_12" BEL "timer0_value_status_13" BEL
+        "timer0_value_status_14" BEL "timer0_value_status_15" BEL
+        "timer0_value_status_16" BEL "timer0_value_status_17" BEL
+        "timer0_value_status_18" BEL "timer0_value_status_19" BEL
+        "timer0_value_status_20" BEL "timer0_value_status_21" BEL
+        "timer0_value_status_22" BEL "timer0_value_status_23" BEL
+        "timer0_value_status_24" BEL "timer0_value_status_25" BEL
+        "timer0_value_status_26" BEL "timer0_value_status_27" BEL
+        "timer0_value_status_28" BEL "timer0_value_status_29" BEL
+        "timer0_value_status_30" BEL "timer0_value_status_31" BEL
+        "machine_n_read_0" BEL "machine_n_read_1" BEL "machine_n_read_2" BEL
+        "machine_n_read_3" BEL "machine_n_read_4" BEL "machine_n_read_5" BEL
+        "uart_phy_source_valid" BEL "machine_data_0" BEL "machine_data_1" BEL
+        "machine_data_2" BEL "machine_data_3" BEL "machine_data_4" BEL
+        "machine_data_5" BEL "machine_data_6" BEL "machine_data_7" BEL
+        "machine_data_8" BEL "machine_data_9" BEL "machine_data_10" BEL
+        "machine_data_11" BEL "machine_data_12" BEL "machine_data_13" BEL
+        "machine_data_14" BEL "machine_data_15" BEL "machine_data_16" BEL
+        "machine_data_17" BEL "machine_data_18" BEL "machine_data_19" BEL
+        "machine_data_20" BEL "machine_data_21" BEL "machine_data_22" BEL
+        "machine_data_23" BEL "machine_data_24" BEL "machine_data_25" BEL
+        "machine_data_26" BEL "machine_data_27" BEL "machine_data_28" BEL
+        "machine_data_29" BEL "machine_data_30" BEL "machine_data_31" BEL
+        "interface6_bank_bus_dat_r_0" BEL "interface6_bank_bus_dat_r_1" BEL
+        "interface6_bank_bus_dat_r_2" BEL "interface6_bank_bus_dat_r_3" BEL
+        "interface6_bank_bus_dat_r_4" BEL "interface6_bank_bus_dat_r_5" BEL
+        "interface6_bank_bus_dat_r_6" BEL "interface6_bank_bus_dat_r_7" BEL
+        "interface6_bank_bus_dat_r_8" BEL "interface6_bank_bus_dat_r_9" BEL
+        "interface6_bank_bus_dat_r_10" BEL "interface6_bank_bus_dat_r_11" BEL
+        "interface6_bank_bus_dat_r_12" BEL "interface6_bank_bus_dat_r_13" BEL
+        "interface6_bank_bus_dat_r_14" BEL "interface6_bank_bus_dat_r_15" BEL
+        "interface6_bank_bus_dat_r_16" BEL "interface6_bank_bus_dat_r_17" BEL
+        "interface6_bank_bus_dat_r_18" BEL "interface6_bank_bus_dat_r_19" BEL
+        "interface6_bank_bus_dat_r_20" BEL "interface6_bank_bus_dat_r_21" BEL
+        "interface6_bank_bus_dat_r_22" BEL "interface6_bank_bus_dat_r_23" BEL
+        "interface6_bank_bus_dat_r_24" BEL "interface6_bank_bus_dat_r_25" BEL
+        "interface6_bank_bus_dat_r_26" BEL "interface6_bank_bus_dat_r_27" BEL
+        "interface6_bank_bus_dat_r_28" BEL "interface6_bank_bus_dat_r_29" BEL
+        "interface6_bank_bus_dat_r_30" BEL "interface6_bank_bus_dat_r_31" BEL
         "data_read_0" BEL "data_read_1" BEL "data_read_2" BEL "data_read_3"
         BEL "data_read_4" BEL "data_read_5" BEL "data_read_6" BEL
         "data_read_7" BEL "data_read_8" BEL "data_read_9" BEL "data_read_10"
@@ -506,14 +507,14 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "interface3_bank_bus_dat_r_28" BEL "interface3_bank_bus_dat_r_29" BEL
         "interface3_bank_bus_dat_r_30" BEL "interface3_bank_bus_dat_r_31" BEL
         "state_FSM_FFd2" BEL "state_FSM_FFd1" BEL "counter_0" BEL "counter_1"
-        BEL "uart_phy_tx_bitcount_0" BEL "uart_phy_tx_bitcount_1" BEL
+        BEL "uart_tx_fifo_produce_0" BEL "uart_tx_fifo_produce_1" BEL
+        "uart_tx_fifo_produce_2" BEL "uart_tx_fifo_produce_3" BEL
+        "uart_phy_tx_bitcount_0" BEL "uart_phy_tx_bitcount_1" BEL
         "uart_phy_tx_bitcount_2" BEL "uart_phy_tx_bitcount_3" BEL
-        "uart_tx_fifo_consume_0" BEL "uart_tx_fifo_consume_1" BEL
-        "uart_tx_fifo_consume_2" BEL "uart_tx_fifo_consume_3" BEL
         "uart_phy_rx_bitcount_0" BEL "uart_phy_rx_bitcount_1" BEL
         "uart_phy_rx_bitcount_2" BEL "uart_phy_rx_bitcount_3" BEL
-        "uart_tx_fifo_produce_0" BEL "uart_tx_fifo_produce_1" BEL
-        "uart_tx_fifo_produce_2" BEL "uart_tx_fifo_produce_3" BEL
+        "uart_tx_fifo_consume_0" BEL "uart_tx_fifo_consume_1" BEL
+        "uart_tx_fifo_consume_2" BEL "uart_tx_fifo_consume_3" BEL
         "uart_tx_fifo_level0_0" BEL "uart_tx_fifo_level0_1" BEL
         "uart_tx_fifo_level0_2" BEL "uart_tx_fifo_level0_3" BEL
         "uart_tx_fifo_level0_4" BEL "uart_rx_fifo_produce_0" BEL
@@ -523,8 +524,8 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "uart_rx_fifo_level0_3" BEL "uart_rx_fifo_level0_4" BEL
         "uart_rx_fifo_consume_0" BEL "uart_rx_fifo_consume_1" BEL
         "uart_rx_fifo_consume_2" BEL "uart_rx_fifo_consume_3" BEL "count_0"
-        BEL "count_1" BEL "count_2" BEL "count_3" BEL "count_4" BEL "count_5"
-        BEL "count_8" BEL "count_6" BEL "count_7" BEL "count_9" BEL "count_10"
+        BEL "count_1" BEL "count_2" BEL "count_3" BEL "count_6" BEL "count_4"
+        BEL "count_5" BEL "count_7" BEL "count_8" BEL "count_9" BEL "count_10"
         BEL "count_11" BEL "count_12" BEL "count_13" BEL "count_14" BEL
         "count_15" BEL "count_16" BEL "count_17" BEL "count_18" BEL "count_19"
         BEL "machine_cnt_0" BEL "machine_cnt_1" BEL "machine_cnt_2" BEL
@@ -1401,7 +1402,7 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "lm32_cpu/mc_arithmetic/b_4" BEL "lm32_cpu/mc_arithmetic/b_3" BEL
         "lm32_cpu/mc_arithmetic/b_2" BEL "lm32_cpu/mc_arithmetic/b_1" BEL
         "lm32_cpu/mc_arithmetic/b_0" BEL "uart_phy_tx_busy" BEL
-        "uart_rx_pending" BEL "uart_phy_rx_busy" BEL "uart_tx_pending" BEL
+        "uart_tx_pending" BEL "uart_phy_rx_busy" BEL "uart_rx_pending" BEL
         "uart_rx_fifo_readable" BEL "timer0_zero_pending" BEL "zero_pending"
         BEL "pending1" BEL "grant" BEL "uart_tx_fifo_readable" BEL "serial_tx"
         BEL "lm32_cpu/write_enable_m" BEL "lm32_cpu/instruction_unit/i_cyc_o"
@@ -1413,10 +1414,11 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "lm32_cpu/load_store_unit/stall_wb_load" BEL
         "lm32_cpu/load_store_unit/d_we_o" BEL "machine_write0" BEL
         "machine_bias1" BEL "machine_clk" BEL "bus_wishbone_ack" BEL
-        "storage_full" BEL "rs_storage_full" BEL "timer0_en_storage_full" BEL
-        "timer0_eventmanager_storage_full" BEL "cs_0" BEL "lm32_cpu/valid_m"
-        BEL "lm32_cpu/valid_d" BEL "lm32_cpu/valid_x" BEL
-        "lm32_cpu/interrupt_unit/ie" BEL "lm32_cpu/interrupt_unit/eie" BEL
+        "storage_full" BEL "leds_storage_full" BEL "rs_storage_full" BEL
+        "timer0_en_storage_full" BEL "timer0_eventmanager_storage_full" BEL
+        "cs_0" BEL "lm32_cpu/valid_m" BEL "lm32_cpu/valid_d" BEL
+        "lm32_cpu/valid_x" BEL "lm32_cpu/interrupt_unit/ie" BEL
+        "lm32_cpu/interrupt_unit/eie" BEL
         "lm32_cpu/load_store_unit/wb_load_complete" BEL "sram_bus_ack" BEL
         "main_ram_bus_ack" BEL "interface_we" BEL "lm32_cpu/dflush_m" BEL
         "irq1_FRB" BEL "timer0_irq1_FRB" BEL

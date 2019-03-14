@@ -75,7 +75,7 @@ static void help(void)
 	puts("help                            - this command");
 	puts("reboot                          - reboot CPU");
 //	puts("led                             - led test");
-//	puts("sw                             - switch test");
+	puts("buttons                             - switch test");
 	puts("lcd                             - test lcd XD");
 	puts("test                             - test lcd with buttons");
 	puts("win                             - test lcd window");
@@ -102,7 +102,17 @@ static void lcd_configure(void)
 }
 
 
+static void buttons (void)
+{
+	button_ev_enable_write(1);
+	button_ev_pending_write(1);
+	irq_setmask(irq_getmask() | (1<< 3));
+	printf("get maska %d \n",irq_getmask());
+	printf("get maski %d \n",irq_pending());
+	printf("get maske %d \n",(irq_getmask() | (1 << 3)));
 
+
+}
 
 
 static void lcd_test(void)
@@ -172,6 +182,8 @@ static void console_service(void)
 	}
 	else if(strcmp(token, "test") == 0)
 		screen();
+	else if(strcmp(token, "buttons") == 0)
+		buttons();
 	prompt();
 }
 
@@ -179,8 +191,13 @@ int main(void)
 {
 	irq_setmask(0);
 	irq_setie(1);
+	buttons();	
 	uart_init();
 	
+
+	printf("get maska %X \n",irq_getmask());
+	printf("get maski %X \n",irq_pending());
+	printf("get maske %x \n",(irq_getmask() | (1 << 3)));
 
 	puts("\nLab004 - CPU testing software built "__DATE__" "__TIME__"\n");
 	help();

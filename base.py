@@ -19,7 +19,7 @@ from button import button_intr
 
 _io = [
 
-   # ("user_led",  0, Pins("H17"), IOStandard("LVCMOS33")),
+    ("user_led",  0, Pins("H17"), IOStandard("LVCMOS33")),
    # ("user_led",  1, Pins("K15"), IOStandard("LVCMOS33")),
    # ("user_led",  2, Pins("J13"), IOStandard("LVCMOS33")),
    # ("user_led",  3, Pins("N14"), IOStandard("LVCMOS33")),
@@ -126,7 +126,7 @@ class BaseSoC(SoCCore):
     csr_peripherals = [
         "dna",
        # "xadc",
-       # "leds",
+        "leds",
        # "switches",
         "button",
         "lcd",
@@ -164,9 +164,10 @@ class BaseSoC(SoCCore):
         # FPGA Temperature/Voltage
       #  self.submodules.xadc = xadc.XADC()
 
-        # Led
-      #  user_leds = Cat(*[platform.request("user_led", i) for i in range(16)])
-       # self.submodules.leds = Led(user_leds)
+		# Led
+        user_leds = platform.request("user_led",0)
+#Cat(*[platform.request("user_led", i) for i in range(16)])
+        self.submodules.leds = Led(user_leds)
 
         # Switches
        # user_switches = Cat(*[platform.request("user_sw", i) for i in range(16)])

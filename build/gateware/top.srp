@@ -53,147 +53,147 @@ WARNING:Xst:29 - Optimization Effort not specified
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v" included at line 61.
-WARNING:HDLCompiler:1591 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v" Line 186: Root scope declaration is not allowed in verilog 95/2K mode
-Parsing module <lm32_multiplier>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 57.
-Parsing module <lm32_icache>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 63.
-Parsing module <lm32_load_store_unit>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
-Parsing module <lm32_interrupt>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 55.
-Parsing module <lm32_ram>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dtlb.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 32.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 52.
-Parsing module <lm32_dcache>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
-Parsing module <lm32_logic_op>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 56.
-Parsing module <lm32_decoder>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 71.
-Parsing module <lm32_instruction_unit>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_debug.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 53.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
-Parsing module <lm32_shifter>.
 Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v" into library work
 Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 93.
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v" included at line 61.
+WARNING:HDLCompiler:1591 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/config/lm32_config.v" Line 186: Root scope declaration is not allowed in verilog 95/2K mode
 Parsing module <lm32_cpu>.
 WARNING:HDLCompiler:924 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v" Line 653: Attribute target identifier preserve_driver not found in this scope
 WARNING:HDLCompiler:924 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v" Line 652: Attribute target identifier preserve_signal not found in this scope
-Analyzing Verilog file "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" into library work
-Parsing module <top>.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dp_ram.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 31.
-Parsing module <lm32_dp_ram>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_ram.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 55.
+Parsing module <lm32_ram>.
 Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_itlb.v" into library work
 Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 32.
-Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v" into library work
-Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
-Parsing module <lm32_adder>.
 Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_mc_arithmetic.v" into library work
 Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
 Parsing module <lm32_mc_arithmetic>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dcache.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 52.
+Parsing module <lm32_dcache>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_load_store_unit.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 63.
+Parsing module <lm32_load_store_unit>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_shifter.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
+Parsing module <lm32_shifter>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_debug.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 53.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_decoder.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 56.
+Parsing module <lm32_decoder>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_icache.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 57.
+Parsing module <lm32_icache>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
+Parsing module <lm32_interrupt>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_adder.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
+Parsing module <lm32_adder>.
+Analyzing Verilog file "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" into library work
+Parsing module <top>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_logic_op.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
+Parsing module <lm32_logic_op>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dp_ram.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 31.
+Parsing module <lm32_dp_ram>.
 Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_addsub.v" into library work
 Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 49.
 Parsing module <lm32_addsub>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_dtlb.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 32.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_instruction_unit.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 71.
+Parsing module <lm32_instruction_unit>.
+Analyzing Verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_multiplier.v" into library work
+Parsing verilog file "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_include.v" included at line 50.
+Parsing module <lm32_multiplier>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1647: Port I_LOCK_O is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1683: Port I_LOCK_O is not connected to this instance
 
 Elaborating module <top>.
 
 Elaborating module <$unit_1>.
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 17: Using initial value of ctrl_reset_reset_w since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 61: Using initial value of rom_bus_err since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 74: Using initial value of sram_bus_err since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 89: Using initial value of main_ram_bus_err since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 108: Using initial value of bus_wishbone_err since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 125: Using initial value of uart_phy_source_first since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 126: Using initial value of uart_phy_source_last since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 162: Using initial value of uart_tx_fifo_sink_first since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 163: Using initial value of uart_tx_fifo_sink_last since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 179: Using initial value of uart_tx_fifo_replace since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 216: Using initial value of uart_rx_fifo_replace since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 234: Using initial value of uart_reset since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 246: Using initial value of timer0_update_value_w since it is never assigned
-WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 354: Using initial value of start_w since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 18: Using initial value of ctrl_reset_reset_w since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 62: Using initial value of rom_bus_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 75: Using initial value of sram_bus_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 90: Using initial value of main_ram_bus_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 109: Using initial value of bus_wishbone_err since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 126: Using initial value of uart_phy_source_first since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 127: Using initial value of uart_phy_source_last since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 163: Using initial value of uart_tx_fifo_sink_first since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 164: Using initial value of uart_tx_fifo_sink_last since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 180: Using initial value of uart_tx_fifo_replace since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 217: Using initial value of uart_rx_fifo_replace since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 235: Using initial value of uart_reset since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 247: Using initial value of timer0_update_value_w since it is never assigned
+WARNING:HDLCompiler:872 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 358: Using initial value of start_w since it is never assigned
 Reading initialization file \"mem.init\".
-WARNING:HDLCompiler:1670 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1688: Signal <mem> in initial block is partially initialized.
+WARNING:HDLCompiler:1670 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1724: Signal <mem> in initial block is partially initialized.
 Reading initialization file \"mem_2.init\".
-WARNING:HDLCompiler:1670 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1724: Signal <mem_2> in initial block is partially initialized.
+WARNING:HDLCompiler:1670 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1760: Signal <mem_2> in initial block is partially initialized.
 Reading initialization file \"mem_3.init\".
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 557: Assignment to uart_phy_sink_first ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 558: Assignment to uart_phy_sink_last ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 562: Assignment to uart_phy_source_ready ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 608: Assignment to uart_tx_fifo_level1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 633: Assignment to uart_rx_fifo_source_first ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 634: Assignment to uart_rx_fifo_source_last ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 638: Assignment to uart_rx_fifo_level1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 681: Assignment to config_padding0 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 682: Assignment to xfer_padding0 ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 695: Result of 16-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 790: Assignment to rom_bus_dat_w ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 791: Assignment to rom_bus_sel ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 793: Assignment to rom_bus_we ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 794: Assignment to rom_bus_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 795: Assignment to rom_bus_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 801: Assignment to sram_bus_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 802: Assignment to sram_bus_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 808: Assignment to main_ram_bus_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 809: Assignment to main_ram_bus_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 812: Assignment to bus_wishbone_sel ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 815: Assignment to bus_wishbone_cti ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 816: Assignment to bus_wishbone_bte ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 837: Assignment to csrbank0_in_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 838: Assignment to csrbank0_in_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 839: Assignment to status_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 840: Assignment to status_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 849: Assignment to ctrl_reset_reset_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 853: Assignment to csrbank1_bus_errors_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 854: Assignment to csrbank1_bus_errors_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 855: Assignment to ctrl_storage ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 859: Assignment to csrbank2_id1_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 860: Assignment to csrbank2_id1_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 861: Assignment to csrbank2_id0_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 862: Assignment to csrbank2_id0_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 880: Assignment to csrbank3_active_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 881: Assignment to csrbank3_active_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 882: Assignment to csrbank3_pending_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 883: Assignment to csrbank3_pending_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 886: Assignment to csrbank3_miso_data_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 887: Assignment to csrbank3_miso_data_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 909: Assignment to timer0_update_value_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 911: Assignment to csrbank5_value_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 912: Assignment to csrbank5_value_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 913: Assignment to timer0_eventmanager_status_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 914: Assignment to timer0_eventmanager_status_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 931: Assignment to csrbank6_txfull_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 932: Assignment to csrbank6_txfull_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 933: Assignment to csrbank6_rxempty_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 934: Assignment to csrbank6_rxempty_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 935: Assignment to uart_eventmanager_status_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 936: Assignment to uart_eventmanager_status_re ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 967: Assignment to sram_bus_we1 ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 976: Assignment to sram_bus_dat_w1 ignored, since the identifier is never used
-WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1093: Result of 30-bit expression is truncated to fit in 14-bit target.
-WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1265: Result of 58-bit expression is truncated to fit in 57-bit target.
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1073: Assignment to re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 569: Assignment to uart_phy_sink_first ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 570: Assignment to uart_phy_sink_last ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 574: Assignment to uart_phy_source_ready ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 620: Assignment to uart_tx_fifo_level1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 645: Assignment to uart_rx_fifo_source_first ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 646: Assignment to uart_rx_fifo_source_last ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 650: Assignment to uart_rx_fifo_level1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 694: Assignment to config_padding0 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 695: Assignment to xfer_padding0 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 708: Result of 16-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 803: Assignment to rom_bus_dat_w ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 804: Assignment to rom_bus_sel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 806: Assignment to rom_bus_we ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 807: Assignment to rom_bus_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 808: Assignment to rom_bus_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 814: Assignment to sram_bus_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 815: Assignment to sram_bus_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 821: Assignment to main_ram_bus_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 822: Assignment to main_ram_bus_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 825: Assignment to bus_wishbone_sel ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 828: Assignment to bus_wishbone_cti ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 829: Assignment to bus_wishbone_bte ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 850: Assignment to csrbank0_in_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 851: Assignment to csrbank0_in_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 852: Assignment to status_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 853: Assignment to status_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 862: Assignment to ctrl_reset_reset_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 866: Assignment to csrbank1_bus_errors_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 867: Assignment to csrbank1_bus_errors_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 868: Assignment to ctrl_storage ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 872: Assignment to csrbank2_id1_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 873: Assignment to csrbank2_id1_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 874: Assignment to csrbank2_id0_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 875: Assignment to csrbank2_id0_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 893: Assignment to csrbank3_active_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 894: Assignment to csrbank3_active_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 895: Assignment to csrbank3_pending_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 896: Assignment to csrbank3_pending_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 899: Assignment to csrbank3_miso_data_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 900: Assignment to csrbank3_miso_data_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 927: Assignment to timer0_update_value_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 929: Assignment to csrbank6_value_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 930: Assignment to csrbank6_value_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 931: Assignment to timer0_eventmanager_status_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 932: Assignment to timer0_eventmanager_status_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 949: Assignment to csrbank7_txfull_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 950: Assignment to csrbank7_txfull_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 951: Assignment to csrbank7_rxempty_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 952: Assignment to csrbank7_rxempty_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 953: Assignment to uart_eventmanager_status_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 954: Assignment to uart_eventmanager_status_re ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 987: Assignment to sram_bus_we1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 997: Assignment to sram_bus_dat_w1 ignored, since the identifier is never used
+WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1114: Result of 30-bit expression is truncated to fit in 14-bit target.
+WARNING:HDLCompiler:413 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1286: Result of 58-bit expression is truncated to fit in 57-bit target.
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1094: Assignment to re ignored, since the identifier is never used
 
 Elaborating module <lm32_cpu(eba_reset=32'b0)>.
 
@@ -238,12 +238,12 @@ WARNING:HDLCompiler:1127 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/su
 WARNING:HDLCompiler:413 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v" Line 176: Result of 32-bit expression is truncated to fit in 1-bit target.
 WARNING:HDLCompiler:1127 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_interrupt.v" Line 176: Assignment to im_csr_read_data ignored, since the identifier is never used
 WARNING:HDLCompiler:1127 - "/opt/liteX/litex/litex/soc/cores/cpu/lm32/verilog/submodule/rtl/lm32_cpu.v" Line 2678: Assignment to x_result_sel_logic_x ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1741: Assignment to uart_tx_fifo_wrport_dat_r ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1758: Assignment to uart_rx_fifo_wrport_dat_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1777: Assignment to uart_tx_fifo_wrport_dat_r ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1794: Assignment to uart_rx_fifo_wrport_dat_r ignored, since the identifier is never used
 
 Elaborating module <DNA_PORT>.
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1782: Assignment to cs_n_t_i ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1785: Assignment to clk_t_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1818: Assignment to cs_n_t_i ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" Line 1821: Assignment to clk_t_i ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -260,12 +260,12 @@ Synthesizing Unit <top>.
     Set property "register_balancing = no" for signal <xilinxmultiregimpl1_regs1>.
     Set property "shreg_extract = no" for signal <xilinxmultiregimpl1_regs1>.
 WARNING:Xst:647 - Input <lcd_rst> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 1649: Output port <I_CTI_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 1649: Output port <I_BTE_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 1649: Output port <D_CTI_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 1649: Output port <D_BTE_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 1649: Output port <I_LOCK_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 1649: Output port <D_LOCK_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 1685: Output port <I_CTI_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 1685: Output port <I_BTE_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 1685: Output port <D_CTI_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 1685: Output port <D_BTE_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 1685: Output port <I_LOCK_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/gateware/top.v" line 1685: Output port <D_LOCK_O> of the instance <lm32_cpu> is unconnected or connected to loadless signal.
 WARNING:Xst:2999 - Signal 'mem', unconnected in block 'top', is tied to its initial value.
 WARNING:Xst:2999 - Signal 'mem_3', unconnected in block 'top', is tied to its initial value.
     Found 8192x32-bit single-port Read Only RAM <Mram_mem> for signal <mem>.
@@ -348,15 +348,17 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <mem_3>,
     Found 32-bit register for signal <xfer_storage_full>.
     Found 32-bit register for signal <mosi_data_storage_full>.
     Found 32-bit register for signal <interface4_bank_bus_dat_r>.
-    Found 1-bit register for signal <lcd_rs>.
+    Found 1-bit register for signal <user_led0>.
     Found 32-bit register for signal <interface5_bank_bus_dat_r>.
+    Found 1-bit register for signal <lcd_rs>.
+    Found 32-bit register for signal <interface6_bank_bus_dat_r>.
     Found 32-bit register for signal <timer0_load_storage_full>.
     Found 32-bit register for signal <timer0_reload_storage_full>.
     Found 1-bit register for signal <timer0_en_storage_full>.
     Found 1-bit register for signal <timer0_eventmanager_storage_full>.
-    Found 32-bit register for signal <interface6_bank_bus_dat_r>.
-    Found 2-bit register for signal <uart_eventmanager_storage_full>.
     Found 32-bit register for signal <interface7_bank_bus_dat_r>.
+    Found 2-bit register for signal <uart_eventmanager_storage_full>.
+    Found 32-bit register for signal <interface8_bank_bus_dat_r>.
     Found 32-bit register for signal <uart_phy_storage_full>.
     Found 1-bit register for signal <xilinxmultiregimpl0_regs0>.
     Found 1-bit register for signal <xilinxmultiregimpl0_regs1>.
@@ -383,42 +385,42 @@ WARNING:Xst:3035 - Index value(s) does not match array range for signal <mem_3>,
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 5-bit subtractor for signal <uart_tx_fifo_level0[4]_GND_1_o_sub_276_OUT> created at line 1204.
-    Found 5-bit subtractor for signal <uart_rx_fifo_level0[4]_GND_1_o_sub_285_OUT> created at line 1226.
-    Found 32-bit subtractor for signal <timer0_value[31]_GND_1_o_sub_289_OUT> created at line 1247.
-    Found 8-bit subtractor for signal <machine_cnt[7]_GND_1_o_sub_304_OUT> created at line 1298.
-    Found 6-bit subtractor for signal <machine_n_write[5]_GND_1_o_sub_310_OUT> created at line 1325.
-    Found 6-bit subtractor for signal <machine_n_read[5]_GND_1_o_sub_311_OUT> created at line 1328.
-    Found 20-bit subtractor for signal <count[19]_GND_1_o_sub_318_OUT> created at line 1354.
-    Found 32-bit adder for signal <ctrl_bus_errors[31]_GND_1_o_add_231_OUT> created at line 1076.
-    Found 2-bit adder for signal <counter[1]_GND_1_o_add_238_OUT> created at line 1105.
-    Found 4-bit adder for signal <uart_phy_tx_bitcount[3]_GND_1_o_add_241_OUT> created at line 1119.
-    Found 33-bit adder for signal <n1269> created at line 1135.
-    Found 4-bit adder for signal <uart_phy_rx_bitcount[3]_GND_1_o_add_253_OUT> created at line 1148.
-    Found 33-bit adder for signal <n1274> created at line 1167.
-    Found 4-bit adder for signal <uart_tx_fifo_produce[3]_GND_1_o_add_269_OUT> created at line 1193.
-    Found 4-bit adder for signal <uart_tx_fifo_consume[3]_GND_1_o_add_271_OUT> created at line 1196.
-    Found 5-bit adder for signal <uart_tx_fifo_level0[4]_GND_1_o_add_273_OUT> created at line 1200.
-    Found 4-bit adder for signal <uart_rx_fifo_produce[3]_GND_1_o_add_278_OUT> created at line 1215.
-    Found 4-bit adder for signal <uart_rx_fifo_consume[3]_GND_1_o_add_280_OUT> created at line 1218.
-    Found 5-bit adder for signal <uart_rx_fifo_level0[4]_GND_1_o_add_282_OUT> created at line 1222.
-    Found 7-bit adder for signal <cnt[6]_GND_1_o_add_293_OUT> created at line 1263.
-    Found 32-bit 4-to-1 multiplexer for signal <interface0_bank_bus_adr[1]_GND_1_o_wide_mux_320_OUT> created at line 1361.
-    Found 32-bit 4-to-1 multiplexer for signal <interface1_bank_bus_adr[1]_GND_1_o_wide_mux_322_OUT> created at line 1382.
-    Found 32-bit 8-to-1 multiplexer for signal <interface3_bank_bus_adr[2]_GND_1_o_wide_mux_327_OUT> created at line 1412.
-    Found 32-bit 8-to-1 multiplexer for signal <interface5_bank_bus_adr[2]_GND_1_o_wide_mux_334_OUT> created at line 1462.
-    Found 32-bit 7-to-1 multiplexer for signal <interface6_bank_bus_adr[2]_GND_1_o_wide_mux_338_OUT> created at line 1507.
-    Found 1-bit tristate buffer for signal <lcd_spi_cs_n> created at line 1781
-    Found 1-bit tristate buffer for signal <lcd_spi_clk> created at line 1784
-    Found 1-bit tristate buffer for signal <lcd_spi_mosi> created at line 1787
-    Found 7-bit comparator greater for signal <cnt[6]_PWR_1_o_LessThan_293_o> created at line 1262
-    Found 7-bit comparator greater for signal <cnt[6]_GND_1_o_LessThan_538_o> created at line 1776
+    Found 5-bit subtractor for signal <uart_tx_fifo_level0[4]_GND_1_o_sub_281_OUT> created at line 1225.
+    Found 5-bit subtractor for signal <uart_rx_fifo_level0[4]_GND_1_o_sub_290_OUT> created at line 1247.
+    Found 32-bit subtractor for signal <timer0_value[31]_GND_1_o_sub_294_OUT> created at line 1268.
+    Found 8-bit subtractor for signal <machine_cnt[7]_GND_1_o_sub_309_OUT> created at line 1319.
+    Found 6-bit subtractor for signal <machine_n_write[5]_GND_1_o_sub_315_OUT> created at line 1346.
+    Found 6-bit subtractor for signal <machine_n_read[5]_GND_1_o_sub_316_OUT> created at line 1349.
+    Found 20-bit subtractor for signal <count[19]_GND_1_o_sub_323_OUT> created at line 1375.
+    Found 32-bit adder for signal <ctrl_bus_errors[31]_GND_1_o_add_236_OUT> created at line 1097.
+    Found 2-bit adder for signal <counter[1]_GND_1_o_add_243_OUT> created at line 1126.
+    Found 4-bit adder for signal <uart_phy_tx_bitcount[3]_GND_1_o_add_246_OUT> created at line 1140.
+    Found 33-bit adder for signal <n1287> created at line 1156.
+    Found 4-bit adder for signal <uart_phy_rx_bitcount[3]_GND_1_o_add_258_OUT> created at line 1169.
+    Found 33-bit adder for signal <n1292> created at line 1188.
+    Found 4-bit adder for signal <uart_tx_fifo_produce[3]_GND_1_o_add_274_OUT> created at line 1214.
+    Found 4-bit adder for signal <uart_tx_fifo_consume[3]_GND_1_o_add_276_OUT> created at line 1217.
+    Found 5-bit adder for signal <uart_tx_fifo_level0[4]_GND_1_o_add_278_OUT> created at line 1221.
+    Found 4-bit adder for signal <uart_rx_fifo_produce[3]_GND_1_o_add_283_OUT> created at line 1236.
+    Found 4-bit adder for signal <uart_rx_fifo_consume[3]_GND_1_o_add_285_OUT> created at line 1239.
+    Found 5-bit adder for signal <uart_rx_fifo_level0[4]_GND_1_o_add_287_OUT> created at line 1243.
+    Found 7-bit adder for signal <cnt[6]_GND_1_o_add_298_OUT> created at line 1284.
+    Found 32-bit 4-to-1 multiplexer for signal <interface0_bank_bus_adr[1]_GND_1_o_wide_mux_325_OUT> created at line 1382.
+    Found 32-bit 4-to-1 multiplexer for signal <interface1_bank_bus_adr[1]_GND_1_o_wide_mux_327_OUT> created at line 1403.
+    Found 32-bit 8-to-1 multiplexer for signal <interface3_bank_bus_adr[2]_GND_1_o_wide_mux_332_OUT> created at line 1433.
+    Found 32-bit 8-to-1 multiplexer for signal <interface6_bank_bus_adr[2]_GND_1_o_wide_mux_341_OUT> created at line 1495.
+    Found 32-bit 7-to-1 multiplexer for signal <interface7_bank_bus_adr[2]_GND_1_o_wide_mux_345_OUT> created at line 1540.
+    Found 1-bit tristate buffer for signal <lcd_spi_cs_n> created at line 1817
+    Found 1-bit tristate buffer for signal <lcd_spi_clk> created at line 1820
+    Found 1-bit tristate buffer for signal <lcd_spi_mosi> created at line 1823
+    Found 7-bit comparator greater for signal <cnt[6]_PWR_1_o_LessThan_298_o> created at line 1283
+    Found 7-bit comparator greater for signal <cnt[6]_GND_1_o_LessThan_547_o> created at line 1812
     Summary:
 	inferred   6 RAM(s).
 	inferred  18 Adder/Subtractor(s).
-	inferred 1101 D-type flip-flop(s).
+	inferred 1134 D-type flip-flop(s).
 	inferred   2 Comparator(s).
-	inferred 132 Multiplexer(s).
+	inferred 134 Multiplexer(s).
 	inferred   3 Tristate(s).
 	inferred   1 Finite State Machine(s).
 Unit <top> synthesized.
@@ -863,8 +865,8 @@ Macro Statistics
  6-bit subtractor                                      : 3
  7-bit adder                                           : 1
  8-bit subtractor                                      : 3
-# Registers                                            : 224
- 1-bit register                                        : 113
+# Registers                                            : 226
+ 1-bit register                                        : 114
  10-bit register                                       : 5
  12-bit register                                       : 1
  13-bit register                                       : 1
@@ -875,7 +877,7 @@ Macro Statistics
  23-bit register                                       : 1
  3-bit register                                        : 4
  30-bit register                                       : 10
- 32-bit register                                       : 50
+ 32-bit register                                       : 51
  4-bit register                                        : 10
  5-bit register                                        : 5
  57-bit register                                       : 1
@@ -889,7 +891,7 @@ Macro Statistics
  32-bit comparator greater                             : 1
  5-bit comparator equal                                : 6
  7-bit comparator greater                              : 2
-# Multiplexers                                         : 280
+# Multiplexers                                         : 282
  1-bit 2-to-1 multiplexer                              : 129
  1-bit 4-to-1 multiplexer                              : 32
  1-bit 8-to-1 multiplexer                              : 1
@@ -898,7 +900,7 @@ Macro Statistics
  20-bit 2-to-1 multiplexer                             : 1
  3-bit 2-to-1 multiplexer                              : 2
  30-bit 2-to-1 multiplexer                             : 10
- 32-bit 2-to-1 multiplexer                             : 57
+ 32-bit 2-to-1 multiplexer                             : 59
  32-bit 3-to-1 multiplexer                             : 3
  32-bit 4-to-1 multiplexer                             : 2
  32-bit 7-to-1 multiplexer                             : 1
@@ -1180,8 +1182,8 @@ Macro Statistics
  6-bit down counter                                    : 1
  7-bit up counter                                      : 1
  8-bit down counter                                    : 3
-# Registers                                            : 2173
- Flip-Flops                                            : 2173
+# Registers                                            : 2206
+ Flip-Flops                                            : 2206
 # Comparators                                          : 13
  1-bit comparator equal                                : 1
  21-bit comparator equal                               : 2
@@ -1189,7 +1191,7 @@ Macro Statistics
  32-bit comparator greater                             : 1
  5-bit comparator equal                                : 6
  7-bit comparator greater                              : 2
-# Multiplexers                                         : 608
+# Multiplexers                                         : 610
  1-bit 2-to-1 multiplexer                              : 483
  1-bit 4-to-1 multiplexer                              : 32
  1-bit 8-to-1 multiplexer                              : 1
@@ -1197,7 +1199,7 @@ Macro Statistics
  2-bit 2-to-1 multiplexer                              : 6
  3-bit 2-to-1 multiplexer                              : 2
  30-bit 2-to-1 multiplexer                             : 7
- 32-bit 2-to-1 multiplexer                             : 49
+ 32-bit 2-to-1 multiplexer                             : 51
  32-bit 3-to-1 multiplexer                             : 3
  32-bit 4-to-1 multiplexer                             : 2
  32-bit 7-to-1 multiplexer                             : 1
@@ -1300,49 +1302,72 @@ WARNING:Xst:1710 - FF/Latch <i_adr_o_0> (without init value) has a constant valu
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <i_adr_o_1> (without init value) has a constant value of 0 in block <lm32_instruction_unit>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <i_cti_o_1> (without init value) has a constant value of 1 in block <lm32_instruction_unit>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <d_cti_o_1> (without init value) has a constant value of 1 in block <lm32_load_store_unit>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1293 - FF/Latch <interface6_bank_bus_dat_r_9> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_8> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <interface5_bank_bus_dat_r_26> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_25> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_24> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_19> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_18> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_17> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_16> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_15> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_14> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_13> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_12> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_9> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_8> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_7> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_6> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_5> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_4> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_3> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_2> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_31> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_30> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_29> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_28> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_27> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_26> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_25> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_24> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_19> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_18> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_17> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_16> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_15> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_14> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_13> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_31> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_30> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_29> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_28> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_27> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_26> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_25> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_24> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_19> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_18> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_17> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_16> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_15> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_14> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_13> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_12> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface6_bank_bus_dat_r_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_31> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_30> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_29> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_28> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_27> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_26> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_25> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_24> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_19> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_18> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_17> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_16> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_15> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_14> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_13> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_12> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_9> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface7_bank_bus_dat_r_8> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_31> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_30> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_29> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_28> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface5_bank_bus_dat_r_27> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_29> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_28> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_27> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_26> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_25> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_24> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_19> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
@@ -1364,6 +1389,22 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_3> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_2> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_28> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_27> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_26> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_25> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_24> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_21> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_20> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_19> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_18> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_17> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_16> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_15> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_14> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_13> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_12> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_11> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_10> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
@@ -1378,14 +1419,6 @@ WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface4_bank_bus_dat_r_1> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_31> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_30> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_29> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_28> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_27> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_26> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_25> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_24> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_23> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch <interface0_bank_bus_dat_r_22> has a constant value of 0 in block <top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:2677 - Node <cs_1> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <cs_2> of sequential type is unconnected in block <top>.
 WARNING:Xst:2677 - Node <cs_3> of sequential type is unconnected in block <top>.
@@ -1524,8 +1557,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 2111
- Flip-Flops                                            : 2111
+# Registers                                            : 2113
+ Flip-Flops                                            : 2113
 
 =========================================================================
 
@@ -1548,23 +1581,23 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 3328
+# BELS                             : 3332
 #      GND                         : 1
 #      INV                         : 60
 #      LUT1                        : 94
 #      LUT2                        : 351
-#      LUT3                        : 472
+#      LUT3                        : 474
 #      LUT4                        : 187
-#      LUT5                        : 489
-#      LUT6                        : 915
+#      LUT5                        : 490
+#      LUT6                        : 916
 #      MUXCY                       : 376
 #      MUXF7                       : 21
 #      VCC                         : 1
 #      XORCY                       : 361
-# FlipFlops/Latches                : 2111
+# FlipFlops/Latches                : 2113
 #      FD                          : 17
 #      FDE                         : 113
-#      FDR                         : 618
+#      FDR                         : 620
 #      FDRE                        : 1276
 #      FDS                         : 2
 #      FDSE                        : 85
@@ -1574,10 +1607,10 @@ Primitive and Black Box Usage:
 #      RAMB36E1                    : 15
 # Clock Buffers                    : 1
 #      BUFGP                       : 1
-# IO Buffers                       : 8
+# IO Buffers                       : 9
 #      IBUF                        : 3
 #      IOBUF                       : 1
-#      OBUF                        : 2
+#      OBUF                        : 3
 #      OBUFT                       : 2
 # DSPs                             : 3
 #      DSP48E1                     : 3
@@ -1591,22 +1624,22 @@ Selected Device : 7a100tcsg324-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            2111  out of  126800     1%  
- Number of Slice LUTs:                 2728  out of  63400     4%  
-    Number used as Logic:              2568  out of  63400     4%  
+ Number of Slice Registers:            2113  out of  126800     1%  
+ Number of Slice LUTs:                 2732  out of  63400     4%  
+    Number used as Logic:              2572  out of  63400     4%  
     Number used as Memory:              160  out of  19000     0%  
        Number used as RAM:              160
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3443
-   Number with an unused Flip Flop:    1332  out of   3443    38%  
-   Number with an unused LUT:           715  out of   3443    20%  
-   Number of fully used LUT-FF pairs:  1396  out of   3443    40%  
+ Number of LUT Flip Flop pairs used:   3447
+   Number with an unused Flip Flop:    1334  out of   3447    38%  
+   Number with an unused LUT:           715  out of   3447    20%  
+   Number of fully used LUT-FF pairs:  1398  out of   3447    40%  
    Number of unique control sets:        57
 
 IO Utilization: 
- Number of IOs:                          10
- Number of bonded IOBs:                   9  out of    210     4%  
+ Number of IOs:                          11
+ Number of bonded IOBs:                  10  out of    210     4%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               16  out of    135    11%  
@@ -1635,7 +1668,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk100                             | BUFGP                  | 2211  |
+clk100                             | BUFGP                  | 2213  |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -1658,7 +1691,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk100'
   Clock period: 7.319ns (frequency: 136.631MHz)
-  Total number of paths / destination ports: 271450 / 6916
+  Total number of paths / destination ports: 271469 / 6920
 -------------------------------------------------------------------------
 Delay:               7.319ns (Levels of Logic = 1)
   Source:            lm32_cpu/multiplier/Mmult_n0023 (DSP)
@@ -1691,8 +1724,8 @@ Offset:              1.619ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IOBUF:IO->O           1   0.001   0.421  lcd_spi_mosi_IOBUF (N513)
-     LUT6:I5->O            1   0.124   0.919  Mmux_machine_data[31]_machine_data[31]_mux_308_OUT110 (Mmux_machine_data[31]_machine_data[31]_mux_308_OUT1)
-     LUT6:I1->O            1   0.124   0.000  Mmux_machine_data[31]_machine_data[31]_mux_308_OUT112 (machine_data[31]_machine_data[31]_mux_308_OUT<0>)
+     LUT6:I5->O            1   0.124   0.919  Mmux_machine_data[31]_machine_data[31]_mux_313_OUT110 (Mmux_machine_data[31]_machine_data[31]_mux_313_OUT1)
+     LUT6:I1->O            1   0.124   0.000  Mmux_machine_data[31]_machine_data[31]_mux_313_OUT112 (machine_data[31]_machine_data[31]_mux_313_OUT<0>)
      FDR:D                     0.030          machine_data_0
     ----------------------------------------
     Total                      1.619ns (0.279ns logic, 1.340ns route)
@@ -1700,7 +1733,7 @@ Offset:              1.619ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk100'
-  Total number of paths / destination ports: 34 / 8
+  Total number of paths / destination ports: 35 / 9
 -------------------------------------------------------------------------
 Offset:              2.760ns (Levels of Logic = 3)
   Source:            machine_n_write_3 (FF)
@@ -1712,7 +1745,7 @@ Offset:              2.760ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDRE:C->Q             4   0.478   0.959  machine_n_write_3 (machine_n_write_3)
-     LUT6:I0->O           23   0.124   0.676  _n1768<5>1 (_n1768)
+     LUT6:I0->O           23   0.124   0.676  _n1706<5>1 (_n1706)
      LUT6:I4->O            1   0.124   0.399  mosi_t_oe_inv1 (mosi_t_oe_inv)
      IOBUF:T->IO               0.000          lcd_spi_mosi_IOBUF (lcd_spi_mosi)
     ----------------------------------------
@@ -1735,15 +1768,15 @@ clk100         |    7.319|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 19.00 secs
-Total CPU time to Xst completion: 18.74 secs
+Total REAL time to Xst completion: 18.00 secs
+Total CPU time to Xst completion: 17.61 secs
  
 --> 
 
 
-Total memory usage is 526364 kilobytes
+Total memory usage is 526492 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  297 (   0 filtered)
+Number of warnings :  328 (   0 filtered)
 Number of infos    :   46 (   0 filtered)
 

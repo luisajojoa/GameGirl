@@ -5,7 +5,7 @@ Loading device for application Rf_Device from file '7a100t.nph' in environment
    "top" is an NCD, version 3.2, device xc7a100t, package csg324, speed -1
 Opened constraints file top.pcf.
 
-Thu Mar 14 09:22:06 2019
+Thu Mar 14 10:02:41 2019
 
 /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -g Binary:Yes -w top.ncd top.bit 
 
