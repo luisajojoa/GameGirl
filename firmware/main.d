@@ -8,7 +8,7 @@ main.o: main.c /opt/liteX/litex/litex/soc/software/include/base/stdio.h \
  /opt/liteX/litex/litex/soc/software/include/base/console.h \
  /home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/software/include/generated/csr.h \
  /opt/liteX/litex/litex/soc/software/include/base/stdint.h \
- /opt/liteX/litex/litex/soc/software/include/hw/common.h lcdwrite.h
+ /opt/liteX/litex/litex/soc/software/include/hw/common.h init.h
 
 /opt/liteX/litex/litex/soc/software/include/base/stdio.h:
 
@@ -32,4 +32,4 @@ main.o: main.c /opt/liteX/litex/litex/soc/software/include/base/stdio.h \
 
 /opt/liteX/litex/litex/soc/software/include/hw/common.h:
 
-lcdwrite.h:
+init.h:

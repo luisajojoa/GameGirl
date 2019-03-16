@@ -62,6 +62,13 @@ _io = [
     ),
 	("lcd_rs",0,Pins("D18"), IOStandard("LVCMOS33")),
 	("lcd_rst",0,Pins("D17"), IOStandard("LVCMOS33")),
+	("GPO", 0, Pins("D14"), IOStandard("LVCMOS33")),#JA1
+	("SD_spi", 0,
+        Subsignal("clk", Pins("F16")),#JA2
+        Subsignal("mosi", Pins("G16")),#JA3
+        Subsignal("miso", Pins("H14")),#JA4
+        IOStandard("LVCMOS33"),# la coma
+    )
 ]
 """
 QUACHO						NEXYS 4 DDR
@@ -106,59 +113,65 @@ platform = Platform()
 # create our soc (fpga description)
 class BaseSoC(SoCCore):
     # Peripherals CSR declaration
-    csr_peripherals = [
-        "dna",
-        "leds",
-        "buttons",
-        "lcd",
+	csr_peripherals = [
+		"dna",
+		"leds",
+		"buttons",
+		"lcd",
+		"SD",
+		"GPO",
 		"rs"
-    ]
-    csr_map_update(SoCCore.csr_map, csr_peripherals)
+	]
+	csr_map_update(SoCCore.csr_map, csr_peripherals)
 
 
     #Declaración de las interrupciones
-    interrupt_map= {
-        "buttons" : 3,
+	interrupt_map= {
+		"buttons" : 3,
 	}
-		
+	
 	#Actualización del mapa de interrupciones
-    interrupt_map.update(interrupt_map)    
+	interrupt_map.update(interrupt_map)    
 
     
-    def __init__(self, platform):
-        sys_clk_freq = int(100e6)
-        # SoC with CPU
-        SoCCore.__init__(self, platform,
-            cpu_type="lm32",
-            clk_freq=100e6,
-            csr_data_width=32,
-            ident="CPU Test SoC", ident_version=True,
-            integrated_rom_size=0x8000,
-            integrated_main_ram_size=16*1024)
+	def __init__(self, platform):
+		sys_clk_freq = int(100e6)
+		# SoC with CPU
+		SoCCore.__init__(self, platform,
+			cpu_type="lm32",
+			clk_freq=100e6,
+			csr_data_width=32,
+			ident="CPU Test SoC", ident_version=True,
+			integrated_rom_size=0x8000,
+			integrated_main_ram_size=16*1024)
 
         # Clock Reset Generation
-        self.submodules.crg = CRG(platform.request("clk100"), ~platform.request("cpu_reset"))
+		self.submodules.crg = CRG(platform.request("clk100"), ~platform.request("cpu_reset"))
 
-        # FPGA identification
-        self.submodules.dna = dna.DNA()
+		# FPGA identification
+		self.submodules.dna = dna.DNA()
 
 		# Led
-        user_leds = Cat(*[platform.request("user_led", i) for i in range(4)])
-        self.submodules.leds = Led(user_leds)
+		user_leds = Cat(*[platform.request("user_led", i) for i in range(4)])
+		self.submodules.leds = Led(user_leds)
 
 		#RS y RST LCD
-        rs= platform.request("lcd_rs")
-        self.submodules.rs= Led(rs)
-        rst= platform.request("lcd_rst")
-        rst=1
+		rs= platform.request("lcd_rs")
+		self.submodules.rs= Led(rs)
+		rst= platform.request("lcd_rst")
+		rst=1
 
         # Buttons
-        bttn= Cat(*[platform.request("user_btn",i) for i in range (5)])
-        self.submodules.buttons = button_intr(bttn)
+		bttn= Cat(*[platform.request("user_btn",i) for i in range (5)])
+		self.submodules.buttons = button_intr(bttn)
 
+		#GPO
+		self.submodules.GPO = Led(platform.request("GPO",0))
+		#SD
+		self.submodules.SD = SPIMaster(platform.request("SD_spi"))
 
-       # LCD
-        self.submodules.lcd = SPIMaster(platform.request("lcd_spi"))
+		# LCD
+		self.submodules.lcd = SPIMaster(platform.request("lcd_spi"))
 
 
 soc = BaseSoC(platform)

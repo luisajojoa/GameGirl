@@ -6,7 +6,10 @@
 #include <uart.h>
 #include <console.h>
 #include <generated/csr.h>
-#include "lcdwrite.h"
+#include "init.h"
+
+
+
 
 
 
@@ -78,7 +81,7 @@ static void help(void)
 	puts("buttons                             - switch test");
 	puts("lcd                             - test lcd XD");
 	puts("test                             - test lcd with buttons");
-	puts("win                             - test lcd window");
+	puts("a                             - test lcd window");
 }
 
 static void reboot(void)
@@ -160,6 +163,9 @@ lcd_write(0,0x0021);   Se escribe la dirección de X [ de 0-219 pixeles (0-00hdb
 
 
 
+
+
+
 static void console_service(void)
 {
 	char *str;
@@ -184,6 +190,8 @@ static void console_service(void)
 		screen();
 	else if(strcmp(token, "buttons") == 0)
 		buttons();
+	else if(strcmp(token, "a") == 0)
+		sd_init();
 	prompt();
 }
 
