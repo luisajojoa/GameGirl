@@ -12,39 +12,39 @@ extern uint32_t csr_readl(uint32_t addr);
 #include <hw/common.h>
 #endif /* ! CSR_ACCESSORS_DEFINED */
 
-/* button */
-#define CSR_BUTTON_BASE 0xe0005000
-#define CSR_BUTTON_IN_ADDR 0xe0005000
-#define CSR_BUTTON_IN_SIZE 1
-static inline unsigned int button_in_read(void) {
+/* buttons */
+#define CSR_BUTTONS_BASE 0xe0005000
+#define CSR_BUTTONS_IN_ADDR 0xe0005000
+#define CSR_BUTTONS_IN_SIZE 1
+static inline unsigned int buttons_in_read(void) {
 	unsigned int r = csr_readl(0xe0005000);
 	return r;
 }
-#define CSR_BUTTON_EV_STATUS_ADDR 0xe0005004
-#define CSR_BUTTON_EV_STATUS_SIZE 1
-static inline unsigned int button_ev_status_read(void) {
+#define CSR_BUTTONS_EV_STATUS_ADDR 0xe0005004
+#define CSR_BUTTONS_EV_STATUS_SIZE 1
+static inline unsigned int buttons_ev_status_read(void) {
 	unsigned int r = csr_readl(0xe0005004);
 	return r;
 }
-static inline void button_ev_status_write(unsigned int value) {
+static inline void buttons_ev_status_write(unsigned int value) {
 	csr_writel(value, 0xe0005004);
 }
-#define CSR_BUTTON_EV_PENDING_ADDR 0xe0005008
-#define CSR_BUTTON_EV_PENDING_SIZE 1
-static inline unsigned int button_ev_pending_read(void) {
+#define CSR_BUTTONS_EV_PENDING_ADDR 0xe0005008
+#define CSR_BUTTONS_EV_PENDING_SIZE 1
+static inline unsigned int buttons_ev_pending_read(void) {
 	unsigned int r = csr_readl(0xe0005008);
 	return r;
 }
-static inline void button_ev_pending_write(unsigned int value) {
+static inline void buttons_ev_pending_write(unsigned int value) {
 	csr_writel(value, 0xe0005008);
 }
-#define CSR_BUTTON_EV_ENABLE_ADDR 0xe000500c
-#define CSR_BUTTON_EV_ENABLE_SIZE 1
-static inline unsigned int button_ev_enable_read(void) {
+#define CSR_BUTTONS_EV_ENABLE_ADDR 0xe000500c
+#define CSR_BUTTONS_EV_ENABLE_SIZE 1
+static inline unsigned int buttons_ev_enable_read(void) {
 	unsigned int r = csr_readl(0xe000500c);
 	return r;
 }
-static inline void button_ev_enable_write(unsigned int value) {
+static inline void buttons_ev_enable_write(unsigned int value) {
 	csr_writel(value, 0xe000500c);
 }
 
@@ -318,8 +318,8 @@ static inline int timer0_interrupt_read(void) {
 static inline int uart_interrupt_read(void) {
 	return 2;
 }
-#define BUTTON_INTERRUPT 3
-static inline int button_interrupt_read(void) {
+#define BUTTONS_INTERRUPT 3
+static inline int buttons_interrupt_read(void) {
 	return 3;
 }
 #define CSR_DATA_WIDTH 32

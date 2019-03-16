@@ -5,9 +5,15 @@ module top(
 	input clk100,
 	input cpu_reset,
 	output user_led0,
+	output user_led1,
+	output user_led2,
+	output user_led3,
 	output lcd_rs,
 	input lcd_rst,
 	input user_btn0,
+	input user_btn1,
+	input user_btn2,
+	input user_btn3,
 	inout lcd_spi_cs_n,
 	inout lcd_spi_clk,
 	inout lcd_spi_mosi
@@ -269,19 +275,34 @@ reg int_rst = 1'd1;
 reg [56:0] status = 57'd0;
 wire do_1;
 reg [6:0] cnt = 7'd0;
-reg leds_storage_full = 1'd0;
-wire leds_storage;
+reg [3:0] leds_storage_full = 4'd0;
+wire [3:0] leds_storage;
 reg leds_re = 1'd0;
 reg rs_storage_full = 1'd0;
 wire rs_storage;
 reg rs_re = 1'd0;
-wire in_status;
+wire [3:0] in_status;
 wire irq;
+wire one_status;
+reg one_pending = 1'd0;
+wire one_trigger;
+reg one_clear = 1'd0;
+reg one_old_trigger = 1'd0;
 wire zero_status;
 reg zero_pending = 1'd0;
 wire zero_trigger;
 reg zero_clear = 1'd0;
 reg zero_old_trigger = 1'd0;
+wire two_status;
+reg two_pending = 1'd0;
+wire two_trigger;
+reg two_clear = 1'd0;
+reg two_old_trigger = 1'd0;
+wire three_status;
+reg three_pending = 1'd0;
+wire three_trigger;
+reg three_clear = 1'd0;
+reg three_old_trigger = 1'd0;
 wire config_offline;
 wire [1:0] config_padding0;
 wire config_cs_polarity;
@@ -363,13 +384,13 @@ wire [31:0] mosi_data_storage;
 reg mosi_data_re = 1'd0;
 wire [31:0] miso_data_status;
 wire status_re;
-wire status_r;
-wire status_w;
+wire [3:0] status_r;
+reg [3:0] status_w = 4'd0;
 wire pending_re;
-wire pending_r;
-wire pending_w;
-reg storage_full = 1'd0;
-wire storage;
+wire [3:0] pending_r;
+reg [3:0] pending_w = 4'd0;
+reg [3:0] storage_full = 4'd0;
+wire [3:0] storage;
 reg re = 1'd0;
 reg [1:0] state = 2'd0;
 reg [1:0] next_state = 2'd0;
@@ -397,11 +418,11 @@ wire interface0_bank_bus_we;
 wire [31:0] interface0_bank_bus_dat_w;
 reg [31:0] interface0_bank_bus_dat_r = 32'd0;
 wire csrbank0_in_re;
-wire csrbank0_in_r;
-wire csrbank0_in_w;
+wire [3:0] csrbank0_in_r;
+wire [3:0] csrbank0_in_w;
 wire csrbank0_ev_enable0_re;
-wire csrbank0_ev_enable0_r;
-wire csrbank0_ev_enable0_w;
+wire [3:0] csrbank0_ev_enable0_r;
+wire [3:0] csrbank0_ev_enable0_w;
 wire csrbank0_sel;
 wire [13:0] interface1_bank_bus_adr;
 wire interface1_bank_bus_we;
@@ -461,8 +482,8 @@ wire interface4_bank_bus_we;
 wire [31:0] interface4_bank_bus_dat_w;
 reg [31:0] interface4_bank_bus_dat_r = 32'd0;
 wire csrbank4_out0_re;
-wire csrbank4_out0_r;
-wire csrbank4_out0_w;
+wire [3:0] csrbank4_out0_r;
+wire [3:0] csrbank4_out0_w;
 wire csrbank4_sel;
 wire [13:0] interface5_bank_bus_adr;
 wire interface5_bank_bus_we;
@@ -514,6 +535,10 @@ wire csrbank8_tuning_word0_re;
 wire [31:0] csrbank8_tuning_word0_r;
 wire [31:0] csrbank8_tuning_word0_w;
 wire csrbank8_sel;
+wire [3:0] slice_proxy0;
+wire [3:0] slice_proxy1;
+wire [3:0] slice_proxy2;
+wire [3:0] slice_proxy3;
 reg [29:0] array_muxed0 = 30'd0;
 reg [31:0] array_muxed1 = 32'd0;
 reg [3:0] array_muxed2 = 4'd0;
@@ -524,8 +549,9 @@ reg [2:0] array_muxed6 = 3'd0;
 reg [1:0] array_muxed7 = 2'd0;
 (* register_balancing = "no", shreg_extract = "no" *) reg xilinxmultiregimpl0_regs0 = 1'd0;
 (* register_balancing = "no", shreg_extract = "no" *) reg xilinxmultiregimpl0_regs1 = 1'd0;
-(* register_balancing = "no", shreg_extract = "no" *) reg xilinxmultiregimpl1_regs0 = 1'd0;
-(* register_balancing = "no", shreg_extract = "no" *) reg xilinxmultiregimpl1_regs1 = 1'd0;
+(* register_balancing = "no", shreg_extract = "no" *) reg [3:0] xilinxmultiregimpl1_regs0 = 4'd0;
+(* register_balancing = "no", shreg_extract = "no" *) reg [3:0] xilinxmultiregimpl1_regs1 = 4'd0;
+wire xilinxmultiregimpl1;
 
 assign lm32_reset = ctrl_reset;
 assign ctrl_bus_error = error;
@@ -678,19 +704,55 @@ assign timer0_zero_status = timer0_zero_trigger;
 assign sys_clk = clk100;
 assign por_clk = clk100;
 assign sys_rst = int_rst;
-assign user_led0 = leds_storage;
+assign {user_led3, user_led2, user_led1, user_led0} = leds_storage;
 assign lcd_rs = rs_storage;
-assign zero_trigger = user_btn0;
-assign status_w = zero_status;
+assign zero_trigger = slice_proxy0[3];
+assign one_trigger = slice_proxy1[1];
+assign two_trigger = slice_proxy2[2];
+assign three_trigger = slice_proxy3[0];
+always @(*) begin
+	one_clear <= 1'd0;
+	if ((pending_re & pending_r[0])) begin
+		one_clear <= 1'd1;
+	end
+end
 always @(*) begin
 	zero_clear <= 1'd0;
-	if ((pending_re & pending_r)) begin
+	if ((pending_re & pending_r[1])) begin
 		zero_clear <= 1'd1;
 	end
 end
-assign pending_w = zero_pending;
-assign irq = (pending_w & storage);
+always @(*) begin
+	two_clear <= 1'd0;
+	if ((pending_re & pending_r[2])) begin
+		two_clear <= 1'd1;
+	end
+end
+always @(*) begin
+	status_w <= 4'd0;
+	status_w[0] <= one_status;
+	status_w[1] <= zero_status;
+	status_w[2] <= two_status;
+	status_w[3] <= three_status;
+end
+always @(*) begin
+	three_clear <= 1'd0;
+	if ((pending_re & pending_r[3])) begin
+		three_clear <= 1'd1;
+	end
+end
+always @(*) begin
+	pending_w <= 4'd0;
+	pending_w[0] <= one_pending;
+	pending_w[1] <= zero_pending;
+	pending_w[2] <= two_pending;
+	pending_w[3] <= three_pending;
+end
+assign irq = ((((pending_w[0] & storage[0]) | (pending_w[1] & storage[1])) | (pending_w[2] & storage[2])) | (pending_w[3] & storage[3]));
+assign one_status = one_trigger;
 assign zero_status = zero_trigger;
+assign two_status = two_trigger;
+assign three_status = three_trigger;
 assign {config_div_read, config_div_write, config_padding1, config_half_duplex, config_lsb_first, config_clk_phase, config_clk_polarity, config_cs_polarity, config_padding0, config_offline} = config_storage;
 assign {xfer_padding1, xfer_read_length, xfer_padding0, xfer_write_length, xfer_cs} = xfer_storage;
 assign start = (start_re & start_r);
@@ -734,11 +796,11 @@ assign machine_write = (machine_n_write != 1'd0);
 assign machine_read = (machine_n_read != 1'd0);
 assign machine_done0 = (~(machine_write | machine_read));
 always @(*) begin
-	machine_sample <= 1'd0;
-	machine_fsm_is_ongoing1 <= 1'd0;
 	next_state <= 2'd0;
+	machine_fsm_is_ongoing1 <= 1'd0;
 	machine_shift <= 1'd0;
 	machine_fsm_is_ongoing0 <= 1'd0;
+	machine_sample <= 1'd0;
 	next_state <= state;
 	case (state)
 		1'd1: begin
@@ -834,9 +896,9 @@ assign bus_wishbone_cyc = (shared_cyc & slave_sel[3]);
 assign shared_err = (((rom_bus_err | sram_bus_err) | main_ram_bus_err) | bus_wishbone_err);
 assign wait_1 = ((shared_stb & shared_cyc) & (~shared_ack));
 always @(*) begin
+	shared_dat_r <= 32'd0;
 	shared_ack <= 1'd0;
 	error <= 1'd0;
-	shared_dat_r <= 32'd0;
 	shared_ack <= (((rom_bus_ack | sram_bus_ack) | main_ram_bus_ack) | bus_wishbone_ack);
 	shared_dat_r <= (((({32{slave_sel_r[0]}} & rom_bus_dat_r) | ({32{slave_sel_r[1]}} & sram_bus_dat_r0)) | ({32{slave_sel_r[2]}} & main_ram_bus_dat_r)) | ({32{slave_sel_r[3]}} & bus_wishbone_dat_r));
 	if (done) begin
@@ -847,17 +909,17 @@ always @(*) begin
 end
 assign done = (count == 1'd0);
 assign csrbank0_sel = (interface0_bank_bus_adr[13:9] == 4'd10);
-assign csrbank0_in_r = interface0_bank_bus_dat_w[0];
+assign csrbank0_in_r = interface0_bank_bus_dat_w[3:0];
 assign csrbank0_in_re = ((csrbank0_sel & interface0_bank_bus_we) & (interface0_bank_bus_adr[1:0] == 1'd0));
-assign status_r = interface0_bank_bus_dat_w[0];
+assign status_r = interface0_bank_bus_dat_w[3:0];
 assign status_re = ((csrbank0_sel & interface0_bank_bus_we) & (interface0_bank_bus_adr[1:0] == 1'd1));
-assign pending_r = interface0_bank_bus_dat_w[0];
+assign pending_r = interface0_bank_bus_dat_w[3:0];
 assign pending_re = ((csrbank0_sel & interface0_bank_bus_we) & (interface0_bank_bus_adr[1:0] == 2'd2));
-assign csrbank0_ev_enable0_r = interface0_bank_bus_dat_w[0];
+assign csrbank0_ev_enable0_r = interface0_bank_bus_dat_w[3:0];
 assign csrbank0_ev_enable0_re = ((csrbank0_sel & interface0_bank_bus_we) & (interface0_bank_bus_adr[1:0] == 2'd3));
-assign csrbank0_in_w = in_status;
-assign storage = storage_full;
-assign csrbank0_ev_enable0_w = storage_full;
+assign csrbank0_in_w = in_status[3:0];
+assign storage = storage_full[3:0];
+assign csrbank0_ev_enable0_w = storage_full[3:0];
 assign csrbank1_sel = (interface1_bank_bus_adr[13:9] == 1'd0);
 assign ctrl_reset_reset_r = interface1_bank_bus_dat_w[0];
 assign ctrl_reset_reset_re = ((csrbank1_sel & interface1_bank_bus_we) & (interface1_bank_bus_adr[1:0] == 1'd0));
@@ -908,10 +970,10 @@ assign mosi_data_storage = mosi_data_storage_full[31:0];
 assign csrbank3_mosi_data0_w = mosi_data_storage_full[31:0];
 assign csrbank3_miso_data_w = miso_data_status[31:0];
 assign csrbank4_sel = (interface4_bank_bus_adr[13:9] == 4'd9);
-assign csrbank4_out0_r = interface4_bank_bus_dat_w[0];
+assign csrbank4_out0_r = interface4_bank_bus_dat_w[3:0];
 assign csrbank4_out0_re = ((csrbank4_sel & interface4_bank_bus_we) & (interface4_bank_bus_adr[0] == 1'd0));
-assign leds_storage = leds_storage_full;
-assign csrbank4_out0_w = leds_storage_full;
+assign leds_storage = leds_storage_full[3:0];
+assign csrbank4_out0_w = leds_storage_full[3:0];
 assign csrbank5_sel = (interface5_bank_bus_adr[13:9] == 4'd12);
 assign csrbank5_out0_r = interface5_bank_bus_dat_w[0];
 assign csrbank5_out0_re = ((csrbank5_sel & interface5_bank_bus_we) & (interface5_bank_bus_adr[0] == 1'd0));
@@ -996,6 +1058,10 @@ assign interface7_bank_bus_dat_w = interface_dat_w;
 assign interface8_bank_bus_dat_w = interface_dat_w;
 assign sram_bus_dat_w1 = interface_dat_w;
 assign interface_dat_r = (((((((((interface0_bank_bus_dat_r | interface1_bank_bus_dat_r) | interface2_bank_bus_dat_r) | interface3_bank_bus_dat_r) | interface4_bank_bus_dat_r) | interface5_bank_bus_dat_r) | interface6_bank_bus_dat_r) | interface7_bank_bus_dat_r) | interface8_bank_bus_dat_r) | sram_bus_dat_r1);
+assign slice_proxy0 = {user_btn3, user_btn2, user_btn1, user_btn0};
+assign slice_proxy1 = {user_btn3, user_btn2, user_btn1, user_btn0};
+assign slice_proxy2 = {user_btn3, user_btn2, user_btn1, user_btn0};
+assign slice_proxy3 = {user_btn3, user_btn2, user_btn1, user_btn0};
 always @(*) begin
 	array_muxed0 <= 30'd0;
 	case (grant)
@@ -1086,6 +1152,7 @@ always @(*) begin
 end
 assign uart_phy_rx = xilinxmultiregimpl0_regs1;
 assign in_status = xilinxmultiregimpl1_regs1;
+assign xilinxmultiregimpl1 = {user_btn3, user_btn2, user_btn1, user_btn0};
 
 always @(posedge por_clk) begin
 	int_rst <= (~cpu_reset);
@@ -1286,12 +1353,33 @@ always @(posedge sys_clk) begin
 			status <= {status, do_1};
 		end
 	end
+	if (one_clear) begin
+		one_pending <= 1'd0;
+	end
+	one_old_trigger <= one_trigger;
+	if (((~one_trigger) & one_old_trigger)) begin
+		one_pending <= 1'd1;
+	end
 	if (zero_clear) begin
 		zero_pending <= 1'd0;
 	end
 	zero_old_trigger <= zero_trigger;
 	if (((~zero_trigger) & zero_old_trigger)) begin
 		zero_pending <= 1'd1;
+	end
+	if (two_clear) begin
+		two_pending <= 1'd0;
+	end
+	two_old_trigger <= two_trigger;
+	if (((~two_trigger) & two_old_trigger)) begin
+		two_pending <= 1'd1;
+	end
+	if (three_clear) begin
+		three_pending <= 1'd0;
+	end
+	three_old_trigger <= three_trigger;
+	if (((~three_trigger) & three_old_trigger)) begin
+		three_pending <= 1'd1;
 	end
 	if (machine_done1) begin
 		data_read <= machine_data;
@@ -1395,7 +1483,7 @@ always @(posedge sys_clk) begin
 		endcase
 	end
 	if (csrbank0_ev_enable0_re) begin
-		storage_full <= csrbank0_ev_enable0_r;
+		storage_full[3:0] <= csrbank0_ev_enable0_r;
 	end
 	re <= csrbank0_ev_enable0_re;
 	interface1_bank_bus_dat_r <= 1'd0;
@@ -1475,7 +1563,7 @@ always @(posedge sys_clk) begin
 		endcase
 	end
 	if (csrbank4_out0_re) begin
-		leds_storage_full <= csrbank4_out0_r;
+		leds_storage_full[3:0] <= csrbank4_out0_r;
 	end
 	leds_re <= csrbank4_out0_re;
 	interface5_bank_bus_dat_r <= 1'd0;
@@ -1632,12 +1720,18 @@ always @(posedge sys_clk) begin
 		timer0_value <= 32'd0;
 		status <= 57'd0;
 		cnt <= 7'd0;
-		leds_storage_full <= 1'd0;
+		leds_storage_full <= 4'd0;
 		leds_re <= 1'd0;
 		rs_storage_full <= 1'd0;
 		rs_re <= 1'd0;
+		one_pending <= 1'd0;
+		one_old_trigger <= 1'd0;
 		zero_pending <= 1'd0;
 		zero_old_trigger <= 1'd0;
+		two_pending <= 1'd0;
+		two_old_trigger <= 1'd0;
+		three_pending <= 1'd0;
+		three_old_trigger <= 1'd0;
 		active <= 1'd0;
 		pending0 <= 1'd0;
 		machine_clk <= 1'd1;
@@ -1657,7 +1751,7 @@ always @(posedge sys_clk) begin
 		xfer_re <= 1'd0;
 		mosi_data_storage_full <= 32'd0;
 		mosi_data_re <= 1'd0;
-		storage_full <= 1'd0;
+		storage_full <= 4'd0;
 		re <= 1'd0;
 		state <= 2'd0;
 		grant <= 1'd0;
@@ -1676,7 +1770,7 @@ always @(posedge sys_clk) begin
 	end
 	xilinxmultiregimpl0_regs0 <= serial_rx;
 	xilinxmultiregimpl0_regs1 <= xilinxmultiregimpl0_regs0;
-	xilinxmultiregimpl1_regs0 <= user_btn0;
+	xilinxmultiregimpl1_regs0 <= {user_btn3, user_btn2, user_btn1, user_btn0};
 	xilinxmultiregimpl1_regs1 <= xilinxmultiregimpl1_regs0;
 end
 

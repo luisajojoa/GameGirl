@@ -20,9 +20,9 @@ from button import button_intr
 _io = [
 
     ("user_led",  0, Pins("H17"), IOStandard("LVCMOS33")),
-   # ("user_led",  1, Pins("K15"), IOStandard("LVCMOS33")),
-   # ("user_led",  2, Pins("J13"), IOStandard("LVCMOS33")),
-   # ("user_led",  3, Pins("N14"), IOStandard("LVCMOS33")),
+    ("user_led",  1, Pins("K15"), IOStandard("LVCMOS33")),
+    ("user_led",  2, Pins("J13"), IOStandard("LVCMOS33")),
+    ("user_led",  3, Pins("N14"), IOStandard("LVCMOS33")),
    # ("user_led",  4, Pins("R18"), IOStandard("LVCMOS33")),
    # ("user_led",  5, Pins("V17"), IOStandard("LVCMOS33")),
    # ("user_led",  6, Pins("U17"), IOStandard("LVCMOS33")),
@@ -36,28 +36,10 @@ _io = [
    # ("user_led", 14, Pins("V12"), IOStandard("LVCMOS33")),
    # ("user_led", 15, Pins("V11"), IOStandard("LVCMOS33")),
 
-   # ("user_sw",  0, Pins("J15"), IOStandard("LVCMOS33")),
-   # ("user_sw",  1, Pins("L16"), IOStandard("LVCMOS33")),
-   # ("user_sw",  2, Pins("M13"), IOStandard("LVCMOS33")),
-   # ("user_sw",  3, Pins("R15"), IOStandard("LVCMOS33")),
-   # ("user_sw",  4, Pins("R17"), IOStandard("LVCMOS33")),
-   # ("user_sw",  5, Pins("T18"), IOStandard("LVCMOS33")),
-   # ("user_sw",  6, Pins("U18"), IOStandard("LVCMOS33")),
-   # ("user_sw",  7, Pins("R13"), IOStandard("LVCMOS33")),
-   # ("user_sw",  8, Pins("T8"), IOStandard("LVCMOS33")),
-   # ("user_sw",  9, Pins("U8"), IOStandard("LVCMOS33")),
-   # ("user_sw", 10, Pins("R16"), IOStandard("LVCMOS33")),
-   # ("user_sw", 11, Pins("T13"), IOStandard("LVCMOS33")),
-   # ("user_sw", 12, Pins("H6"), IOStandard("LVCMOS33")),
-   # ("user_sw", 13, Pins("U12"), IOStandard("LVCMOS33")),
-   # ("user_sw", 14, Pins("U11"), IOStandard("LVCMOS33")),
-   # ("user_sw", 15, Pins("V10"), IOStandard("LVCMOS33")),
-
-    ("user_btn", 0, Pins("N17"), IOStandard("LVCMOS33")),
-   # ("user_btn", 1, Pins("P18"), IOStandard("LVCMOS33")),
-   # ("user_btn", 2, Pins("P17"), IOStandard("LVCMOS33")),
-   # ("user_btn", 3, Pins("M17"), IOStandard("LVCMOS33")),
-   # ("user_btn", 4, Pins("M18"), IOStandard("LVCMOS33")),
+    ("user_btn", 0, Pins("P18"), IOStandard("LVCMOS33")),
+    ("user_btn", 1, Pins("M18"), IOStandard("LVCMOS33")),
+    ("user_btn", 2, Pins("P17"), IOStandard("LVCMOS33")),
+    ("user_btn", 3, Pins("M17"), IOStandard("LVCMOS33")),
 
 
     ("clk100", 0, Pins("E3"), IOStandard("LVCMOS33")),
@@ -125,10 +107,8 @@ class BaseSoC(SoCCore):
     # Peripherals CSR declaration
     csr_peripherals = [
         "dna",
-       # "xadc",
         "leds",
-       # "switches",
-        "button",
+        "buttons",
         "lcd",
 		"rs"
     ]
@@ -137,7 +117,7 @@ class BaseSoC(SoCCore):
 
     #Declaración de las interrupciones
     interrupt_map= {
-        "button" : 3,
+        "buttons" : 3,
 	}
 		
 	#Actualización del mapa de interrupciones
@@ -161,17 +141,9 @@ class BaseSoC(SoCCore):
         # FPGA identification
         self.submodules.dna = dna.DNA()
 
-        # FPGA Temperature/Voltage
-      #  self.submodules.xadc = xadc.XADC()
-
 		# Led
-        user_leds = platform.request("user_led",0)
-#Cat(*[platform.request("user_led", i) for i in range(16)])
+        user_leds = Cat(*[platform.request("user_led", i) for i in range(4)])
         self.submodules.leds = Led(user_leds)
-
-        # Switches
-       # user_switches = Cat(*[platform.request("user_sw", i) for i in range(16)])
-        #self.submodules.switches = Switch(user_switches)
 
 		#RS y RST LCD
         rs= platform.request("lcd_rs")
@@ -180,9 +152,9 @@ class BaseSoC(SoCCore):
         rst=1
 
         # Buttons
-        self.submodules.button= button_intr(platform.request("user_btn",0))
-# Cat(*[platform.request("user_btn", i) for i in range(5)])
-        #self.submodules.buttons = Button(user_buttons)
+        bttn= Cat(*[platform.request("user_btn",i) for i in range (4)])
+        self.submodules.buttons = button_intr(bttn)
+
 
        # LCD
         self.submodules.lcd = SPIMaster(platform.request("lcd_spi"))
@@ -190,8 +162,5 @@ class BaseSoC(SoCCore):
 
 soc = BaseSoC(platform)
 
-#
-# build
-#
 builder = Builder(soc, output_dir="build", csr_csv="test/csr.csv")
 builder.build()

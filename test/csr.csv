@@ -1,4 +1,4 @@
-csr_base,button,0xe0005000,,
+csr_base,buttons,0xe0005000,,
 csr_base,ctrl,0xe0000000,,
 csr_base,dna,0xe0004000,,
 csr_base,lcd,0xe0005800,,
@@ -8,10 +8,10 @@ csr_base,timer0,0xe0002800,,
 csr_base,uart,0xe0001800,,
 csr_base,uart_phy,0xe0001000,,
 csr_base,identifier_mem,0xe0002000,,
-csr_register,button_in,0xe0005000,1,ro
-csr_register,button_ev_status,0xe0005004,1,rw
-csr_register,button_ev_pending,0xe0005008,1,rw
-csr_register,button_ev_enable,0xe000500c,1,rw
+csr_register,buttons_in,0xe0005000,1,ro
+csr_register,buttons_ev_status,0xe0005004,1,rw
+csr_register,buttons_ev_pending,0xe0005008,1,rw
+csr_register,buttons_ev_enable,0xe000500c,1,rw
 csr_register,ctrl_reset,0xe0000000,1,rw
 csr_register,ctrl_scratch,0xe0000004,1,rw
 csr_register,ctrl_bus_errors,0xe0000008,1,ro
@@ -43,7 +43,7 @@ csr_register,uart_phy_tuning_word,0xe0001000,1,rw
 constant,nmi_interrupt,0,,
 constant,timer0_interrupt,1,,
 constant,uart_interrupt,2,,
-constant,button_interrupt,3,,
+constant,buttons_interrupt,3,,
 constant,csr_data_width,32,,
 constant,system_clock_frequency,100000000,,
 constant,config_clock_frequency,100000000,,

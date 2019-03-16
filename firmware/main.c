@@ -104,8 +104,8 @@ static void lcd_configure(void)
 
 static void buttons (void)
 {
-	button_ev_enable_write(1);
-	button_ev_pending_write(1);
+	buttons_ev_enable_write(0xff);
+	buttons_ev_pending_write(0xff);
 	irq_setmask(irq_getmask() | (1<< 3));
 	printf("get maska %d \n",irq_getmask());
 	printf("get maski %d \n",irq_pending());
