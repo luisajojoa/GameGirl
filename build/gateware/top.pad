@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Sat Mar 16 11:50:57 2019
+Sat Mar 16 12:03:14 2019
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -251,7 +251,7 @@ N13|||VCCO_14|||14|||||3.30||||
 N14|user_led3|IOB33|IO_L8P_T1_D11_14|OUTPUT|LVCMOS33|14|12|SLOW||||LOCATED|NO|NONE|
 N15||IOB33M|IO_L11P_T1_SRCC_14|UNUSED||14|||||||||
 N16||IOB33S|IO_L11N_T1_SRCC_14|UNUSED||14|||||||||
-N17||IOB33M|IO_L9P_T1_DQS_14|UNUSED||14|||||||||
+N17|user_btn4|IOB33|IO_L9P_T1_DQS_14|INPUT|LVCMOS33|14||||NONE||LOCATED|NO|NONE|
 N18|||GND||||||||||||
 P1|||GND||||||||||||
 P2||IOB33M|IO_L15P_T2_DQS_34|UNUSED||34|||||||||

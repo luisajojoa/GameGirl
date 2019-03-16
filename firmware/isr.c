@@ -25,7 +25,7 @@ void buttonTest()
 
 	unsigned int pend = buttons_ev_pending_read();
 	printf("%X\n", pend);
-/*	switch(buttonsPending){
+	switch(pend){
 		case 1:
 			leds_out_write(0x01);
 			break;
@@ -37,37 +37,16 @@ void buttonTest()
 			break;
 		case 8:
 			leds_out_write(0x08);
+			break;
+		case 16:
+			leds_out_write(0x03);
 			break;	
 		default:
 			leds_out_write(0xff);
 			break;
-	}*/
+	}
 
-		if (pend & 0x01) {
-			printf("a\n");
-
-			leds_out_write(0x01);
-		}
-		//00000010
-		if (pend & 0x02) {
-			printf("b\n");
-			buttons_ev_pending_write(0x02);
-			leds_out_write(0x02);
-			buttons_ev_enable_write(0xff);
-		}
-		//00000100
-		if (pend & 0x04) {
-			printf("c\n");
-			leds_out_write(0x04);
-		}
-		//00001000
-		if (pend & 0x08) {
-			printf("d\n");
-			leds_out_write(0x08);
-		}else{
-			printf("%X",pend);
-			printf("hola");
-		}
+	
 	buttons_ev_pending_write(0xff);	
 	buttons_ev_enable_write(0xff);
 

@@ -40,6 +40,7 @@ _io = [
     ("user_btn", 1, Pins("M18"), IOStandard("LVCMOS33")),
     ("user_btn", 2, Pins("P17"), IOStandard("LVCMOS33")),
     ("user_btn", 3, Pins("M17"), IOStandard("LVCMOS33")),
+    ("user_btn", 4, Pins("N17"), IOStandard("LVCMOS33")),
 
 
     ("clk100", 0, Pins("E3"), IOStandard("LVCMOS33")),
@@ -130,7 +131,7 @@ class BaseSoC(SoCCore):
         SoCCore.__init__(self, platform,
             cpu_type="lm32",
             clk_freq=100e6,
-			csr_data_width=32,
+            csr_data_width=32,
             ident="CPU Test SoC", ident_version=True,
             integrated_rom_size=0x8000,
             integrated_main_ram_size=16*1024)
@@ -152,7 +153,7 @@ class BaseSoC(SoCCore):
         rst=1
 
         # Buttons
-        bttn= Cat(*[platform.request("user_btn",i) for i in range (4)])
+        bttn= Cat(*[platform.request("user_btn",i) for i in range (5)])
         self.submodules.buttons = button_intr(bttn)
 
 

@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Sat Mar 16 11:50:26 2019
+// Written by: Map P.20131013 on Sat Mar 16 12:02:41 2019
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -15,6 +15,7 @@ COMP "user_btn0" LOCATE = SITE "P18" LEVEL 1;
 COMP "user_btn1" LOCATE = SITE "M18" LEVEL 1;
 COMP "user_btn2" LOCATE = SITE "P17" LEVEL 1;
 COMP "user_btn3" LOCATE = SITE "M17" LEVEL 1;
+COMP "user_btn4" LOCATE = SITE "N17" LEVEL 1;
 COMP "serial_tx" LOCATE = SITE "D4" LEVEL 1;
 COMP "lcd_rs" LOCATE = SITE "D18" LEVEL 1;
 COMP "lcd_spi_cs_n" LOCATE = SITE "C17" LEVEL 1;
@@ -115,9 +116,10 @@ PIN
 TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "xilinxmultiregimpl1_regs0_0" BEL "xilinxmultiregimpl1_regs0_1" BEL
         "xilinxmultiregimpl1_regs0_2" BEL "xilinxmultiregimpl1_regs0_3" BEL
-        "int_rst" BEL "xilinxmultiregimpl0_regs1" BEL
-        "xilinxmultiregimpl1_regs1_0" BEL "xilinxmultiregimpl1_regs1_1" BEL
-        "xilinxmultiregimpl1_regs1_2" BEL "xilinxmultiregimpl1_regs1_3" BEL
+        "xilinxmultiregimpl1_regs0_4" BEL "int_rst" BEL
+        "xilinxmultiregimpl0_regs1" BEL "xilinxmultiregimpl1_regs1_0" BEL
+        "xilinxmultiregimpl1_regs1_1" BEL "xilinxmultiregimpl1_regs1_2" BEL
+        "xilinxmultiregimpl1_regs1_3" BEL "xilinxmultiregimpl1_regs1_4" BEL
         "rom_bus_ack" BEL "bus_wishbone_dat_r_0" BEL "bus_wishbone_dat_r_1"
         BEL "bus_wishbone_dat_r_2" BEL "bus_wishbone_dat_r_3" BEL
         "bus_wishbone_dat_r_4" BEL "bus_wishbone_dat_r_5" BEL
@@ -136,26 +138,26 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "bus_wishbone_dat_r_30" BEL "bus_wishbone_dat_r_31" BEL
         "uart_tx_old_trigger" BEL "uart_rx_old_trigger" BEL
         "timer0_zero_old_trigger" BEL "one_old_trigger" BEL "zero_old_trigger"
-        BEL "two_old_trigger" BEL "three_old_trigger" BEL "active" BEL
-        "slave_sel_r_0" BEL "slave_sel_r_1" BEL "slave_sel_r_2" BEL
-        "slave_sel_r_3" BEL "sel_r" BEL "uart_phy_rx_r" BEL "pending0" BEL
-        "uart_phy_rx_reg_0" BEL "uart_phy_rx_reg_1" BEL "uart_phy_rx_reg_2"
-        BEL "uart_phy_rx_reg_3" BEL "uart_phy_rx_reg_4" BEL
-        "uart_phy_rx_reg_5" BEL "uart_phy_rx_reg_6" BEL "uart_phy_rx_reg_7"
-        BEL "interface_dat_w_0" BEL "interface_dat_w_1" BEL
-        "interface_dat_w_2" BEL "interface_dat_w_3" BEL "interface_dat_w_4"
-        BEL "interface_dat_w_5" BEL "interface_dat_w_6" BEL
-        "interface_dat_w_7" BEL "interface_dat_w_8" BEL "interface_dat_w_9"
-        BEL "interface_dat_w_10" BEL "interface_dat_w_11" BEL
-        "interface_dat_w_12" BEL "interface_dat_w_13" BEL "interface_dat_w_14"
-        BEL "interface_dat_w_15" BEL "interface_dat_w_16" BEL
-        "interface_dat_w_17" BEL "interface_dat_w_18" BEL "interface_dat_w_19"
-        BEL "interface_dat_w_20" BEL "interface_dat_w_21" BEL
-        "interface_dat_w_22" BEL "interface_dat_w_23" BEL "interface_dat_w_24"
-        BEL "interface_dat_w_25" BEL "interface_dat_w_26" BEL
-        "interface_dat_w_27" BEL "interface_dat_w_28" BEL "interface_dat_w_29"
-        BEL "interface_dat_w_30" BEL "interface_dat_w_31" BEL
-        "interface_adr_0" BEL "interface_adr_1" BEL "interface_adr_2" BEL
+        BEL "four_old_trigger" BEL "two_old_trigger" BEL "three_old_trigger"
+        BEL "active" BEL "slave_sel_r_0" BEL "slave_sel_r_1" BEL
+        "slave_sel_r_2" BEL "slave_sel_r_3" BEL "sel_r" BEL "uart_phy_rx_r"
+        BEL "pending0" BEL "uart_phy_rx_reg_0" BEL "uart_phy_rx_reg_1" BEL
+        "uart_phy_rx_reg_2" BEL "uart_phy_rx_reg_3" BEL "uart_phy_rx_reg_4"
+        BEL "uart_phy_rx_reg_5" BEL "uart_phy_rx_reg_6" BEL
+        "uart_phy_rx_reg_7" BEL "interface_dat_w_0" BEL "interface_dat_w_1"
+        BEL "interface_dat_w_2" BEL "interface_dat_w_3" BEL
+        "interface_dat_w_4" BEL "interface_dat_w_5" BEL "interface_dat_w_6"
+        BEL "interface_dat_w_7" BEL "interface_dat_w_8" BEL
+        "interface_dat_w_9" BEL "interface_dat_w_10" BEL "interface_dat_w_11"
+        BEL "interface_dat_w_12" BEL "interface_dat_w_13" BEL
+        "interface_dat_w_14" BEL "interface_dat_w_15" BEL "interface_dat_w_16"
+        BEL "interface_dat_w_17" BEL "interface_dat_w_18" BEL
+        "interface_dat_w_19" BEL "interface_dat_w_20" BEL "interface_dat_w_21"
+        BEL "interface_dat_w_22" BEL "interface_dat_w_23" BEL
+        "interface_dat_w_24" BEL "interface_dat_w_25" BEL "interface_dat_w_26"
+        BEL "interface_dat_w_27" BEL "interface_dat_w_28" BEL
+        "interface_dat_w_29" BEL "interface_dat_w_30" BEL "interface_dat_w_31"
+        BEL "interface_adr_0" BEL "interface_adr_1" BEL "interface_adr_2" BEL
         "interface_adr_3" BEL "interface_adr_4" BEL "interface_adr_5" BEL
         "interface_adr_9" BEL "interface_adr_10" BEL "interface_adr_11" BEL
         "interface_adr_12" BEL "interface_adr_13" BEL "uart_phy_sink_ready"
@@ -212,94 +214,94 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "status_47" BEL "status_48" BEL "status_49" BEL "status_50" BEL
         "status_51" BEL "status_52" BEL "status_53" BEL "status_54" BEL
         "status_55" BEL "status_56" BEL "storage_full_0" BEL "storage_full_1"
-        BEL "storage_full_2" BEL "storage_full_3" BEL "config_storage_full_0"
-        BEL "config_storage_full_1" BEL "config_storage_full_2" BEL
-        "config_storage_full_3" BEL "config_storage_full_4" BEL
-        "config_storage_full_5" BEL "config_storage_full_6" BEL
-        "config_storage_full_7" BEL "config_storage_full_8" BEL
-        "config_storage_full_9" BEL "config_storage_full_10" BEL
-        "config_storage_full_11" BEL "config_storage_full_12" BEL
-        "config_storage_full_13" BEL "config_storage_full_14" BEL
-        "config_storage_full_15" BEL "config_storage_full_16" BEL
-        "config_storage_full_17" BEL "config_storage_full_18" BEL
-        "config_storage_full_19" BEL "config_storage_full_20" BEL
-        "config_storage_full_21" BEL "config_storage_full_22" BEL
-        "config_storage_full_23" BEL "config_storage_full_24" BEL
-        "config_storage_full_25" BEL "config_storage_full_26" BEL
-        "config_storage_full_27" BEL "config_storage_full_28" BEL
-        "config_storage_full_29" BEL "config_storage_full_30" BEL
-        "config_storage_full_31" BEL "xfer_storage_full_0" BEL
-        "xfer_storage_full_1" BEL "xfer_storage_full_2" BEL
-        "xfer_storage_full_3" BEL "xfer_storage_full_4" BEL
-        "xfer_storage_full_5" BEL "xfer_storage_full_6" BEL
-        "xfer_storage_full_7" BEL "xfer_storage_full_8" BEL
-        "xfer_storage_full_9" BEL "xfer_storage_full_10" BEL
-        "xfer_storage_full_11" BEL "xfer_storage_full_12" BEL
-        "xfer_storage_full_13" BEL "xfer_storage_full_14" BEL
-        "xfer_storage_full_15" BEL "xfer_storage_full_16" BEL
-        "xfer_storage_full_17" BEL "xfer_storage_full_18" BEL
-        "xfer_storage_full_19" BEL "xfer_storage_full_20" BEL
-        "xfer_storage_full_21" BEL "xfer_storage_full_22" BEL
-        "xfer_storage_full_23" BEL "xfer_storage_full_24" BEL
-        "xfer_storage_full_25" BEL "xfer_storage_full_26" BEL
-        "xfer_storage_full_27" BEL "xfer_storage_full_28" BEL
-        "xfer_storage_full_29" BEL "xfer_storage_full_30" BEL
-        "xfer_storage_full_31" BEL "mosi_data_storage_full_0" BEL
-        "mosi_data_storage_full_1" BEL "mosi_data_storage_full_2" BEL
-        "mosi_data_storage_full_3" BEL "mosi_data_storage_full_4" BEL
-        "mosi_data_storage_full_5" BEL "mosi_data_storage_full_6" BEL
-        "mosi_data_storage_full_7" BEL "mosi_data_storage_full_8" BEL
-        "mosi_data_storage_full_9" BEL "mosi_data_storage_full_10" BEL
-        "mosi_data_storage_full_11" BEL "mosi_data_storage_full_12" BEL
-        "mosi_data_storage_full_13" BEL "mosi_data_storage_full_14" BEL
-        "mosi_data_storage_full_15" BEL "mosi_data_storage_full_16" BEL
-        "mosi_data_storage_full_17" BEL "mosi_data_storage_full_18" BEL
-        "mosi_data_storage_full_19" BEL "mosi_data_storage_full_20" BEL
-        "mosi_data_storage_full_21" BEL "mosi_data_storage_full_22" BEL
-        "mosi_data_storage_full_23" BEL "mosi_data_storage_full_24" BEL
-        "mosi_data_storage_full_25" BEL "mosi_data_storage_full_26" BEL
-        "mosi_data_storage_full_27" BEL "mosi_data_storage_full_28" BEL
-        "mosi_data_storage_full_29" BEL "mosi_data_storage_full_30" BEL
-        "mosi_data_storage_full_31" BEL "leds_storage_full_0" BEL
-        "leds_storage_full_1" BEL "leds_storage_full_2" BEL
-        "leds_storage_full_3" BEL "timer0_load_storage_full_0" BEL
-        "timer0_load_storage_full_1" BEL "timer0_load_storage_full_2" BEL
-        "timer0_load_storage_full_3" BEL "timer0_load_storage_full_4" BEL
-        "timer0_load_storage_full_5" BEL "timer0_load_storage_full_6" BEL
-        "timer0_load_storage_full_7" BEL "timer0_load_storage_full_8" BEL
-        "timer0_load_storage_full_9" BEL "timer0_load_storage_full_10" BEL
-        "timer0_load_storage_full_11" BEL "timer0_load_storage_full_12" BEL
-        "timer0_load_storage_full_13" BEL "timer0_load_storage_full_14" BEL
-        "timer0_load_storage_full_15" BEL "timer0_load_storage_full_16" BEL
-        "timer0_load_storage_full_17" BEL "timer0_load_storage_full_18" BEL
-        "timer0_load_storage_full_19" BEL "timer0_load_storage_full_20" BEL
-        "timer0_load_storage_full_21" BEL "timer0_load_storage_full_22" BEL
-        "timer0_load_storage_full_23" BEL "timer0_load_storage_full_24" BEL
-        "timer0_load_storage_full_25" BEL "timer0_load_storage_full_26" BEL
-        "timer0_load_storage_full_27" BEL "timer0_load_storage_full_28" BEL
-        "timer0_load_storage_full_29" BEL "timer0_load_storage_full_30" BEL
-        "timer0_load_storage_full_31" BEL "timer0_reload_storage_full_0" BEL
-        "timer0_reload_storage_full_1" BEL "timer0_reload_storage_full_2" BEL
-        "timer0_reload_storage_full_3" BEL "timer0_reload_storage_full_4" BEL
-        "timer0_reload_storage_full_5" BEL "timer0_reload_storage_full_6" BEL
-        "timer0_reload_storage_full_7" BEL "timer0_reload_storage_full_8" BEL
-        "timer0_reload_storage_full_9" BEL "timer0_reload_storage_full_10" BEL
-        "timer0_reload_storage_full_11" BEL "timer0_reload_storage_full_12"
-        BEL "timer0_reload_storage_full_13" BEL
-        "timer0_reload_storage_full_14" BEL "timer0_reload_storage_full_15"
-        BEL "timer0_reload_storage_full_16" BEL
-        "timer0_reload_storage_full_17" BEL "timer0_reload_storage_full_18"
-        BEL "timer0_reload_storage_full_19" BEL
-        "timer0_reload_storage_full_20" BEL "timer0_reload_storage_full_21"
-        BEL "timer0_reload_storage_full_22" BEL
-        "timer0_reload_storage_full_23" BEL "timer0_reload_storage_full_24"
-        BEL "timer0_reload_storage_full_25" BEL
-        "timer0_reload_storage_full_26" BEL "timer0_reload_storage_full_27"
-        BEL "timer0_reload_storage_full_28" BEL
-        "timer0_reload_storage_full_29" BEL "timer0_reload_storage_full_30"
-        BEL "timer0_reload_storage_full_31" BEL
-        "uart_eventmanager_storage_full_0" BEL
-        "uart_eventmanager_storage_full_1" BEL "ctrl_storage_full_0" BEL
+        BEL "storage_full_2" BEL "storage_full_3" BEL "storage_full_4" BEL
+        "config_storage_full_0" BEL "config_storage_full_1" BEL
+        "config_storage_full_2" BEL "config_storage_full_3" BEL
+        "config_storage_full_4" BEL "config_storage_full_5" BEL
+        "config_storage_full_6" BEL "config_storage_full_7" BEL
+        "config_storage_full_8" BEL "config_storage_full_9" BEL
+        "config_storage_full_10" BEL "config_storage_full_11" BEL
+        "config_storage_full_12" BEL "config_storage_full_13" BEL
+        "config_storage_full_14" BEL "config_storage_full_15" BEL
+        "config_storage_full_16" BEL "config_storage_full_17" BEL
+        "config_storage_full_18" BEL "config_storage_full_19" BEL
+        "config_storage_full_20" BEL "config_storage_full_21" BEL
+        "config_storage_full_22" BEL "config_storage_full_23" BEL
+        "config_storage_full_24" BEL "config_storage_full_25" BEL
+        "config_storage_full_26" BEL "config_storage_full_27" BEL
+        "config_storage_full_28" BEL "config_storage_full_29" BEL
+        "config_storage_full_30" BEL "config_storage_full_31" BEL
+        "xfer_storage_full_0" BEL "xfer_storage_full_1" BEL
+        "xfer_storage_full_2" BEL "xfer_storage_full_3" BEL
+        "xfer_storage_full_4" BEL "xfer_storage_full_5" BEL
+        "xfer_storage_full_6" BEL "xfer_storage_full_7" BEL
+        "xfer_storage_full_8" BEL "xfer_storage_full_9" BEL
+        "xfer_storage_full_10" BEL "xfer_storage_full_11" BEL
+        "xfer_storage_full_12" BEL "xfer_storage_full_13" BEL
+        "xfer_storage_full_14" BEL "xfer_storage_full_15" BEL
+        "xfer_storage_full_16" BEL "xfer_storage_full_17" BEL
+        "xfer_storage_full_18" BEL "xfer_storage_full_19" BEL
+        "xfer_storage_full_20" BEL "xfer_storage_full_21" BEL
+        "xfer_storage_full_22" BEL "xfer_storage_full_23" BEL
+        "xfer_storage_full_24" BEL "xfer_storage_full_25" BEL
+        "xfer_storage_full_26" BEL "xfer_storage_full_27" BEL
+        "xfer_storage_full_28" BEL "xfer_storage_full_29" BEL
+        "xfer_storage_full_30" BEL "xfer_storage_full_31" BEL
+        "mosi_data_storage_full_0" BEL "mosi_data_storage_full_1" BEL
+        "mosi_data_storage_full_2" BEL "mosi_data_storage_full_3" BEL
+        "mosi_data_storage_full_4" BEL "mosi_data_storage_full_5" BEL
+        "mosi_data_storage_full_6" BEL "mosi_data_storage_full_7" BEL
+        "mosi_data_storage_full_8" BEL "mosi_data_storage_full_9" BEL
+        "mosi_data_storage_full_10" BEL "mosi_data_storage_full_11" BEL
+        "mosi_data_storage_full_12" BEL "mosi_data_storage_full_13" BEL
+        "mosi_data_storage_full_14" BEL "mosi_data_storage_full_15" BEL
+        "mosi_data_storage_full_16" BEL "mosi_data_storage_full_17" BEL
+        "mosi_data_storage_full_18" BEL "mosi_data_storage_full_19" BEL
+        "mosi_data_storage_full_20" BEL "mosi_data_storage_full_21" BEL
+        "mosi_data_storage_full_22" BEL "mosi_data_storage_full_23" BEL
+        "mosi_data_storage_full_24" BEL "mosi_data_storage_full_25" BEL
+        "mosi_data_storage_full_26" BEL "mosi_data_storage_full_27" BEL
+        "mosi_data_storage_full_28" BEL "mosi_data_storage_full_29" BEL
+        "mosi_data_storage_full_30" BEL "mosi_data_storage_full_31" BEL
+        "leds_storage_full_0" BEL "leds_storage_full_1" BEL
+        "leds_storage_full_2" BEL "leds_storage_full_3" BEL
+        "timer0_load_storage_full_0" BEL "timer0_load_storage_full_1" BEL
+        "timer0_load_storage_full_2" BEL "timer0_load_storage_full_3" BEL
+        "timer0_load_storage_full_4" BEL "timer0_load_storage_full_5" BEL
+        "timer0_load_storage_full_6" BEL "timer0_load_storage_full_7" BEL
+        "timer0_load_storage_full_8" BEL "timer0_load_storage_full_9" BEL
+        "timer0_load_storage_full_10" BEL "timer0_load_storage_full_11" BEL
+        "timer0_load_storage_full_12" BEL "timer0_load_storage_full_13" BEL
+        "timer0_load_storage_full_14" BEL "timer0_load_storage_full_15" BEL
+        "timer0_load_storage_full_16" BEL "timer0_load_storage_full_17" BEL
+        "timer0_load_storage_full_18" BEL "timer0_load_storage_full_19" BEL
+        "timer0_load_storage_full_20" BEL "timer0_load_storage_full_21" BEL
+        "timer0_load_storage_full_22" BEL "timer0_load_storage_full_23" BEL
+        "timer0_load_storage_full_24" BEL "timer0_load_storage_full_25" BEL
+        "timer0_load_storage_full_26" BEL "timer0_load_storage_full_27" BEL
+        "timer0_load_storage_full_28" BEL "timer0_load_storage_full_29" BEL
+        "timer0_load_storage_full_30" BEL "timer0_load_storage_full_31" BEL
+        "timer0_reload_storage_full_0" BEL "timer0_reload_storage_full_1" BEL
+        "timer0_reload_storage_full_2" BEL "timer0_reload_storage_full_3" BEL
+        "timer0_reload_storage_full_4" BEL "timer0_reload_storage_full_5" BEL
+        "timer0_reload_storage_full_6" BEL "timer0_reload_storage_full_7" BEL
+        "timer0_reload_storage_full_8" BEL "timer0_reload_storage_full_9" BEL
+        "timer0_reload_storage_full_10" BEL "timer0_reload_storage_full_11"
+        BEL "timer0_reload_storage_full_12" BEL
+        "timer0_reload_storage_full_13" BEL "timer0_reload_storage_full_14"
+        BEL "timer0_reload_storage_full_15" BEL
+        "timer0_reload_storage_full_16" BEL "timer0_reload_storage_full_17"
+        BEL "timer0_reload_storage_full_18" BEL
+        "timer0_reload_storage_full_19" BEL "timer0_reload_storage_full_20"
+        BEL "timer0_reload_storage_full_21" BEL
+        "timer0_reload_storage_full_22" BEL "timer0_reload_storage_full_23"
+        BEL "timer0_reload_storage_full_24" BEL
+        "timer0_reload_storage_full_25" BEL "timer0_reload_storage_full_26"
+        BEL "timer0_reload_storage_full_27" BEL
+        "timer0_reload_storage_full_28" BEL "timer0_reload_storage_full_29"
+        BEL "timer0_reload_storage_full_30" BEL
+        "timer0_reload_storage_full_31" BEL "uart_eventmanager_storage_full_0"
+        BEL "uart_eventmanager_storage_full_1" BEL "ctrl_storage_full_0" BEL
         "ctrl_storage_full_1" BEL "ctrl_storage_full_2" BEL
         "ctrl_storage_full_3" BEL "ctrl_storage_full_4" BEL
         "ctrl_storage_full_5" BEL "ctrl_storage_full_6" BEL
@@ -391,95 +393,96 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "timer0_value_29" BEL "timer0_value_30" BEL "timer0_value_31" BEL
         "interface0_bank_bus_dat_r_0" BEL "interface0_bank_bus_dat_r_1" BEL
         "interface0_bank_bus_dat_r_2" BEL "interface0_bank_bus_dat_r_3" BEL
-        "interface1_bank_bus_dat_r_0" BEL "interface1_bank_bus_dat_r_1" BEL
-        "interface1_bank_bus_dat_r_2" BEL "interface1_bank_bus_dat_r_3" BEL
-        "interface1_bank_bus_dat_r_4" BEL "interface1_bank_bus_dat_r_5" BEL
-        "interface1_bank_bus_dat_r_6" BEL "interface1_bank_bus_dat_r_7" BEL
-        "interface1_bank_bus_dat_r_8" BEL "interface1_bank_bus_dat_r_9" BEL
-        "interface1_bank_bus_dat_r_10" BEL "interface1_bank_bus_dat_r_11" BEL
-        "interface1_bank_bus_dat_r_12" BEL "interface1_bank_bus_dat_r_13" BEL
-        "interface1_bank_bus_dat_r_14" BEL "interface1_bank_bus_dat_r_15" BEL
-        "interface1_bank_bus_dat_r_16" BEL "interface1_bank_bus_dat_r_17" BEL
-        "interface1_bank_bus_dat_r_18" BEL "interface1_bank_bus_dat_r_19" BEL
-        "interface1_bank_bus_dat_r_20" BEL "interface1_bank_bus_dat_r_21" BEL
-        "interface1_bank_bus_dat_r_22" BEL "interface1_bank_bus_dat_r_23" BEL
-        "interface1_bank_bus_dat_r_24" BEL "interface1_bank_bus_dat_r_25" BEL
-        "interface1_bank_bus_dat_r_26" BEL "interface1_bank_bus_dat_r_27" BEL
-        "interface1_bank_bus_dat_r_28" BEL "interface1_bank_bus_dat_r_29" BEL
-        "interface1_bank_bus_dat_r_30" BEL "interface1_bank_bus_dat_r_31" BEL
-        "interface2_bank_bus_dat_r_0" BEL "interface2_bank_bus_dat_r_1" BEL
-        "interface2_bank_bus_dat_r_2" BEL "interface2_bank_bus_dat_r_3" BEL
-        "interface2_bank_bus_dat_r_4" BEL "interface2_bank_bus_dat_r_5" BEL
-        "interface2_bank_bus_dat_r_6" BEL "interface2_bank_bus_dat_r_7" BEL
-        "interface2_bank_bus_dat_r_8" BEL "interface2_bank_bus_dat_r_9" BEL
-        "interface2_bank_bus_dat_r_10" BEL "interface2_bank_bus_dat_r_11" BEL
-        "interface2_bank_bus_dat_r_12" BEL "interface2_bank_bus_dat_r_13" BEL
-        "interface2_bank_bus_dat_r_14" BEL "interface2_bank_bus_dat_r_15" BEL
-        "interface2_bank_bus_dat_r_16" BEL "interface2_bank_bus_dat_r_17" BEL
-        "interface2_bank_bus_dat_r_18" BEL "interface2_bank_bus_dat_r_19" BEL
-        "interface2_bank_bus_dat_r_20" BEL "interface2_bank_bus_dat_r_21" BEL
-        "interface2_bank_bus_dat_r_22" BEL "interface2_bank_bus_dat_r_23" BEL
-        "interface2_bank_bus_dat_r_24" BEL "interface2_bank_bus_dat_r_25" BEL
-        "interface2_bank_bus_dat_r_26" BEL "interface2_bank_bus_dat_r_27" BEL
-        "interface2_bank_bus_dat_r_28" BEL "interface2_bank_bus_dat_r_29" BEL
-        "interface2_bank_bus_dat_r_30" BEL "interface2_bank_bus_dat_r_31" BEL
-        "interface4_bank_bus_dat_r_0" BEL "interface4_bank_bus_dat_r_1" BEL
-        "interface4_bank_bus_dat_r_2" BEL "interface4_bank_bus_dat_r_3" BEL
-        "interface5_bank_bus_dat_r_0" BEL "interface8_bank_bus_dat_r_0" BEL
-        "interface8_bank_bus_dat_r_1" BEL "interface8_bank_bus_dat_r_2" BEL
-        "interface8_bank_bus_dat_r_3" BEL "interface8_bank_bus_dat_r_4" BEL
-        "interface8_bank_bus_dat_r_5" BEL "interface8_bank_bus_dat_r_6" BEL
-        "interface8_bank_bus_dat_r_7" BEL "interface8_bank_bus_dat_r_8" BEL
-        "interface8_bank_bus_dat_r_9" BEL "interface8_bank_bus_dat_r_10" BEL
-        "interface8_bank_bus_dat_r_11" BEL "interface8_bank_bus_dat_r_12" BEL
-        "interface8_bank_bus_dat_r_13" BEL "interface8_bank_bus_dat_r_14" BEL
-        "interface8_bank_bus_dat_r_15" BEL "interface8_bank_bus_dat_r_16" BEL
-        "interface8_bank_bus_dat_r_17" BEL "interface8_bank_bus_dat_r_18" BEL
-        "interface8_bank_bus_dat_r_19" BEL "interface8_bank_bus_dat_r_20" BEL
-        "interface8_bank_bus_dat_r_21" BEL "interface8_bank_bus_dat_r_22" BEL
-        "interface8_bank_bus_dat_r_23" BEL "interface8_bank_bus_dat_r_24" BEL
-        "interface8_bank_bus_dat_r_25" BEL "interface8_bank_bus_dat_r_26" BEL
-        "interface8_bank_bus_dat_r_27" BEL "interface8_bank_bus_dat_r_28" BEL
-        "interface8_bank_bus_dat_r_29" BEL "interface8_bank_bus_dat_r_30" BEL
-        "interface8_bank_bus_dat_r_31" BEL "uart_phy_tx_reg_0" BEL
-        "uart_phy_tx_reg_1" BEL "uart_phy_tx_reg_2" BEL "uart_phy_tx_reg_3"
-        BEL "uart_phy_tx_reg_4" BEL "uart_phy_tx_reg_5" BEL
-        "uart_phy_tx_reg_6" BEL "uart_phy_tx_reg_7" BEL "machine_n_write_0"
-        BEL "machine_n_write_1" BEL "machine_n_write_2" BEL
-        "machine_n_write_3" BEL "machine_n_write_4" BEL "machine_n_write_5"
-        BEL "interface7_bank_bus_dat_r_0" BEL "interface7_bank_bus_dat_r_1"
-        BEL "interface7_bank_bus_dat_r_2" BEL "interface7_bank_bus_dat_r_3"
-        BEL "interface7_bank_bus_dat_r_4" BEL "interface7_bank_bus_dat_r_5"
-        BEL "interface7_bank_bus_dat_r_6" BEL "interface7_bank_bus_dat_r_7"
-        BEL "timer0_value_status_0" BEL "timer0_value_status_1" BEL
-        "timer0_value_status_2" BEL "timer0_value_status_3" BEL
-        "timer0_value_status_4" BEL "timer0_value_status_5" BEL
-        "timer0_value_status_6" BEL "timer0_value_status_7" BEL
-        "timer0_value_status_8" BEL "timer0_value_status_9" BEL
-        "timer0_value_status_10" BEL "timer0_value_status_11" BEL
-        "timer0_value_status_12" BEL "timer0_value_status_13" BEL
-        "timer0_value_status_14" BEL "timer0_value_status_15" BEL
-        "timer0_value_status_16" BEL "timer0_value_status_17" BEL
-        "timer0_value_status_18" BEL "timer0_value_status_19" BEL
-        "timer0_value_status_20" BEL "timer0_value_status_21" BEL
-        "timer0_value_status_22" BEL "timer0_value_status_23" BEL
-        "timer0_value_status_24" BEL "timer0_value_status_25" BEL
-        "timer0_value_status_26" BEL "timer0_value_status_27" BEL
-        "timer0_value_status_28" BEL "timer0_value_status_29" BEL
-        "timer0_value_status_30" BEL "timer0_value_status_31" BEL
-        "machine_n_read_0" BEL "machine_n_read_1" BEL "machine_n_read_2" BEL
-        "machine_n_read_3" BEL "machine_n_read_4" BEL "machine_n_read_5" BEL
-        "uart_phy_source_valid" BEL "machine_data_0" BEL "machine_data_1" BEL
-        "machine_data_2" BEL "machine_data_3" BEL "machine_data_4" BEL
-        "machine_data_5" BEL "machine_data_6" BEL "machine_data_7" BEL
-        "machine_data_8" BEL "machine_data_9" BEL "machine_data_10" BEL
-        "machine_data_11" BEL "machine_data_12" BEL "machine_data_13" BEL
-        "machine_data_14" BEL "machine_data_15" BEL "machine_data_16" BEL
-        "machine_data_17" BEL "machine_data_18" BEL "machine_data_19" BEL
-        "machine_data_20" BEL "machine_data_21" BEL "machine_data_22" BEL
-        "machine_data_23" BEL "machine_data_24" BEL "machine_data_25" BEL
-        "machine_data_26" BEL "machine_data_27" BEL "machine_data_28" BEL
-        "machine_data_29" BEL "machine_data_30" BEL "machine_data_31" BEL
+        "interface0_bank_bus_dat_r_4" BEL "interface1_bank_bus_dat_r_0" BEL
+        "interface1_bank_bus_dat_r_1" BEL "interface1_bank_bus_dat_r_2" BEL
+        "interface1_bank_bus_dat_r_3" BEL "interface1_bank_bus_dat_r_4" BEL
+        "interface1_bank_bus_dat_r_5" BEL "interface1_bank_bus_dat_r_6" BEL
+        "interface1_bank_bus_dat_r_7" BEL "interface1_bank_bus_dat_r_8" BEL
+        "interface1_bank_bus_dat_r_9" BEL "interface1_bank_bus_dat_r_10" BEL
+        "interface1_bank_bus_dat_r_11" BEL "interface1_bank_bus_dat_r_12" BEL
+        "interface1_bank_bus_dat_r_13" BEL "interface1_bank_bus_dat_r_14" BEL
+        "interface1_bank_bus_dat_r_15" BEL "interface1_bank_bus_dat_r_16" BEL
+        "interface1_bank_bus_dat_r_17" BEL "interface1_bank_bus_dat_r_18" BEL
+        "interface1_bank_bus_dat_r_19" BEL "interface1_bank_bus_dat_r_20" BEL
+        "interface1_bank_bus_dat_r_21" BEL "interface1_bank_bus_dat_r_22" BEL
+        "interface1_bank_bus_dat_r_23" BEL "interface1_bank_bus_dat_r_24" BEL
+        "interface1_bank_bus_dat_r_25" BEL "interface1_bank_bus_dat_r_26" BEL
+        "interface1_bank_bus_dat_r_27" BEL "interface1_bank_bus_dat_r_28" BEL
+        "interface1_bank_bus_dat_r_29" BEL "interface1_bank_bus_dat_r_30" BEL
+        "interface1_bank_bus_dat_r_31" BEL "interface2_bank_bus_dat_r_0" BEL
+        "interface2_bank_bus_dat_r_1" BEL "interface2_bank_bus_dat_r_2" BEL
+        "interface2_bank_bus_dat_r_3" BEL "interface2_bank_bus_dat_r_4" BEL
+        "interface2_bank_bus_dat_r_5" BEL "interface2_bank_bus_dat_r_6" BEL
+        "interface2_bank_bus_dat_r_7" BEL "interface2_bank_bus_dat_r_8" BEL
+        "interface2_bank_bus_dat_r_9" BEL "interface2_bank_bus_dat_r_10" BEL
+        "interface2_bank_bus_dat_r_11" BEL "interface2_bank_bus_dat_r_12" BEL
+        "interface2_bank_bus_dat_r_13" BEL "interface2_bank_bus_dat_r_14" BEL
+        "interface2_bank_bus_dat_r_15" BEL "interface2_bank_bus_dat_r_16" BEL
+        "interface2_bank_bus_dat_r_17" BEL "interface2_bank_bus_dat_r_18" BEL
+        "interface2_bank_bus_dat_r_19" BEL "interface2_bank_bus_dat_r_20" BEL
+        "interface2_bank_bus_dat_r_21" BEL "interface2_bank_bus_dat_r_22" BEL
+        "interface2_bank_bus_dat_r_23" BEL "interface2_bank_bus_dat_r_24" BEL
+        "interface2_bank_bus_dat_r_25" BEL "interface2_bank_bus_dat_r_26" BEL
+        "interface2_bank_bus_dat_r_27" BEL "interface2_bank_bus_dat_r_28" BEL
+        "interface2_bank_bus_dat_r_29" BEL "interface2_bank_bus_dat_r_30" BEL
+        "interface2_bank_bus_dat_r_31" BEL "interface4_bank_bus_dat_r_0" BEL
+        "interface4_bank_bus_dat_r_1" BEL "interface4_bank_bus_dat_r_2" BEL
+        "interface4_bank_bus_dat_r_3" BEL "interface5_bank_bus_dat_r_0" BEL
+        "interface8_bank_bus_dat_r_0" BEL "interface8_bank_bus_dat_r_1" BEL
+        "interface8_bank_bus_dat_r_2" BEL "interface8_bank_bus_dat_r_3" BEL
+        "interface8_bank_bus_dat_r_4" BEL "interface8_bank_bus_dat_r_5" BEL
+        "interface8_bank_bus_dat_r_6" BEL "interface8_bank_bus_dat_r_7" BEL
+        "interface8_bank_bus_dat_r_8" BEL "interface8_bank_bus_dat_r_9" BEL
+        "interface8_bank_bus_dat_r_10" BEL "interface8_bank_bus_dat_r_11" BEL
+        "interface8_bank_bus_dat_r_12" BEL "interface8_bank_bus_dat_r_13" BEL
+        "interface8_bank_bus_dat_r_14" BEL "interface8_bank_bus_dat_r_15" BEL
+        "interface8_bank_bus_dat_r_16" BEL "interface8_bank_bus_dat_r_17" BEL
+        "interface8_bank_bus_dat_r_18" BEL "interface8_bank_bus_dat_r_19" BEL
+        "interface8_bank_bus_dat_r_20" BEL "interface8_bank_bus_dat_r_21" BEL
+        "interface8_bank_bus_dat_r_22" BEL "interface8_bank_bus_dat_r_23" BEL
+        "interface8_bank_bus_dat_r_24" BEL "interface8_bank_bus_dat_r_25" BEL
+        "interface8_bank_bus_dat_r_26" BEL "interface8_bank_bus_dat_r_27" BEL
+        "interface8_bank_bus_dat_r_28" BEL "interface8_bank_bus_dat_r_29" BEL
+        "interface8_bank_bus_dat_r_30" BEL "interface8_bank_bus_dat_r_31" BEL
+        "uart_phy_tx_reg_0" BEL "uart_phy_tx_reg_1" BEL "uart_phy_tx_reg_2"
+        BEL "uart_phy_tx_reg_3" BEL "uart_phy_tx_reg_4" BEL
+        "uart_phy_tx_reg_5" BEL "uart_phy_tx_reg_6" BEL "uart_phy_tx_reg_7"
+        BEL "machine_n_write_0" BEL "machine_n_write_1" BEL
+        "machine_n_write_2" BEL "machine_n_write_3" BEL "machine_n_write_4"
+        BEL "machine_n_write_5" BEL "interface7_bank_bus_dat_r_0" BEL
+        "interface7_bank_bus_dat_r_1" BEL "interface7_bank_bus_dat_r_2" BEL
+        "interface7_bank_bus_dat_r_3" BEL "interface7_bank_bus_dat_r_4" BEL
+        "interface7_bank_bus_dat_r_5" BEL "interface7_bank_bus_dat_r_6" BEL
+        "interface7_bank_bus_dat_r_7" BEL "timer0_value_status_0" BEL
+        "timer0_value_status_1" BEL "timer0_value_status_2" BEL
+        "timer0_value_status_3" BEL "timer0_value_status_4" BEL
+        "timer0_value_status_5" BEL "timer0_value_status_6" BEL
+        "timer0_value_status_7" BEL "timer0_value_status_8" BEL
+        "timer0_value_status_9" BEL "timer0_value_status_10" BEL
+        "timer0_value_status_11" BEL "timer0_value_status_12" BEL
+        "timer0_value_status_13" BEL "timer0_value_status_14" BEL
+        "timer0_value_status_15" BEL "timer0_value_status_16" BEL
+        "timer0_value_status_17" BEL "timer0_value_status_18" BEL
+        "timer0_value_status_19" BEL "timer0_value_status_20" BEL
+        "timer0_value_status_21" BEL "timer0_value_status_22" BEL
+        "timer0_value_status_23" BEL "timer0_value_status_24" BEL
+        "timer0_value_status_25" BEL "timer0_value_status_26" BEL
+        "timer0_value_status_27" BEL "timer0_value_status_28" BEL
+        "timer0_value_status_29" BEL "timer0_value_status_30" BEL
+        "timer0_value_status_31" BEL "machine_n_read_0" BEL "machine_n_read_1"
+        BEL "machine_n_read_2" BEL "machine_n_read_3" BEL "machine_n_read_4"
+        BEL "machine_n_read_5" BEL "uart_phy_source_valid" BEL
+        "machine_data_0" BEL "machine_data_1" BEL "machine_data_2" BEL
+        "machine_data_3" BEL "machine_data_4" BEL "machine_data_5" BEL
+        "machine_data_6" BEL "machine_data_7" BEL "machine_data_8" BEL
+        "machine_data_9" BEL "machine_data_10" BEL "machine_data_11" BEL
+        "machine_data_12" BEL "machine_data_13" BEL "machine_data_14" BEL
+        "machine_data_15" BEL "machine_data_16" BEL "machine_data_17" BEL
+        "machine_data_18" BEL "machine_data_19" BEL "machine_data_20" BEL
+        "machine_data_21" BEL "machine_data_22" BEL "machine_data_23" BEL
+        "machine_data_24" BEL "machine_data_25" BEL "machine_data_26" BEL
+        "machine_data_27" BEL "machine_data_28" BEL "machine_data_29" BEL
+        "machine_data_30" BEL "machine_data_31" BEL
         "interface6_bank_bus_dat_r_0" BEL "interface6_bank_bus_dat_r_1" BEL
         "interface6_bank_bus_dat_r_2" BEL "interface6_bank_bus_dat_r_3" BEL
         "interface6_bank_bus_dat_r_4" BEL "interface6_bank_bus_dat_r_5" BEL
@@ -1421,8 +1424,9 @@ TIMEGRP PRDclk100 = BEL "xilinxmultiregimpl0_regs0" BEL
         "uart_phy_rx_busy" BEL "uart_tx_pending" BEL "uart_rx_pending" BEL
         "uart_rx_fifo_readable" BEL "timer0_zero_pending" BEL "one_pending"
         BEL "zero_pending" BEL "two_pending" BEL "three_pending" BEL
-        "pending1" BEL "grant" BEL "uart_tx_fifo_readable" BEL "serial_tx" BEL
-        "lm32_cpu/write_enable_m" BEL "lm32_cpu/instruction_unit/i_cyc_o" BEL
+        "four_pending" BEL "pending1" BEL "grant" BEL "uart_tx_fifo_readable"
+        BEL "serial_tx" BEL "lm32_cpu/write_enable_m" BEL
+        "lm32_cpu/instruction_unit/i_cyc_o" BEL
         "lm32_cpu/load_store_unit/d_sel_o_3" BEL
         "lm32_cpu/load_store_unit/d_sel_o_2" BEL
         "lm32_cpu/load_store_unit/d_sel_o_1" BEL

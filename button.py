@@ -15,10 +15,12 @@ class button_intr (Module, AutoCSR):
 		self.ev.zero= EventSourceProcess()
 		self.ev.two= EventSourceProcess()
 		self.ev.three= EventSourceProcess() #Flanco de bajada
+		self.ev.four= EventSourceProcess()
 
         #Agrenado el pending al arreglo de pendings
-		self.comb +=[self.ev.zero.trigger.eq(signal[3]),
+		self.comb +=[self.ev.zero.trigger.eq(signal[0]),
 			self.ev.one.trigger.eq(signal[1]),
 			self.ev.two.trigger.eq(signal[2]),
-			self.ev.three.trigger.eq(signal[0])
+			self.ev.three.trigger.eq(signal[3]),
+			self.ev.four.trigger.eq(signal[4])
 		]
