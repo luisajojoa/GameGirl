@@ -6,7 +6,7 @@ isr.o: isr.c \
  /opt/liteX/litex/litex/soc/software/include/base/system.h \
  /opt/liteX/litex/litex/soc/software/include/base/uart.h \
  /opt/liteX/litex/litex/soc/software/include/base/stdio.h \
- /opt/liteX/litex/litex/soc/software/include/base/stddef.h
+ /opt/liteX/litex/litex/soc/software/include/base/stddef.h variables.h
 
 /home/luisa/Documentos/Universidad/Digital2/fpga_101-master/GameGirl/build/software/include/generated/csr.h:
 
@@ -23,3 +23,5 @@ isr.o: isr.c \
 /opt/liteX/litex/litex/soc/software/include/base/stdio.h:
 
 /opt/liteX/litex/litex/soc/software/include/base/stddef.h:
+
+variables.h:

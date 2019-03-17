@@ -1,19 +1,14 @@
 
 #include "init.h"
 
-unsigned OFFLINE      = (1 << 0);
-unsigned CS_POLARITY  = (1 << 3);
-unsigned CLK_POLARITY = (1 << 4);
-unsigned CLK_PHASE    = (1 << 5);
-unsigned LSB_FIRST    = (1 << 6);
-unsigned HALF_DUPLEX  = (1 << 7);
-unsigned DIV_READ     = (1 << 16);
+
+/*
 unsigned DIV_WRITE    = (1 << 24);
 
 // xfer mapping
 unsigned WRITE_LENGTH = (1 << 16);
 unsigned READ_LENGTH  = (1 << 24);
-
+*/
  void lcd_write(unsigned char rs, unsigned int data)
 {
 	rs_out_write(rs);
@@ -257,7 +252,7 @@ void lcd_initialize(void){
 
 }
 
-
+/*
 
 
 
@@ -277,7 +272,7 @@ void SD_configure(void) {
 void SD_write_8(unsigned  int value){
 	SD_mosi_data_write(value << 24) ;
 	SD_start_write(1);
-	while (SD_pending_read() & 0x1);
+	while (SD_active_read() & 0x1);
 }
 
 unsigned int SD_read(unsigned char dato,unsigned char addr){
@@ -460,6 +455,7 @@ GPO_out_write(1);//AGREGADO
 
 GPO_out_write(1);//AGREGADO
 printf("Inicialización terminada.\n" );
-}
 
+}
+*/
 

@@ -1,12 +1,14 @@
 from migen import *
 from migen.genlib.cdc import MultiReg
+
 from litex.soc.interconnect.csr import *
 from litex.soc.interconnect.csr_eventmanager import *
 
-class button_intr (Module, AutoCSR):
+class button_intr(Module, AutoCSR):
 	def __init__(self,signal):
         ##Creando GPIOIn normal	
 		self._in = CSRStatus(len(signal))
+		self._dir= CSRStatus(8);
 		self.specials += MultiReg(signal, self._in.status)
 
 		#Agrgando el submodulo para poder interrumpir
