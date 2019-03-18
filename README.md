@@ -92,6 +92,7 @@ La conexión entre los periféricos y el procesador se hace por medio de un bus 
 #### Bus wishbone
 Como se mencionó antes, los periféricos y el procesador se comunican por medio de un bus wishbone. A continuación podemos ver las entradas y salidas que necesita dicho bus para su adecuado funcionamiento. 
 
+![wishbone](https://user-images.githubusercontent.com/17129769/54510325-d26f5600-491a-11e9-81b3-6472a7c99c74.PNG)
 
 
 #### SPI
