@@ -74,5 +74,19 @@ Por otro lado, se consideran los siguientes módulos como periféricos:
 El mapa de memoria de nuestro proyecto es el siguiente:
 ![mapamem](https://user-images.githubusercontent.com/17129769/54509862-0cd7f380-4919-11e9-9d8c-5b4324592542.jpeg)
 Para abordar en estos periféricos de comunicación se analizará primero el procesador LatticeMico32.
+#### LatticeMico32
+![lm](https://user-images.githubusercontent.com/17129769/54509886-309b3980-4919-11e9-96cb-338621cf930b.jpeg)
+En la figura anterior se puede observar el funcionamiento del procesador, el cual se divide en 6 etapas de funcionamiento.
+*	La primera es direcciones, donde se calcula y envía al contador de programa la dirección de la instrucción a ejecutar.
+*	Fech, es donde la instrucción es leida desde la memoria y es almacenada en el registro de instrucción.
+*	La decodifica y los operandos también son entregados al resto del proceso mientras que a la par el PC relativo a las ramas es predicho.
+*	Se ejecuta la operación decodificada y para operaciones lógicas simples o sumas la ejcución termina y se entrega.
+*	Para instrucciones más complicadas, se almacena el resultado y una segunda ejecución es realizada para obtener el resutado final.
+*	Finalmente los resultados son escritos en el archivo de registros.
 
+Para el control de interrupciones se designan 3 registros por parte del procesador, esos son el habilitador de interrupciones (IE), la máscara de interrupciones (IM) y la interrupción pendiente (IP). Una vez activada una interrupción, el procesador guarda todos sus registros en la pila, modifica el registro IP y espera hasta que se solucione la interrupción para restaurar el valor de los registros almacenados y retomar el programa inicial.
+La conexión entre los periféricos y el procesador se hace por medio de un bus wishbone. Sin embargo las interrupciones realizadas por los periféricos son directas con el procesador para que pueda encargarse de ellas inmediatamente.
+#### SPI
+El periferico SPI implementado es el nos proporcionó el profesor y se puede observar en la figura siguiente el diagrama de bloques funcional donde se especifican los registros y los subbloques que lo componen.
+Nuestro periferico SPI se instancia dos veces, uno para la LCD y otro para la comunicación con la SD donde la única diferencia entre los dos es la configuración de frecuencias y cantidad de bits por tiempo de escritura.
 
