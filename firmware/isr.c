@@ -27,7 +27,6 @@ void buttonTest(void)
 {
 
 	unsigned int pend = buttons_ev_pending_read();
-	printf("boton click %d \n",pend);
 	switch(pend){
 		case 16:
 			dir_global=1;

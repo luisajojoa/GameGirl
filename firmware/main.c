@@ -21,8 +21,6 @@ int points =0;
 int lvl =0;
 
 
-
-
 static char *readstr(void)
 {
 	char c[2];
@@ -86,12 +84,8 @@ static void help(void)
 {
 	puts("Available commands:");
 	puts("help                            - this command");
-	puts("reboot                          - reboot CPU");
-//	puts("led                             - led test");
-//	puts("play                             - start game");
-	puts("lcd                             - test lcd XD");
-	puts("test                             - test buttons");
-	puts("a                             - test lcd window");
+	puts("reboot                           - restart game");
+	puts("play                             - start game");
 }
 
 static void reboot(void)
@@ -104,7 +98,7 @@ static void reboot(void)
 
 static void lcd_configure(void)
 {
-	printf("configurando \n");
+	//printf("configurando \n");
 	//configure
 	int spi_clk= 6.25e6;
 	int div_write= system_clock_frequency_read()/spi_clk -2;
@@ -126,49 +120,6 @@ static void buttons (void)
 }
 
 
-static void lcd_test(void)
-{
-	int i=0;
-
-	lcd_initialize();
-	while(i<38720){
-	lcd_write(1,0x08ff);
-	i++;
-	}
-	printf("terminó de escribir lcd \n");
-}
-
-
-static void screen(void)
-{
-
-/*
-Utilizando los registros 0h0020 y 0h0021 se ajusta la dirección de la RAM donde se desea escribir.
-
-lcd_write(0,0x0020);  Se escribe la dirección de Y [ de 0-175 pixeles (0-00haf)]
-lcd_write(0,0x0021);   Se escribe la dirección de X [ de 0-219 pixeles (0-00hdb)]
-
-*/
-	//lcd_configure();
-	//lcd_initialize();
-	int yMin= 58;
-	int yMax= 117;
-	int xMin= 73;
-	int xMax= 147;
-	for(int i=yMin; i< yMax; i++)
-	{
-		lcd_write(0,0x0020);
-		lcd_write(1, i)	;
-		for (int j = xMin; j < xMax; j++)
-		{
-			lcd_write(0,0x0021);
-			lcd_write(1,j);
-			lcd_write(0,0x0022);
-			lcd_write(1,0xf000);
-		}
-	}
-}
-
 
 
 /////////////////////////////////
@@ -184,31 +135,37 @@ static void decoColor(int color) //Funcionando
 	switch (color)
 	{
 		case (0):
-		lcd_write(1,0x0000);
+		lcd_write(1,0x0000); //negro
 		break;
 
 		case (1):
-		lcd_write(1,0xFFFF);
+		lcd_write(1,0xFFFF);  //blanco
 		break;
 
 		case (2):
-		lcd_write(1,0xEC1D);
+		lcd_write(1,0xEC1D); //violeta
 		break;
 
 		case (3):
-		lcd_write(1,0xF81F);
+		lcd_write(1,0xF81F); //Magenta
 		break;
 
 		case (4):
-		lcd_write(1,0xFFDF);
+		lcd_write(1,0xFFDF); //snow
+		break;
+		case (8):
+		lcd_write(1,0x03E0); //dark green
+		break;
+		case (6):
+		lcd_write(1,0x07E0); //Green
 		break;
 
-		case (8): //Fondo
-		lcd_write(1,0x08FF);
+		case (5): //Borde
+		lcd_write(1,0xFD20);//FEA0); //light green
 		break;
 
 		case (9):
-		lcd_write(1,0xFB08);
+		lcd_write(1,0xFB08); //tomato
 		break;
 
 		default:
@@ -265,7 +222,15 @@ static int decoTile (int tile, int pos)
 			}
 			break;
 		}
-		case(8): //Fondo
+		case(5):
+		{
+			for(int v=0; v<LTH*(LTH);v++)
+			{
+				data[v]=5;
+			}
+			break;
+		}
+		case(8): //Borde
 		{
 			for(int v=0; v<LTH*(LTH);v++)
 			{
@@ -273,6 +238,123 @@ static int decoTile (int tile, int pos)
 			}
 			break;
 		}
+		case(100):
+		{
+			return num0Uno[pos];
+		}
+		case(101):
+		{
+			return num0Dos[pos];
+		}
+		case(110):
+		{
+			return num1Uno[pos];
+
+		}
+		case(111):
+		{
+			return num1Dos[pos];
+
+		}
+		case(120):
+		{
+			return num2Uno[pos];
+
+		}
+		case(121):
+		{
+			return num2Dos[pos];
+		}		
+		case(130):
+		{
+			return num2Uno[pos];
+		}
+		case(131):
+		{
+			return num3Dos[pos];
+
+		}
+		case(140):
+		{
+			return num4Uno[pos];
+		}
+		case(141):
+		{
+			return num4Dos[pos];
+
+		}
+		case(150):
+		{
+			return num5Uno [pos];
+
+		}
+		case(151):
+		{
+			return num3Dos[pos];
+		}
+		case(160):
+		{
+			return num5Uno[pos];
+
+		}
+		case(161):
+		{
+			return num6Dos[pos];
+
+		}
+		case(170):
+		{
+			return num7Uno[pos];
+		}
+		case(171):
+		{
+			return num1Dos[pos];
+
+		}
+		case(180):
+		{
+			return num8Uno[pos];
+
+		}
+		case(181):
+		{
+			return num6Dos[pos];
+
+		}
+		case(190):
+		{
+			return num8Uno[pos];
+
+		}
+		case(191):
+		{
+			return num4Dos[pos];
+
+		}
+		case(200):
+		{
+			return snakeHeadRight[pos];
+		}
+		case(201):
+		{
+			return snakeHeadUp[pos];
+		}
+		case(202):
+		{
+			return snakeHeadLeft[pos];
+		}
+		case(203):
+		{
+			return snakeHeadDown[pos];
+		}
+		case(204):
+		{
+			return bod[pos];
+		}
+		case(205):
+		{
+			return food[pos];
+		}	
 		default:
 		{
 			for(int v=0; v<LTH*(LTH);v++)
@@ -286,9 +368,10 @@ static int decoTile (int tile, int pos)
 }
 
 
+
 /// Pinta un tile seleccionado en la posición de la pantalla que
 /// se indica en el parámetro de entrada.
-static void pintar(int info[3])
+void pintar(int info[3])
 {
 	int tile = info[0];
 	int tilex= info[1];
@@ -304,12 +387,12 @@ static void pintar(int info[3])
 	{
 		lcd_write(0,0x0020);
 		lcd_write(1,(tiley*LTH) +i);
-		for(int j=0;j<LTH;j++)
+		for(int j=LTH;j>0;j--)
 		{
 			lcd_write(0,0x0021);
 			lcd_write(1,(tilex*(LTH) +j));
 			lcd_write(0,0x0022);
-			decoColor(pix[z]);
+			decoColor(pix[121-z]);
 			z++;
 		}
 	}
@@ -323,10 +406,10 @@ static void inicio()
 	lvl=0;
 	dir=0;
 	//Fondo
-
+	
 	for(int q=1;q<(LX/LTH)-1;q++)
 	{
-		for(int f=1;f<(LY/LTH)-1;f++)
+		for(int f=1;f<(LY/LTH)-2;f++)
 		{
 			if((q==(LX/LTH)/2)&&(f==(LY/LTH)/2))
 			{
@@ -342,25 +425,27 @@ static void inicio()
 	//Bordes
 	for(int q=0;q<LX/LTH;q++)
 	{
-		int borde1[3]= {3, q, 0};
+		int borde1[3]= {5, q, 0};
 		pintar(borde1);
 	}
 	for(int q=0;q<LX/LTH;q++)
 	{
-		int borde2[3]= {3, q, (LY/LTH)-1};
+		int borde2[3]= {5, q, (LY/LTH)-1};
 		pintar(borde2);
+		int borde9[3]= {5, q, (LY/LTH)-2};
+		pintar(borde9);
 	}
 	for(int q=0;q<LY/LTH;q++)
 	{
-		int borde1[3]= {3, 0, q};
+		int borde1[3]= {5, 0, q};
 		pintar(borde1);
 	}
 	for(int q=0;q<LY/LTH;q++)
 	{
-		int borde1[3]= {3, (LX/LTH)-1, q};
+		int borde1[3]= {5, (LX/LTH)-1, q};
 		pintar(borde1);
 	}
-	snake[0][0]=0;
+	snake[0][0]=200;
 	snake[0][1]=(LX/LTH)/2;
 	snake[0][2]=(LY/LTH)/2;
 	for(int s=1;s<LARGO;s++)
@@ -370,29 +455,59 @@ static void inicio()
 		snake[s][2]=(LY/LTH)/2;
 	}
 	pintar(snake[0]);
-	comida[0]=4;
+	comida[0]=205;
 	comida[1]=foodgen(0);
 	comida[2]=foodgen(1);
 	pintar(comida);
+	puntaje(points);
+}
+void paintScore(int numero, int pot){
+	int cuadro= 100+(numero*10);
+	int draw[3];
+	if(pot==0)
+	{
+		draw[0]=cuadro;
+		draw[1]=16;
+		draw[2]=15;
+		pintar(draw);
+		draw[0]=cuadro+1;
+		draw[1]=16;
+		draw[2]=14;
+		pintar(draw);
+	}else{
+		draw[0]=cuadro;
+		draw[1]=17;
+		draw[2]=15;
+		pintar(draw);
+		draw[0]=cuadro+1;
+		draw[1]=17;
+		draw[2]=14;
+		pintar(draw);
+	}
+
+
+}
+
+void puntaje (int puntos){
+	paintScore(puntos/10,0);
+	paintScore(puntos%10,1);
 }
 
 /// Genera la posición aleatoria de la comida.
 int foodgen (int pos)
 {
 	int info[2];
-	info[0]=rand()%19 +1 ;
-	info[1]=rand()%14 +1;
+	info[0]=rand()%17 +1 ;
+	info[1]=rand()%12 +1;
 
 
 	if(pos==0)
 	{
-		printf("x : %i\n",info[0]);
 		return info[0];
 
 	}
 	else
 	{
-		printf("y : %i\n",info[1]);
 		return info[1];
 	}
 }
@@ -420,7 +535,7 @@ static void try(void)
 	{
 			for (int p= 1;p<LARGO;p++)
 			{
-				if(snake[p][0]==0)
+				if(snake[p][0]==204)
 				{
 					if((snake[0][1]==snake[p][1]) && (snake[0][2]==snake[p][2]))
 					{
@@ -437,18 +552,17 @@ static void try(void)
 				points++;
 				comida[1]=foodgen(0);
 				comida[2]=foodgen(1);
-				pintar (comida);
-				printf("points : %i\n",points);
+				puntaje(points);
 				if(points%2 ==0 )
 				{
 					lvl++;
 				}
 			}
-
+			pintar (comida);
 
 			for(int w=1;w<=points;w++)
 			{
-				snake[w][0]=0;
+				snake[w][0]=204;
 			}
 			dir= dir_global;
 			switch(dir)
@@ -466,13 +580,13 @@ static void try(void)
 
 					if(snake[0][2]==1)
 					{
-						snake[0][2]=(LY/LTH)-2;
+						snake[0][2]=(LY/LTH)-3;
 					}
 					else
 					{
 						snake[0][2]--;
 					}
-
+					snake[0][0]=203;
 					for(int p=0;p<points+2;p++)
 					{
 						pintar(snake[p]);
@@ -494,6 +608,7 @@ static void try(void)
 					{
 						snake[0][1]--;
 					}
+					snake[0][0]=202;
 					for(int p=0;p<points+2;p++)
 					{
 						pintar(snake[p]);
@@ -513,6 +628,7 @@ static void try(void)
 					{
 						snake[0][1]++;
 					}
+					snake[0][0]=200;
 					for(int p=0;p<points+2;p++)
 					{
 						pintar(snake[p]);
@@ -524,7 +640,7 @@ static void try(void)
 					snake[p][1]=snake[p-1][1];
 					snake[p][2]=snake[p-1][2];
 				}
-					if(snake[0][2]==(LY/LTH)-2)
+					if(snake[0][2]==(LY/LTH)-3)
 					{
 						snake[0][2]=1;
 					}
@@ -532,6 +648,7 @@ static void try(void)
 					{
 						snake[0][2]++;
 					}
+					snake[0][0]=201;
 					for(int p=0;p<points+2;p++)
 					{
 						pintar(snake[p]);
@@ -547,7 +664,6 @@ static void try(void)
 
 
 
-
 static void console_service(void)
 {
 	char *str;
@@ -560,23 +676,11 @@ static void console_service(void)
 		help();
 	else if(strcmp(token, "reboot") == 0)
 		reboot();
-	/*else if(strcmp(token, "led") == 0)
-		led_test();
-	else if(strcmp(token, "sw") == 0)
-		switch_test();
-*/
-	else if(strcmp(token, "lcd") == 0){
-		lcd_test();
-	}
-	else if(strcmp(token, "test") == 0)
-		//buttons();
-		screen();
-	//else if(strcmp(token, "play") == 0)
-		//try();
-	else if(strcmp(token, "a") == 0)
-		try();
 
-	//}
+	else if(strcmp(token, "play") == 0)
+		try();
+	else if(strcmp(token, "puntaje") == 0)
+		puntaje(15);
 	prompt();
 }
 
@@ -587,15 +691,9 @@ int main(void)
 	irq_setmask(0);
 	irq_setie(1);
 	lcd_configure();
+	lcd_initialize();
 	buttons();	
 	uart_init();
-	
-
-	printf("get maska %X \n",irq_getmask());
-	printf("get maski %X \n",irq_pending());
-	printf("get maske %x \n",(irq_getmask() | (1 << 4)));
-
-	puts("\nLab004 - CPU testing software built "__DATE__" "__TIME__"\n");
 	help();
 	prompt();
 

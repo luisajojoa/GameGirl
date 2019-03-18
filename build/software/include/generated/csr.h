@@ -12,6 +12,75 @@ extern uint32_t csr_readl(uint32_t addr);
 #include <hw/common.h>
 #endif /* ! CSR_ACCESSORS_DEFINED */
 
+/* GPO */
+#define CSR_GPO_BASE 0xe0006800
+#define CSR_GPO_OUT_ADDR 0xe0006800
+#define CSR_GPO_OUT_SIZE 1
+static inline unsigned int GPO_out_read(void) {
+	unsigned int r = csr_readl(0xe0006800);
+	return r;
+}
+static inline void GPO_out_write(unsigned int value) {
+	csr_writel(value, 0xe0006800);
+}
+
+/* SD */
+#define CSR_SD_BASE 0xe0006000
+#define CSR_SD_CONFIG_ADDR 0xe0006000
+#define CSR_SD_CONFIG_SIZE 1
+static inline unsigned int SD_config_read(void) {
+	unsigned int r = csr_readl(0xe0006000);
+	return r;
+}
+static inline void SD_config_write(unsigned int value) {
+	csr_writel(value, 0xe0006000);
+}
+#define CSR_SD_XFER_ADDR 0xe0006004
+#define CSR_SD_XFER_SIZE 1
+static inline unsigned int SD_xfer_read(void) {
+	unsigned int r = csr_readl(0xe0006004);
+	return r;
+}
+static inline void SD_xfer_write(unsigned int value) {
+	csr_writel(value, 0xe0006004);
+}
+#define CSR_SD_START_ADDR 0xe0006008
+#define CSR_SD_START_SIZE 1
+static inline unsigned int SD_start_read(void) {
+	unsigned int r = csr_readl(0xe0006008);
+	return r;
+}
+static inline void SD_start_write(unsigned int value) {
+	csr_writel(value, 0xe0006008);
+}
+#define CSR_SD_ACTIVE_ADDR 0xe000600c
+#define CSR_SD_ACTIVE_SIZE 1
+static inline unsigned int SD_active_read(void) {
+	unsigned int r = csr_readl(0xe000600c);
+	return r;
+}
+#define CSR_SD_PENDING_ADDR 0xe0006010
+#define CSR_SD_PENDING_SIZE 1
+static inline unsigned int SD_pending_read(void) {
+	unsigned int r = csr_readl(0xe0006010);
+	return r;
+}
+#define CSR_SD_MOSI_DATA_ADDR 0xe0006014
+#define CSR_SD_MOSI_DATA_SIZE 1
+static inline unsigned int SD_mosi_data_read(void) {
+	unsigned int r = csr_readl(0xe0006014);
+	return r;
+}
+static inline void SD_mosi_data_write(unsigned int value) {
+	csr_writel(value, 0xe0006014);
+}
+#define CSR_SD_MISO_DATA_ADDR 0xe0006018
+#define CSR_SD_MISO_DATA_SIZE 1
+static inline unsigned int SD_miso_data_read(void) {
+	unsigned int r = csr_readl(0xe0006018);
+	return r;
+}
+
 /* buttons */
 #define CSR_BUTTONS_BASE 0xe0005000
 #define CSR_BUTTONS_IN_ADDR 0xe0005000
@@ -162,15 +231,15 @@ static inline void leds_out_write(unsigned int value) {
 }
 
 /* rs */
-#define CSR_RS_BASE 0xe0006000
-#define CSR_RS_OUT_ADDR 0xe0006000
+#define CSR_RS_BASE 0xe0007000
+#define CSR_RS_OUT_ADDR 0xe0007000
 #define CSR_RS_OUT_SIZE 1
 static inline unsigned int rs_out_read(void) {
-	unsigned int r = csr_readl(0xe0006000);
+	unsigned int r = csr_readl(0xe0007000);
 	return r;
 }
 static inline void rs_out_write(unsigned int value) {
-	csr_writel(value, 0xe0006000);
+	csr_writel(value, 0xe0007000);
 }
 
 /* timer0 */

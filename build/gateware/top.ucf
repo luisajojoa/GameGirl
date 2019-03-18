@@ -13,6 +13,10 @@ NET "user_btn1" LOC=M18 | IOSTANDARD=LVCMOS33; # user_btn:1
 NET "user_btn2" LOC=P17 | IOSTANDARD=LVCMOS33; # user_btn:2
 NET "user_btn3" LOC=M17 | IOSTANDARD=LVCMOS33; # user_btn:3
 NET "user_btn4" LOC=N17 | IOSTANDARD=LVCMOS33; # user_btn:4
+NET "GPO0" LOC=D14 | IOSTANDARD=LVCMOS33; # GPO:0
+NET "SD_spi_clk" LOC=F16 | IOSTANDARD=LVCMOS33; # SD_spi:0.clk
+NET "SD_spi_mosi" LOC=G16 | IOSTANDARD=LVCMOS33; # SD_spi:0.mosi
+NET "SD_spi_miso" LOC=H14 | IOSTANDARD=LVCMOS33; # SD_spi:0.miso
 NET "lcd_spi_cs_n" LOC=K1 | IOSTANDARD=LVCMOS33; # lcd_spi:0.cs_n
 NET "lcd_spi_clk" LOC=J2 | IOSTANDARD=LVCMOS33; # lcd_spi:0.clk
 NET "lcd_spi_mosi" LOC=J3 | IOSTANDARD=LVCMOS33; # lcd_spi:0.mosi
