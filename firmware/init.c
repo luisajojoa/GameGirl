@@ -616,13 +616,17 @@ void lcd_initialize(void){
 	lcd_write(0,0x0022); //Start Byte Direccion
 
 }
-/*
 
-void gameGirlIntro(void){
 	int yMin= 58;
-	int yMax= 117;
-	int xMin= 73;
-	int xMax= 147;
+	int yMax= 68;
+	int xMin= 50;
+	int xMax= 100;
+
+	
+
+
+void screen(int yMin, int yMax, int xMin, int xMax, int a){
+	
 	for(int i=yMin; i< yMax; i++)
 	{
 		lcd_write(0,0x0020);
@@ -632,9 +636,9 @@ void gameGirlIntro(void){
 			lcd_write(0,0x0021);
 			lcd_write(1,j);
 			lcd_write(0,0x0022);
-			lcd_write(1,0xf000);
+			lcd_write(1,a);
 		}
 	}
-}*/
+}
 
 

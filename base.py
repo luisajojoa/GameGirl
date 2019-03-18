@@ -19,23 +19,6 @@ from button import button_intr
 
 _io = [
 
-    ("user_led",  0, Pins("H17"), IOStandard("LVCMOS33")),
-    ("user_led",  1, Pins("K15"), IOStandard("LVCMOS33")),
-    ("user_led",  2, Pins("J13"), IOStandard("LVCMOS33")),
-    ("user_led",  3, Pins("N14"), IOStandard("LVCMOS33")),
-   # ("user_led",  4, Pins("R18"), IOStandard("LVCMOS33")),
-   # ("user_led",  5, Pins("V17"), IOStandard("LVCMOS33")),
-   # ("user_led",  6, Pins("U17"), IOStandard("LVCMOS33")),
-   # ("user_led",  7, Pins("U16"), IOStandard("LVCMOS33")),
-   # ("user_led",  8, Pins("V16"), IOStandard("LVCMOS33")),
-   # ("user_led",  9, Pins("T15"), IOStandard("LVCMOS33")),
-   # ("user_led", 10, Pins("U14"), IOStandard("LVCMOS33")),
-   # ("user_led", 11, Pins("T16"), IOStandard("LVCMOS33")),
-   # ("user_led", 12, Pins("V15"), IOStandard("LVCMOS33")),
-   # ("user_led", 13, Pins("V14"), IOStandard("LVCMOS33")),
-   # ("user_led", 14, Pins("V12"), IOStandard("LVCMOS33")),
-   # ("user_led", 15, Pins("V11"), IOStandard("LVCMOS33")),
-
 	("user_btn", 0, Pins("P18"), IOStandard("LVCMOS33")),
 	("user_btn", 1, Pins("M18"), IOStandard("LVCMOS33")),
 	("user_btn", 2, Pins("P17"), IOStandard("LVCMOS33")),
@@ -71,22 +54,7 @@ _io = [
         IOStandard("LVCMOS33")
     )
 ]
-"""
-QUACHO						NEXYS 4 DDR
-SIGNAL	IO	FPGA
-SPICLK	05	P35		p78		E18
-SDI		06	P33		p34		E17
-RS		13	P30		P32		D18
-RST		19	P29		P27		D17
-CS		26	P26		P24		C17
 
-CPUCLK		P126			E3			
-CPURST		P87				C12
-TX			P105			D4
-RX			P101			C4
-
-		xc6slx9-TQG144-2		xc7a100t-CSG324-1
-"""
 
 class Platform(XilinxPlatform):
     default_clk_name = "clk100"
@@ -116,7 +84,6 @@ class BaseSoC(SoCCore):
     # Peripherals CSR declaration
 	csr_peripherals = [
 		"dna",
-		"leds",
 		"buttons",
 		"lcd",
 		"SD",
@@ -152,10 +119,6 @@ class BaseSoC(SoCCore):
 		# FPGA identification
 		self.submodules.dna = dna.DNA()
 
-		# Led
-		user_leds = Cat(*[platform.request("user_led", i) for i in range(4)])
-		self.submodules.leds = Led(user_leds)
- 
 		#RS y RST LCD
 		rs= platform.request("lcd_rs")
 		self.submodules.rs= Led(rs)

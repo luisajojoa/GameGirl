@@ -4,10 +4,6 @@ module top(
 	input serial_rx,
 	input clk100,
 	input cpu_reset,
-	output user_led0,
-	output user_led1,
-	output user_led2,
-	output user_led3,
 	output lcd_rs,
 	input lcd_rst,
 	input user_btn0,
@@ -280,9 +276,6 @@ reg int_rst = 1'd1;
 reg [56:0] status = 57'd0;
 wire do_1;
 reg [6:0] cnt = 7'd0;
-reg [3:0] leds_storage_full = 4'd0;
-wire [3:0] leds_storage;
-reg leds_re = 1'd0;
 reg rs_storage_full = 1'd0;
 wire rs_storage;
 reg rs_re = 1'd0;
@@ -613,59 +606,51 @@ wire interface6_bank_bus_we;
 wire [31:0] interface6_bank_bus_dat_w;
 reg [31:0] interface6_bank_bus_dat_r = 32'd0;
 wire csrbank6_out0_re;
-wire [3:0] csrbank6_out0_r;
-wire [3:0] csrbank6_out0_w;
+wire csrbank6_out0_r;
+wire csrbank6_out0_w;
 wire csrbank6_sel;
 wire [13:0] interface7_bank_bus_adr;
 wire interface7_bank_bus_we;
 wire [31:0] interface7_bank_bus_dat_w;
 reg [31:0] interface7_bank_bus_dat_r = 32'd0;
-wire csrbank7_out0_re;
-wire csrbank7_out0_r;
-wire csrbank7_out0_w;
+wire csrbank7_load0_re;
+wire [31:0] csrbank7_load0_r;
+wire [31:0] csrbank7_load0_w;
+wire csrbank7_reload0_re;
+wire [31:0] csrbank7_reload0_r;
+wire [31:0] csrbank7_reload0_w;
+wire csrbank7_en0_re;
+wire csrbank7_en0_r;
+wire csrbank7_en0_w;
+wire csrbank7_value_re;
+wire [31:0] csrbank7_value_r;
+wire [31:0] csrbank7_value_w;
+wire csrbank7_ev_enable0_re;
+wire csrbank7_ev_enable0_r;
+wire csrbank7_ev_enable0_w;
 wire csrbank7_sel;
 wire [13:0] interface8_bank_bus_adr;
 wire interface8_bank_bus_we;
 wire [31:0] interface8_bank_bus_dat_w;
 reg [31:0] interface8_bank_bus_dat_r = 32'd0;
-wire csrbank8_load0_re;
-wire [31:0] csrbank8_load0_r;
-wire [31:0] csrbank8_load0_w;
-wire csrbank8_reload0_re;
-wire [31:0] csrbank8_reload0_r;
-wire [31:0] csrbank8_reload0_w;
-wire csrbank8_en0_re;
-wire csrbank8_en0_r;
-wire csrbank8_en0_w;
-wire csrbank8_value_re;
-wire [31:0] csrbank8_value_r;
-wire [31:0] csrbank8_value_w;
+wire csrbank8_txfull_re;
+wire csrbank8_txfull_r;
+wire csrbank8_txfull_w;
+wire csrbank8_rxempty_re;
+wire csrbank8_rxempty_r;
+wire csrbank8_rxempty_w;
 wire csrbank8_ev_enable0_re;
-wire csrbank8_ev_enable0_r;
-wire csrbank8_ev_enable0_w;
+wire [1:0] csrbank8_ev_enable0_r;
+wire [1:0] csrbank8_ev_enable0_w;
 wire csrbank8_sel;
 wire [13:0] interface9_bank_bus_adr;
 wire interface9_bank_bus_we;
 wire [31:0] interface9_bank_bus_dat_w;
 reg [31:0] interface9_bank_bus_dat_r = 32'd0;
-wire csrbank9_txfull_re;
-wire csrbank9_txfull_r;
-wire csrbank9_txfull_w;
-wire csrbank9_rxempty_re;
-wire csrbank9_rxempty_r;
-wire csrbank9_rxempty_w;
-wire csrbank9_ev_enable0_re;
-wire [1:0] csrbank9_ev_enable0_r;
-wire [1:0] csrbank9_ev_enable0_w;
+wire csrbank9_tuning_word0_re;
+wire [31:0] csrbank9_tuning_word0_r;
+wire [31:0] csrbank9_tuning_word0_w;
 wire csrbank9_sel;
-wire [13:0] interface10_bank_bus_adr;
-wire interface10_bank_bus_we;
-wire [31:0] interface10_bank_bus_dat_w;
-reg [31:0] interface10_bank_bus_dat_r = 32'd0;
-wire csrbank10_tuning_word0_re;
-wire [31:0] csrbank10_tuning_word0_r;
-wire [31:0] csrbank10_tuning_word0_w;
-wire csrbank10_sel;
 wire [4:0] slice_proxy0;
 wire [4:0] slice_proxy1;
 wire [4:0] slice_proxy2;
@@ -836,7 +821,6 @@ assign timer0_zero_status = timer0_zero_trigger;
 assign sys_clk = clk100;
 assign por_clk = clk100;
 assign sys_rst = int_rst;
-assign {user_led3, user_led2, user_led1, user_led0} = leds_storage;
 assign lcd_rs = rs_storage;
 assign zero_trigger = slice_proxy0[0];
 assign one_trigger = slice_proxy1[1];
@@ -1025,11 +1009,11 @@ assign lcd_machine_write = (lcd_machine_n_write != 1'd0);
 assign lcd_machine_read = (lcd_machine_n_read != 1'd0);
 assign lcd_machine_done0 = (~(lcd_machine_write | lcd_machine_read));
 always @(*) begin
-	lcd_machine_fsm_is_ongoing1 <= 1'd0;
 	lcd_machine_shift <= 1'd0;
-	spimaster1_next_state <= 2'd0;
 	lcd_machine_fsm_is_ongoing0 <= 1'd0;
+	spimaster1_next_state <= 2'd0;
 	lcd_machine_sample <= 1'd0;
+	lcd_machine_fsm_is_ongoing1 <= 1'd0;
 	spimaster1_next_state <= spimaster1_state;
 	case (spimaster1_state)
 		1'd1: begin
@@ -1126,8 +1110,8 @@ assign shared_err = (((rom_bus_err | sram_bus_err) | main_ram_bus_err) | bus_wis
 assign wait_1 = ((shared_stb & shared_cyc) & (~shared_ack));
 always @(*) begin
 	error <= 1'd0;
-	shared_ack <= 1'd0;
 	shared_dat_r <= 32'd0;
+	shared_ack <= 1'd0;
 	shared_ack <= (((rom_bus_ack | sram_bus_ack) | main_ram_bus_ack) | bus_wishbone_ack);
 	shared_dat_r <= (((({32{slave_sel_r[0]}} & rom_bus_dat_r) | ({32{slave_sel_r[1]}} & sram_bus_dat_r0)) | ({32{slave_sel_r[2]}} & main_ram_bus_dat_r)) | ({32{slave_sel_r[3]}} & bus_wishbone_dat_r));
 	if (done) begin
@@ -1137,12 +1121,12 @@ always @(*) begin
 	end
 end
 assign done = (count == 1'd0);
-assign csrbank0_sel = (interface0_bank_bus_adr[13:9] == 4'd13);
+assign csrbank0_sel = (interface0_bank_bus_adr[13:9] == 4'd12);
 assign csrbank0_out0_r = interface0_bank_bus_dat_w[0];
 assign csrbank0_out0_re = ((csrbank0_sel & interface0_bank_bus_we) & (interface0_bank_bus_adr[0] == 1'd0));
 assign GPO_storage = GPO_storage_full;
 assign csrbank0_out0_w = GPO_storage_full;
-assign csrbank1_sel = (interface1_bank_bus_adr[13:9] == 4'd12);
+assign csrbank1_sel = (interface1_bank_bus_adr[13:9] == 4'd11);
 assign csrbank1_config0_r = interface1_bank_bus_dat_w[31:0];
 assign csrbank1_config0_re = ((csrbank1_sel & interface1_bank_bus_we) & (interface1_bank_bus_adr[2:0] == 1'd0));
 assign csrbank1_xfer0_r = interface1_bank_bus_dat_w[31:0];
@@ -1166,7 +1150,7 @@ assign csrbank1_pending_w = SD_pending_status;
 assign SD_mosi_data_storage = SD_mosi_data_storage_full[31:0];
 assign csrbank1_mosi_data0_w = SD_mosi_data_storage_full[31:0];
 assign csrbank1_miso_data_w = SD_miso_data_status[31:0];
-assign csrbank2_sel = (interface2_bank_bus_adr[13:9] == 4'd10);
+assign csrbank2_sel = (interface2_bank_bus_adr[13:9] == 4'd9);
 assign csrbank2_in_r = interface2_bank_bus_dat_w[4:0];
 assign csrbank2_in_re = ((csrbank2_sel & interface2_bank_bus_we) & (interface2_bank_bus_adr[2:0] == 1'd0));
 assign csrbank2_dir_r = interface2_bank_bus_dat_w[7:0];
@@ -1206,7 +1190,7 @@ always @(*) begin
 	end
 end
 assign adr = sram_bus_adr1[5:0];
-assign csrbank5_sel = (interface5_bank_bus_adr[13:9] == 4'd11);
+assign csrbank5_sel = (interface5_bank_bus_adr[13:9] == 4'd10);
 assign csrbank5_config0_r = interface5_bank_bus_dat_w[31:0];
 assign csrbank5_config0_re = ((csrbank5_sel & interface5_bank_bus_we) & (interface5_bank_bus_adr[2:0] == 1'd0));
 assign csrbank5_xfer0_r = interface5_bank_bus_dat_w[31:0];
@@ -1230,64 +1214,59 @@ assign csrbank5_pending_w = lcd_pending_status;
 assign lcd_mosi_data_storage = lcd_mosi_data_storage_full[31:0];
 assign csrbank5_mosi_data0_w = lcd_mosi_data_storage_full[31:0];
 assign csrbank5_miso_data_w = lcd_miso_data_status[31:0];
-assign csrbank6_sel = (interface6_bank_bus_adr[13:9] == 4'd9);
-assign csrbank6_out0_r = interface6_bank_bus_dat_w[3:0];
+assign csrbank6_sel = (interface6_bank_bus_adr[13:9] == 4'd13);
+assign csrbank6_out0_r = interface6_bank_bus_dat_w[0];
 assign csrbank6_out0_re = ((csrbank6_sel & interface6_bank_bus_we) & (interface6_bank_bus_adr[0] == 1'd0));
-assign leds_storage = leds_storage_full[3:0];
-assign csrbank6_out0_w = leds_storage_full[3:0];
-assign csrbank7_sel = (interface7_bank_bus_adr[13:9] == 4'd14);
-assign csrbank7_out0_r = interface7_bank_bus_dat_w[0];
-assign csrbank7_out0_re = ((csrbank7_sel & interface7_bank_bus_we) & (interface7_bank_bus_adr[0] == 1'd0));
 assign rs_storage = rs_storage_full;
-assign csrbank7_out0_w = rs_storage_full;
-assign csrbank8_sel = (interface8_bank_bus_adr[13:9] == 3'd5);
-assign csrbank8_load0_r = interface8_bank_bus_dat_w[31:0];
-assign csrbank8_load0_re = ((csrbank8_sel & interface8_bank_bus_we) & (interface8_bank_bus_adr[2:0] == 1'd0));
-assign csrbank8_reload0_r = interface8_bank_bus_dat_w[31:0];
-assign csrbank8_reload0_re = ((csrbank8_sel & interface8_bank_bus_we) & (interface8_bank_bus_adr[2:0] == 1'd1));
-assign csrbank8_en0_r = interface8_bank_bus_dat_w[0];
-assign csrbank8_en0_re = ((csrbank8_sel & interface8_bank_bus_we) & (interface8_bank_bus_adr[2:0] == 2'd2));
-assign timer0_update_value_r = interface8_bank_bus_dat_w[0];
-assign timer0_update_value_re = ((csrbank8_sel & interface8_bank_bus_we) & (interface8_bank_bus_adr[2:0] == 2'd3));
-assign csrbank8_value_r = interface8_bank_bus_dat_w[31:0];
-assign csrbank8_value_re = ((csrbank8_sel & interface8_bank_bus_we) & (interface8_bank_bus_adr[2:0] == 3'd4));
-assign timer0_eventmanager_status_r = interface8_bank_bus_dat_w[0];
-assign timer0_eventmanager_status_re = ((csrbank8_sel & interface8_bank_bus_we) & (interface8_bank_bus_adr[2:0] == 3'd5));
-assign timer0_eventmanager_pending_r = interface8_bank_bus_dat_w[0];
-assign timer0_eventmanager_pending_re = ((csrbank8_sel & interface8_bank_bus_we) & (interface8_bank_bus_adr[2:0] == 3'd6));
-assign csrbank8_ev_enable0_r = interface8_bank_bus_dat_w[0];
-assign csrbank8_ev_enable0_re = ((csrbank8_sel & interface8_bank_bus_we) & (interface8_bank_bus_adr[2:0] == 3'd7));
+assign csrbank6_out0_w = rs_storage_full;
+assign csrbank7_sel = (interface7_bank_bus_adr[13:9] == 3'd5);
+assign csrbank7_load0_r = interface7_bank_bus_dat_w[31:0];
+assign csrbank7_load0_re = ((csrbank7_sel & interface7_bank_bus_we) & (interface7_bank_bus_adr[2:0] == 1'd0));
+assign csrbank7_reload0_r = interface7_bank_bus_dat_w[31:0];
+assign csrbank7_reload0_re = ((csrbank7_sel & interface7_bank_bus_we) & (interface7_bank_bus_adr[2:0] == 1'd1));
+assign csrbank7_en0_r = interface7_bank_bus_dat_w[0];
+assign csrbank7_en0_re = ((csrbank7_sel & interface7_bank_bus_we) & (interface7_bank_bus_adr[2:0] == 2'd2));
+assign timer0_update_value_r = interface7_bank_bus_dat_w[0];
+assign timer0_update_value_re = ((csrbank7_sel & interface7_bank_bus_we) & (interface7_bank_bus_adr[2:0] == 2'd3));
+assign csrbank7_value_r = interface7_bank_bus_dat_w[31:0];
+assign csrbank7_value_re = ((csrbank7_sel & interface7_bank_bus_we) & (interface7_bank_bus_adr[2:0] == 3'd4));
+assign timer0_eventmanager_status_r = interface7_bank_bus_dat_w[0];
+assign timer0_eventmanager_status_re = ((csrbank7_sel & interface7_bank_bus_we) & (interface7_bank_bus_adr[2:0] == 3'd5));
+assign timer0_eventmanager_pending_r = interface7_bank_bus_dat_w[0];
+assign timer0_eventmanager_pending_re = ((csrbank7_sel & interface7_bank_bus_we) & (interface7_bank_bus_adr[2:0] == 3'd6));
+assign csrbank7_ev_enable0_r = interface7_bank_bus_dat_w[0];
+assign csrbank7_ev_enable0_re = ((csrbank7_sel & interface7_bank_bus_we) & (interface7_bank_bus_adr[2:0] == 3'd7));
 assign timer0_load_storage = timer0_load_storage_full[31:0];
-assign csrbank8_load0_w = timer0_load_storage_full[31:0];
+assign csrbank7_load0_w = timer0_load_storage_full[31:0];
 assign timer0_reload_storage = timer0_reload_storage_full[31:0];
-assign csrbank8_reload0_w = timer0_reload_storage_full[31:0];
+assign csrbank7_reload0_w = timer0_reload_storage_full[31:0];
 assign timer0_en_storage = timer0_en_storage_full;
-assign csrbank8_en0_w = timer0_en_storage_full;
-assign csrbank8_value_w = timer0_value_status[31:0];
+assign csrbank7_en0_w = timer0_en_storage_full;
+assign csrbank7_value_w = timer0_value_status[31:0];
 assign timer0_eventmanager_storage = timer0_eventmanager_storage_full;
-assign csrbank8_ev_enable0_w = timer0_eventmanager_storage_full;
-assign csrbank9_sel = (interface9_bank_bus_adr[13:9] == 2'd3);
-assign uart_rxtx_r = interface9_bank_bus_dat_w[7:0];
-assign uart_rxtx_re = ((csrbank9_sel & interface9_bank_bus_we) & (interface9_bank_bus_adr[2:0] == 1'd0));
-assign csrbank9_txfull_r = interface9_bank_bus_dat_w[0];
-assign csrbank9_txfull_re = ((csrbank9_sel & interface9_bank_bus_we) & (interface9_bank_bus_adr[2:0] == 1'd1));
-assign csrbank9_rxempty_r = interface9_bank_bus_dat_w[0];
-assign csrbank9_rxempty_re = ((csrbank9_sel & interface9_bank_bus_we) & (interface9_bank_bus_adr[2:0] == 2'd2));
-assign uart_eventmanager_status_r = interface9_bank_bus_dat_w[1:0];
-assign uart_eventmanager_status_re = ((csrbank9_sel & interface9_bank_bus_we) & (interface9_bank_bus_adr[2:0] == 2'd3));
-assign uart_eventmanager_pending_r = interface9_bank_bus_dat_w[1:0];
-assign uart_eventmanager_pending_re = ((csrbank9_sel & interface9_bank_bus_we) & (interface9_bank_bus_adr[2:0] == 3'd4));
-assign csrbank9_ev_enable0_r = interface9_bank_bus_dat_w[1:0];
-assign csrbank9_ev_enable0_re = ((csrbank9_sel & interface9_bank_bus_we) & (interface9_bank_bus_adr[2:0] == 3'd5));
-assign csrbank9_txfull_w = uart_txfull_status;
-assign csrbank9_rxempty_w = uart_rxempty_status;
+assign csrbank7_ev_enable0_w = timer0_eventmanager_storage_full;
+assign csrbank8_sel = (interface8_bank_bus_adr[13:9] == 2'd3);
+assign uart_rxtx_r = interface8_bank_bus_dat_w[7:0];
+assign uart_rxtx_re = ((csrbank8_sel & interface8_bank_bus_we) & (interface8_bank_bus_adr[2:0] == 1'd0));
+assign csrbank8_txfull_r = interface8_bank_bus_dat_w[0];
+assign csrbank8_txfull_re = ((csrbank8_sel & interface8_bank_bus_we) & (interface8_bank_bus_adr[2:0] == 1'd1));
+assign csrbank8_rxempty_r = interface8_bank_bus_dat_w[0];
+assign csrbank8_rxempty_re = ((csrbank8_sel & interface8_bank_bus_we) & (interface8_bank_bus_adr[2:0] == 2'd2));
+assign uart_eventmanager_status_r = interface8_bank_bus_dat_w[1:0];
+assign uart_eventmanager_status_re = ((csrbank8_sel & interface8_bank_bus_we) & (interface8_bank_bus_adr[2:0] == 2'd3));
+assign uart_eventmanager_pending_r = interface8_bank_bus_dat_w[1:0];
+assign uart_eventmanager_pending_re = ((csrbank8_sel & interface8_bank_bus_we) & (interface8_bank_bus_adr[2:0] == 3'd4));
+assign csrbank8_ev_enable0_r = interface8_bank_bus_dat_w[1:0];
+assign csrbank8_ev_enable0_re = ((csrbank8_sel & interface8_bank_bus_we) & (interface8_bank_bus_adr[2:0] == 3'd5));
+assign csrbank8_txfull_w = uart_txfull_status;
+assign csrbank8_rxempty_w = uart_rxempty_status;
 assign uart_eventmanager_storage = uart_eventmanager_storage_full[1:0];
-assign csrbank9_ev_enable0_w = uart_eventmanager_storage_full[1:0];
-assign csrbank10_sel = (interface10_bank_bus_adr[13:9] == 2'd2);
-assign csrbank10_tuning_word0_r = interface10_bank_bus_dat_w[31:0];
-assign csrbank10_tuning_word0_re = ((csrbank10_sel & interface10_bank_bus_we) & (interface10_bank_bus_adr[0] == 1'd0));
+assign csrbank8_ev_enable0_w = uart_eventmanager_storage_full[1:0];
+assign csrbank9_sel = (interface9_bank_bus_adr[13:9] == 2'd2);
+assign csrbank9_tuning_word0_r = interface9_bank_bus_dat_w[31:0];
+assign csrbank9_tuning_word0_re = ((csrbank9_sel & interface9_bank_bus_we) & (interface9_bank_bus_adr[0] == 1'd0));
 assign uart_phy_storage = uart_phy_storage_full[31:0];
-assign csrbank10_tuning_word0_w = uart_phy_storage_full[31:0];
+assign csrbank9_tuning_word0_w = uart_phy_storage_full[31:0];
 assign interface0_bank_bus_adr = interface_adr;
 assign interface1_bank_bus_adr = interface_adr;
 assign interface2_bank_bus_adr = interface_adr;
@@ -1298,7 +1277,6 @@ assign interface6_bank_bus_adr = interface_adr;
 assign interface7_bank_bus_adr = interface_adr;
 assign interface8_bank_bus_adr = interface_adr;
 assign interface9_bank_bus_adr = interface_adr;
-assign interface10_bank_bus_adr = interface_adr;
 assign sram_bus_adr1 = interface_adr;
 assign interface0_bank_bus_we = interface_we;
 assign interface1_bank_bus_we = interface_we;
@@ -1310,7 +1288,6 @@ assign interface6_bank_bus_we = interface_we;
 assign interface7_bank_bus_we = interface_we;
 assign interface8_bank_bus_we = interface_we;
 assign interface9_bank_bus_we = interface_we;
-assign interface10_bank_bus_we = interface_we;
 assign sram_bus_we1 = interface_we;
 assign interface0_bank_bus_dat_w = interface_dat_w;
 assign interface1_bank_bus_dat_w = interface_dat_w;
@@ -1322,9 +1299,8 @@ assign interface6_bank_bus_dat_w = interface_dat_w;
 assign interface7_bank_bus_dat_w = interface_dat_w;
 assign interface8_bank_bus_dat_w = interface_dat_w;
 assign interface9_bank_bus_dat_w = interface_dat_w;
-assign interface10_bank_bus_dat_w = interface_dat_w;
 assign sram_bus_dat_w1 = interface_dat_w;
-assign interface_dat_r = (((((((((((interface0_bank_bus_dat_r | interface1_bank_bus_dat_r) | interface2_bank_bus_dat_r) | interface3_bank_bus_dat_r) | interface4_bank_bus_dat_r) | interface5_bank_bus_dat_r) | interface6_bank_bus_dat_r) | interface7_bank_bus_dat_r) | interface8_bank_bus_dat_r) | interface9_bank_bus_dat_r) | interface10_bank_bus_dat_r) | sram_bus_dat_r1);
+assign interface_dat_r = ((((((((((interface0_bank_bus_dat_r | interface1_bank_bus_dat_r) | interface2_bank_bus_dat_r) | interface3_bank_bus_dat_r) | interface4_bank_bus_dat_r) | interface5_bank_bus_dat_r) | interface6_bank_bus_dat_r) | interface7_bank_bus_dat_r) | interface8_bank_bus_dat_r) | interface9_bank_bus_dat_r) | sram_bus_dat_r1);
 assign slice_proxy0 = {user_btn4, user_btn3, user_btn2, user_btn1, user_btn0};
 assign slice_proxy1 = {user_btn4, user_btn3, user_btn2, user_btn1, user_btn0};
 assign slice_proxy2 = {user_btn4, user_btn3, user_btn2, user_btn1, user_btn0};
@@ -1951,105 +1927,93 @@ always @(posedge sys_clk) begin
 		endcase
 	end
 	if (csrbank6_out0_re) begin
-		leds_storage_full[3:0] <= csrbank6_out0_r;
+		rs_storage_full <= csrbank6_out0_r;
 	end
-	leds_re <= csrbank6_out0_re;
+	rs_re <= csrbank6_out0_re;
 	interface7_bank_bus_dat_r <= 1'd0;
 	if (csrbank7_sel) begin
-		case (interface7_bank_bus_adr[0])
+		case (interface7_bank_bus_adr[2:0])
 			1'd0: begin
-				interface7_bank_bus_dat_r <= csrbank7_out0_w;
+				interface7_bank_bus_dat_r <= csrbank7_load0_w;
+			end
+			1'd1: begin
+				interface7_bank_bus_dat_r <= csrbank7_reload0_w;
+			end
+			2'd2: begin
+				interface7_bank_bus_dat_r <= csrbank7_en0_w;
+			end
+			2'd3: begin
+				interface7_bank_bus_dat_r <= timer0_update_value_w;
+			end
+			3'd4: begin
+				interface7_bank_bus_dat_r <= csrbank7_value_w;
+			end
+			3'd5: begin
+				interface7_bank_bus_dat_r <= timer0_eventmanager_status_w;
+			end
+			3'd6: begin
+				interface7_bank_bus_dat_r <= timer0_eventmanager_pending_w;
+			end
+			3'd7: begin
+				interface7_bank_bus_dat_r <= csrbank7_ev_enable0_w;
 			end
 		endcase
 	end
-	if (csrbank7_out0_re) begin
-		rs_storage_full <= csrbank7_out0_r;
+	if (csrbank7_load0_re) begin
+		timer0_load_storage_full[31:0] <= csrbank7_load0_r;
 	end
-	rs_re <= csrbank7_out0_re;
+	timer0_load_re <= csrbank7_load0_re;
+	if (csrbank7_reload0_re) begin
+		timer0_reload_storage_full[31:0] <= csrbank7_reload0_r;
+	end
+	timer0_reload_re <= csrbank7_reload0_re;
+	if (csrbank7_en0_re) begin
+		timer0_en_storage_full <= csrbank7_en0_r;
+	end
+	timer0_en_re <= csrbank7_en0_re;
+	if (csrbank7_ev_enable0_re) begin
+		timer0_eventmanager_storage_full <= csrbank7_ev_enable0_r;
+	end
+	timer0_eventmanager_re <= csrbank7_ev_enable0_re;
 	interface8_bank_bus_dat_r <= 1'd0;
 	if (csrbank8_sel) begin
 		case (interface8_bank_bus_adr[2:0])
 			1'd0: begin
-				interface8_bank_bus_dat_r <= csrbank8_load0_w;
+				interface8_bank_bus_dat_r <= uart_rxtx_w;
 			end
 			1'd1: begin
-				interface8_bank_bus_dat_r <= csrbank8_reload0_w;
+				interface8_bank_bus_dat_r <= csrbank8_txfull_w;
 			end
 			2'd2: begin
-				interface8_bank_bus_dat_r <= csrbank8_en0_w;
+				interface8_bank_bus_dat_r <= csrbank8_rxempty_w;
 			end
 			2'd3: begin
-				interface8_bank_bus_dat_r <= timer0_update_value_w;
+				interface8_bank_bus_dat_r <= uart_eventmanager_status_w;
 			end
 			3'd4: begin
-				interface8_bank_bus_dat_r <= csrbank8_value_w;
+				interface8_bank_bus_dat_r <= uart_eventmanager_pending_w;
 			end
 			3'd5: begin
-				interface8_bank_bus_dat_r <= timer0_eventmanager_status_w;
-			end
-			3'd6: begin
-				interface8_bank_bus_dat_r <= timer0_eventmanager_pending_w;
-			end
-			3'd7: begin
 				interface8_bank_bus_dat_r <= csrbank8_ev_enable0_w;
 			end
 		endcase
 	end
-	if (csrbank8_load0_re) begin
-		timer0_load_storage_full[31:0] <= csrbank8_load0_r;
-	end
-	timer0_load_re <= csrbank8_load0_re;
-	if (csrbank8_reload0_re) begin
-		timer0_reload_storage_full[31:0] <= csrbank8_reload0_r;
-	end
-	timer0_reload_re <= csrbank8_reload0_re;
-	if (csrbank8_en0_re) begin
-		timer0_en_storage_full <= csrbank8_en0_r;
-	end
-	timer0_en_re <= csrbank8_en0_re;
 	if (csrbank8_ev_enable0_re) begin
-		timer0_eventmanager_storage_full <= csrbank8_ev_enable0_r;
+		uart_eventmanager_storage_full[1:0] <= csrbank8_ev_enable0_r;
 	end
-	timer0_eventmanager_re <= csrbank8_ev_enable0_re;
+	uart_eventmanager_re <= csrbank8_ev_enable0_re;
 	interface9_bank_bus_dat_r <= 1'd0;
 	if (csrbank9_sel) begin
-		case (interface9_bank_bus_adr[2:0])
+		case (interface9_bank_bus_adr[0])
 			1'd0: begin
-				interface9_bank_bus_dat_r <= uart_rxtx_w;
-			end
-			1'd1: begin
-				interface9_bank_bus_dat_r <= csrbank9_txfull_w;
-			end
-			2'd2: begin
-				interface9_bank_bus_dat_r <= csrbank9_rxempty_w;
-			end
-			2'd3: begin
-				interface9_bank_bus_dat_r <= uart_eventmanager_status_w;
-			end
-			3'd4: begin
-				interface9_bank_bus_dat_r <= uart_eventmanager_pending_w;
-			end
-			3'd5: begin
-				interface9_bank_bus_dat_r <= csrbank9_ev_enable0_w;
+				interface9_bank_bus_dat_r <= csrbank9_tuning_word0_w;
 			end
 		endcase
 	end
-	if (csrbank9_ev_enable0_re) begin
-		uart_eventmanager_storage_full[1:0] <= csrbank9_ev_enable0_r;
+	if (csrbank9_tuning_word0_re) begin
+		uart_phy_storage_full[31:0] <= csrbank9_tuning_word0_r;
 	end
-	uart_eventmanager_re <= csrbank9_ev_enable0_re;
-	interface10_bank_bus_dat_r <= 1'd0;
-	if (csrbank10_sel) begin
-		case (interface10_bank_bus_adr[0])
-			1'd0: begin
-				interface10_bank_bus_dat_r <= csrbank10_tuning_word0_w;
-			end
-		endcase
-	end
-	if (csrbank10_tuning_word0_re) begin
-		uart_phy_storage_full[31:0] <= csrbank10_tuning_word0_r;
-	end
-	uart_phy_re <= csrbank10_tuning_word0_re;
+	uart_phy_re <= csrbank9_tuning_word0_re;
 	if (sys_rst) begin
 		ctrl_storage_full <= 32'd305419896;
 		ctrl_re <= 1'd0;
@@ -2108,8 +2072,6 @@ always @(posedge sys_clk) begin
 		timer0_value <= 32'd0;
 		status <= 57'd0;
 		cnt <= 7'd0;
-		leds_storage_full <= 4'd0;
-		leds_re <= 1'd0;
 		rs_storage_full <= 1'd0;
 		rs_re <= 1'd0;
 		one_pending <= 1'd0;
@@ -2180,7 +2142,6 @@ always @(posedge sys_clk) begin
 		interface7_bank_bus_dat_r <= 32'd0;
 		interface8_bank_bus_dat_r <= 32'd0;
 		interface9_bank_bus_dat_r <= 32'd0;
-		interface10_bank_bus_dat_r <= 32'd0;
 	end
 	xilinxmultiregimpl0_regs0 <= serial_rx;
 	xilinxmultiregimpl0_regs1 <= xilinxmultiregimpl0_regs0;

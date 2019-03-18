@@ -30,26 +30,20 @@ void buttonTest(void)
 	switch(pend){
 		case 16:
 			dir_global=1;
-			leds_out_write(dir_global);
 			break;
 		case 2:
 			if (dir_global!=16){ dir_global=2;}
-			leds_out_write(dir_global);
 			break;
 		case 4:
 			if (dir_global!=8) {dir_global=4;}
-			leds_out_write(dir_global);
 			break;
 		case 8:
 			if (dir_global!=4) {dir_global=8;}
-			leds_out_write(dir_global);
 			break;
 		case 1:
 			if (dir_global!=2){ dir_global=16;}
-			leds_out_write(dir_global-1);
 			break;	
-		default:
-			leds_out_write(0xff);
+		default:			
 			break;
 	}
 

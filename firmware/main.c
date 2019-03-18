@@ -86,6 +86,7 @@ static void help(void)
 	puts("help                            - this command");
 	puts("reboot                           - restart game");
 	puts("play                             - start game");
+	puts("puntaje                             - start game");
 }
 
 static void reboot(void)
@@ -161,7 +162,7 @@ static void decoColor(int color) //Funcionando
 		break;
 
 		case (5): //Borde
-		lcd_write(1,0xFD20);//FEA0); //light green
+		lcd_write(1,0xFEA0); //light green
 		break;
 
 		case (9):
@@ -411,7 +412,7 @@ static void inicio()
 	{
 		for(int f=1;f<(LY/LTH)-2;f++)
 		{
-			if((q==(LX/LTH)/2)&&(f==(LY/LTH)/2))
+			if((q==(LX/LTH)/2)&&(f==(LY/LTH)/2) || ((q==comida[1])&& (f==comida[2])))
 			{
 			}
 			else
@@ -456,9 +457,6 @@ static void inicio()
 	}
 	pintar(snake[0]);
 	comida[0]=205;
-	comida[1]=foodgen(0);
-	comida[2]=foodgen(1);
-	pintar(comida);
 	puntaje(points);
 }
 void paintScore(int numero, int pot){
@@ -520,7 +518,7 @@ static void fail(void)
 	{
 		lcd_write(1,0xF800);
 	}
-
+	gameGirlIntro();
 }
 
 
@@ -528,7 +526,10 @@ static void fail(void)
 
 static void try(void)
 {
+	comida[1]=foodgen(0);
+	comida[2]=foodgen(1);
 	inicio();
+	pintar(comida);
 
 
 	while(1)
@@ -541,7 +542,10 @@ static void try(void)
 					{
 						fail();
 						busy_wait(20);
+						comida[1]=foodgen(0);
+						comida[2]=foodgen(1);
 						inicio();
+						pintar(comida);
 					}
 				}
 			}
@@ -658,10 +662,34 @@ static void try(void)
 				default:
 					break;
 			}
-		busy_wait(5-(lvl*(0.5)));
+		busy_wait(4.5-(lvl*(0.6)));
 	}
 }
 
+
+void gameGirlIntro(void){
+	int a=0xF81F;
+	int b=0xA145;
+	screen(0,176,0,220,b);
+
+	screen(58,68,50,90,a);
+	screen(68,98,90,110,a);
+	screen(58,68,100,110,a);
+	screen(88,98,80,90,a);
+	screen(68,118,40,60,a);
+	screen(118,128,50,100,a);	
+	screen(108,118,90,110,a);	
+
+	screen(58,68,140,180,a);
+	screen(68,98,180,200,a);
+	screen(58,68,190,200,a);
+	screen(88,98,170,180,a);
+	screen(68,118,130,150,a);
+	screen(118,128,140,190,a);	
+	screen(108,118,180,200,a);	
+	busy_wait(5);
+
+}
 
 
 static void console_service(void)
@@ -680,7 +708,7 @@ static void console_service(void)
 	else if(strcmp(token, "play") == 0)
 		try();
 	else if(strcmp(token, "puntaje") == 0)
-		puntaje(15);
+		gameGirlIntro();
 	prompt();
 }
 
@@ -695,7 +723,10 @@ int main(void)
 	buttons();	
 	uart_init();
 	help();
+	gameGirlIntro();
+	try();
 	prompt();
+
 
 	while(1) {
 		console_service();

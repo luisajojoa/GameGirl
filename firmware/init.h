@@ -30,6 +30,7 @@ int num4Uno[121];
 void lcd_write(unsigned char rs, unsigned int data);
 void busy_wait(unsigned int ds);
 void lcd_initialize(void);
+void screen(int yMin, int yMax, int xMin, int xMax, int a);
 
 
 

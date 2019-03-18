@@ -1,7 +1,7 @@
 Release 14.7 - par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Mon Mar 18 00:20:41 2019
+Mon Mar 18 05:24:22 2019
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -162,7 +162,7 @@ Pinout by Pin Number:
 |H14       |SD_spi_miso |IOB33    |IO_L15P_T2_DQS_15           |INPUT    |LVCMOS33   |15            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
 |H15       |            |IOB33S   |IO_L19N_T3_A21_VREF_15      |UNUSED   |           |15            |          |         |           |         |         |          |           |                |
 |H16       |            |IOB33M   |IO_L13P_T2_MRCC_15          |UNUSED   |           |15            |          |         |           |         |         |          |           |                |
-|H17       |user_led0   |IOB33    |IO_L18P_T2_A24_15           |OUTPUT   |LVCMOS33   |15            |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|H17       |            |IOB33M   |IO_L18P_T2_A24_15           |UNUSED   |           |15            |          |         |           |         |         |          |           |                |
 |H18       |            |         |VCCO_15                     |         |           |15            |          |         |           |         |3.30     |          |           |                |
 |J1        |            |         |VCCO_35                     |         |           |35            |          |         |           |         |3.30     |          |           |                |
 |J2        |lcd_spi_clk |IOB33    |IO_L22N_T3_35               |TRISTATE |LVCMOS33   |35            |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
@@ -176,7 +176,7 @@ Pinout by Pin Number:
 |J10       |            |IPAD     |VP_0                        |UNUSED   |           |0             |          |         |           |         |         |          |           |                |
 |J11       |            |         |VCCINT                      |         |           |              |          |         |           |         |1.0      |          |           |                |
 |J12       |            |         |GND                         |         |           |              |          |         |           |         |         |          |           |                |
-|J13       |user_led2   |IOB33    |IO_L17N_T2_A25_15           |OUTPUT   |LVCMOS33   |15            |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|J13       |            |IOB33S   |IO_L17N_T2_A25_15           |UNUSED   |           |15            |          |         |           |         |         |          |           |                |
 |J14       |            |IOB33M   |IO_L19P_T3_A22_15           |UNUSED   |           |15            |          |         |           |         |         |          |           |                |
 |J15       |            |IOB33S   |IO_L24N_T3_RS0_15           |UNUSED   |           |15            |          |         |           |         |         |          |           |                |
 |J16       |            |         |GND                         |         |           |              |          |         |           |         |         |          |           |                |
@@ -196,7 +196,7 @@ Pinout by Pin Number:
 |K12       |            |         |VCCAUX                      |         |           |              |          |         |           |         |1.8      |          |           |                |
 |K13       |            |IOB33M   |IO_L17P_T2_A26_15           |UNUSED   |           |15            |          |         |           |         |         |          |           |                |
 |K14       |            |         |VCCO_15                     |         |           |15            |          |         |           |         |3.30     |          |           |                |
-|K15       |user_led1   |IOB33    |IO_L24P_T3_RS1_15           |OUTPUT   |LVCMOS33   |15            |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|K15       |            |IOB33M   |IO_L24P_T3_RS1_15           |UNUSED   |           |15            |          |         |           |         |         |          |           |                |
 |K16       |            |IOB33    |IO_25_15                    |UNUSED   |           |15            |          |         |           |         |         |          |           |                |
 |K17       |            |IOB33M   |IO_L1P_T0_D00_MOSI_14       |UNUSED   |           |14            |          |         |           |         |         |          |           |                |
 |K18       |            |IOB33S   |IO_L1N_T0_D01_DIN_14        |UNUSED   |           |14            |          |         |           |         |         |          |           |                |
@@ -249,7 +249,7 @@ Pinout by Pin Number:
 |N11       |            |         |VCCINT                      |         |           |              |          |         |           |         |1.0      |          |           |                |
 |N12       |            |         |GND                         |         |           |              |          |         |           |         |         |          |           |                |
 |N13       |            |         |VCCO_14                     |         |           |14            |          |         |           |         |3.30     |          |           |                |
-|N14       |user_led3   |IOB33    |IO_L8P_T1_D11_14            |OUTPUT   |LVCMOS33   |14            |12        |SLOW     |           |         |         |LOCATED   |NO         |NONE            |
+|N14       |            |IOB33M   |IO_L8P_T1_D11_14            |UNUSED   |           |14            |          |         |           |         |         |          |           |                |
 |N15       |            |IOB33M   |IO_L11P_T1_SRCC_14          |UNUSED   |           |14            |          |         |           |         |         |          |           |                |
 |N16       |            |IOB33S   |IO_L11N_T1_SRCC_14          |UNUSED   |           |14            |          |         |           |         |         |          |           |                |
 |N17       |user_btn4   |IOB33    |IO_L9P_T1_DQS_14            |INPUT    |LVCMOS33   |14            |          |         |           |NONE     |         |LOCATED   |NO         |NONE            |
