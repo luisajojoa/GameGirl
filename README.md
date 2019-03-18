@@ -76,6 +76,7 @@ El mapa de memoria de nuestro proyecto es el siguiente:
 Para abordar en estos periféricos de comunicación se analizará primero el procesador LatticeMico32.
 #### LatticeMico32
 ![lm](https://user-images.githubusercontent.com/17129769/54509886-309b3980-4919-11e9-96cb-338621cf930b.jpeg)
+
 En la figura anterior se puede observar el funcionamiento del procesador, el cual se divide en 6 etapas de funcionamiento.
 *	La primera es direcciones, donde se calcula y envía al contador de programa la dirección de la instrucción a ejecutar.
 *	Fech, es donde la instrucción es leida desde la memoria y es almacenada en el registro de instrucción.
@@ -89,4 +90,21 @@ La conexión entre los periféricos y el procesador se hace por medio de un bus 
 #### SPI
 El periferico SPI implementado es el nos proporcionó el profesor y se puede observar en la figura siguiente el diagrama de bloques funcional donde se especifican los registros y los subbloques que lo componen.
 Nuestro periferico SPI se instancia dos veces, uno para la LCD y otro para la comunicación con la SD donde la única diferencia entre los dos es la configuración de frecuencias y cantidad de bits por tiempo de escritura.
+![spiBloq](https://user-images.githubusercontent.com/17129769/54509975-8b349580-4919-11e9-8622-cb6e4cefa9f2.PNG)
 
+##### LCD 
+Al instanciar la LCD como un módulo SPIMaster se obtuvo el siguiente mapa de memoria:
+
+
+##### SD
+Nuestro mapa de memoria quedó configurado de la siguiente manera:
+
+
+##### GPI
+Para el protocolo GPI se manejó solo un registro donde se almacenaba el estado de los pulsadores y por medio de las interrupciones se gestiona la ejecución de las acciones.
+De aquí se encontró el siguiente mapa de memoria:
+
+##### Timer 
+Nuestro periferico timer se encuentra ubicado en las siguientes posiciones de memoria:
+##### UART
+Para conectarnos enviar y recibir información desde la uart se usan los siguientes registros:
