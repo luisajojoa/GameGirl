@@ -72,5 +72,7 @@ Por otro lado, se consideran los siguientes módulos como periféricos:
 *	Timer
 *	UART
 El mapa de memoria de nuestro proyecto es el siguiente:
+![mapamem](https://user-images.githubusercontent.com/17129769/54509862-0cd7f380-4919-11e9-9d8c-5b4324592542.jpeg)
+Para abordar en estos periféricos de comunicación se analizará primero el procesador LatticeMico32.
 
 
