@@ -71,7 +71,9 @@ Por otro lado, se consideran los siguientes módulos como periféricos:
 *	GPI
 *	Timer
 *	UART
+
 El mapa de memoria de nuestro proyecto es el siguiente:
+
 ![mapamem](https://user-images.githubusercontent.com/17129769/54509862-0cd7f380-4919-11e9-9d8c-5b4324592542.jpeg)
 Para abordar en estos periféricos de comunicación se analizará primero el procesador LatticeMico32.
 #### LatticeMico32
@@ -87,6 +89,11 @@ En la figura anterior se puede observar el funcionamiento del procesador, el cua
 
 Para el control de interrupciones se designan 3 registros por parte del procesador, esos son el habilitador de interrupciones (IE), la máscara de interrupciones (IM) y la interrupción pendiente (IP). Una vez activada una interrupción, el procesador guarda todos sus registros en la pila, modifica el registro IP y espera hasta que se solucione la interrupción para restaurar el valor de los registros almacenados y retomar el programa inicial.
 La conexión entre los periféricos y el procesador se hace por medio de un bus wishbone. Sin embargo las interrupciones realizadas por los periféricos son directas con el procesador para que pueda encargarse de ellas inmediatamente.
+#### Bus wishbone
+Como se mencionó antes, los periféricos y el procesador se comunican por medio de un bus wishbone. A continuación podemos ver las entradas y salidas que necesita dicho bus para su adecuado funcionamiento. 
+
+
+
 #### SPI
 El periferico SPI implementado es el nos proporcionó el profesor y se puede observar en la figura siguiente el diagrama de bloques funcional donde se especifican los registros y los subbloques que lo componen.
 Nuestro periferico SPI se instancia dos veces, uno para la LCD y otro para la comunicación con la SD donde la única diferencia entre los dos es la configuración de frecuencias y cantidad de bits por tiempo de escritura.
@@ -96,15 +103,26 @@ Nuestro periferico SPI se instancia dos veces, uno para la LCD y otro para la co
 Al instanciar la LCD como un módulo SPIMaster se obtuvo el siguiente mapa de memoria:
 
 
+![lcd](https://user-images.githubusercontent.com/17129769/54510100-0c8c2800-491a-11e9-8b33-82d2a8855231.jpeg)
+
+
 ##### SD
 Nuestro mapa de memoria quedó configurado de la siguiente manera:
 
+
+![sd](https://user-images.githubusercontent.com/17129769/54510116-17df5380-491a-11e9-82a4-aa19cdb2f4f8.jpeg)
 
 ##### GPI
 Para el protocolo GPI se manejó solo un registro donde se almacenaba el estado de los pulsadores y por medio de las interrupciones se gestiona la ejecución de las acciones.
 De aquí se encontró el siguiente mapa de memoria:
 
+
+![gpio](https://user-images.githubusercontent.com/17129769/54510145-31809b00-491a-11e9-8d8b-e1bdacb68e1f.jpeg)
+
 ##### Timer 
 Nuestro periferico timer se encuentra ubicado en las siguientes posiciones de memoria:
+![timer](https://user-images.githubusercontent.com/17129769/54510163-42c9a780-491a-11e9-97ff-7f9642fee282.jpeg)
+
 ##### UART
 Para conectarnos enviar y recibir información desde la uart se usan los siguientes registros:
+![uart](https://user-images.githubusercontent.com/17129769/54510166-43fad480-491a-11e9-86c4-763dfc236bee.jpeg)
